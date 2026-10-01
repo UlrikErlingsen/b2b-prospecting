@@ -3,7 +3,7 @@ import streamlit as st
 from pages import _ui
 from prospectsignal import brreg, nace, orgnr, regions
 from prospectsignal.errors import RegisterUnavailable
-from prospectsignal.schema import ENK_WARNING
+from prospectsignal.schema import ENK_WARNING, PERSON_NAME_FORMS
 
 _ui.header(
     "Company card",
@@ -33,7 +33,7 @@ if unit["is_demo"]:
     st.info(
         "Fictional DEMO company. Its organisation number fails MOD11 on purpose and does not exist in the register."
     )
-if unit["org_form"] == "ENK":
+if unit["org_form"] in PERSON_NAME_FORMS:
     st.warning(ENK_WARNING)
 flags = [
     label

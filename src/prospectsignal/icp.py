@@ -115,7 +115,8 @@ class ICP:
             lines.append(f"Founded: {self.founded_from or '…'} to {self.founded_to or '…'}")
         lines.append("Organisation form: " + (", ".join(self.org_forms) or "any"))
         lines.append(
-            "ENK: " + ("included (person names — handle as personal data)" if self.include_enk else "excluded")
+            "ENK and unknown-form sub-units: "
+            + ("included (person names — handle as personal data)" if self.include_enk else "excluded")
         )
         if self.vat_registered is not None:
             lines.append("VAT-registered: " + ("yes" if self.vat_registered else "no"))

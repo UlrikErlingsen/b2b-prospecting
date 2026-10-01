@@ -11,10 +11,11 @@ Company facts from Enhetsregisteret: organisation number, name, legal form, indu
 - Roles: board members, CEO (daglig leder), contact persons, auditors' people, birth numbers.
 - E-mail addresses, phone and mobile numbers, even though the bulk file contains them.
 - Street addresses of sole proprietorships (ENK), which are often the owner's home.
+- Street addresses of sub-units whose parent company is missing from the open register (legal form unknown, so possibly a sole proprietorship).
 
 ## Sole proprietorships (ENK)
 
-An ENK is usually named after its owner, so an ENK row identifies a person. NLOD § 3 does not license personal data without a lawful basis. ProspectSignal therefore excludes ENK from filters and exports unless you include them deliberately, shows a warning on every ENK row, and keeps only coarse location (postcode and kommune) for counts.
+An ENK is usually named after its owner, so an ENK row identifies a person. NLOD § 3 does not license personal data without a lawful basis. ProspectSignal therefore excludes ENK from filters and exports unless you include them deliberately, shows a warning on every ENK row, and keeps only coarse location (postcode and kommune) for counts. Sub-units whose parent is missing from the open register are treated the same way, because their owner may be a sole proprietor.
 
 ## Your notes
 

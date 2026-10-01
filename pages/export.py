@@ -54,8 +54,11 @@ st.caption(
         else "."
     )
 )
-if exportable["org_form"].eq("ENK").any():
-    st.warning("The export contains ENK rows. Their names identify people; handle them as personal data.")
+if _ui.has_person_name_forms(exportable):
+    st.warning(
+        "The export contains ENK rows (or sub-units with an unknown legal form). Their names can identify people; "
+        "handle them as personal data."
+    )
 if store.get_meta("dataset") == "demo":
     st.info("Demo export: the organisation numbers fail MOD11 on purpose, so Freddo's validator will reject them.")
 st.dataframe(freddo_frame(exportable), hide_index=True, width="stretch", height=260)

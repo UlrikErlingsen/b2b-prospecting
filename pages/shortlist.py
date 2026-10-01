@@ -67,7 +67,7 @@ if not gone.empty:
         f"{len(gone)} shortlisted unit(s) are no longer in the loaded register (deleted or removed from open data). "
         "They are kept here with your notes but left out of exports."
     )
-if scored["org_form"].eq("ENK").any():
+if _ui.has_person_name_forms(scored):
     st.warning(ENK_WARNING)
 
 view = scored.copy()

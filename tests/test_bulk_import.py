@@ -9,7 +9,7 @@ from prospectsignal.schema import EXCLUDED_REGISTER_FIELDS, band_for
 from prospectsignal.storage import _band_sql, assert_no_person_columns
 
 AS_NR, ENK_NR, BANKRUPT_NR, HOLDING_NR = "100011379", "100022745", "100034115", "100045486"
-SUB_NR, ENK_SUB_NR, CLOSED_SUB_NR = "100056852", "100068222", "100079593"
+SUB_NR, ENK_SUB_NR, CLOSED_SUB_NR, ORPHAN_SUB_NR = "100056852", "100068222", "100079593", "100090950"
 
 
 @pytest.fixture
@@ -18,7 +18,7 @@ def loaded(bulk_files) -> Store:
     counts = store.import_bulk(
         *bulk_files, downloaded_at=date(2026, 10, 1), published={"enheter": "Thu, 01 Oct 2026 02:27:24 GMT"}
     )
-    assert counts == {"hovedenheter": 4, "underenheter": 3}
+    assert counts == {"hovedenheter": 4, "underenheter": 4}
     return store
 
 
@@ -86,10 +86,19 @@ def test_underenhet_inherits_parent_status_and_closure(loaded):
 def test_enk_excluded_by_default(loaded):
     everyone = ICP(entity_kind="both", exclude_inactive=False, include_enk=True)
     default = ICP(entity_kind="both", exclude_inactive=False)
-    assert loaded.count(everyone) == 7
+    assert loaded.count(everyone) == 8
     assert loaded.count(default) == 5
     assert ENK_NR not in set(loaded.query(default)["org_nr"])
     assert ENK_SUB_NR not in set(loaded.query(default)["org_nr"])
+    assert ORPHAN_SUB_NR not in set(loaded.query(default)["org_nr"])
+    assert ORPHAN_SUB_NR in set(loaded.query(everyone)["org_nr"])
+
+
+def test_subunit_with_unknown_parent_is_handled_like_enk(loaded):
+    orphan = loaded.get_unit(ORPHAN_SUB_NR)
+    assert orphan["org_form"] == "UKJENT"
+    assert orphan["address"] == ""  # may belong to a sole proprietor: no street address
+    assert orphan["kommune_nr"] == "3301"
 
 
 def test_inactive_units_excluded_by_default(loaded):
@@ -120,7 +129,7 @@ def test_failed_reimport_keeps_existing_data(loaded, tmp_path):
         handle.write(text)
     with pytest.raises(DataProblem, match="antallAnsatte"):
         loaded.import_bulk(path, downloaded_at=date(2026, 10, 2))
-    assert loaded.unit_count() == 7
+    assert loaded.unit_count() == 8
 
 
 def test_band_python_and_sql_agree():

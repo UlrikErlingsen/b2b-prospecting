@@ -23,6 +23,7 @@ from prospectsignal import (
     load_demo,
 )
 from prospectsignal.demo import DEMO_SEED, DEMO_SIZE
+from prospectsignal.schema import PERSON_NAME_FORMS, UNKNOWN_FORM
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS = {"demo": "Offline demo (fictional)", "register": "Real register (Brønnøysund)"}
@@ -115,10 +116,15 @@ def show_error(exc: Exception) -> None:
 
 
 def enk_flag(frame: pd.DataFrame) -> pd.Series:
-    return frame["org_form"].eq("ENK").map({True: "⚠ ENK: person name", False: ""})
+    labels = {"ENK": "⚠ ENK: person name", UNKNOWN_FORM: "⚠ legal form unknown"}
+    return frame["org_form"].map(lambda form: labels.get(form, ""))
 
 
 def date_text(value: object) -> str:
     if value is None or (not isinstance(value, str) and pd.isna(value)):
         return "—"
     return pd.Timestamp(value).date().isoformat()
+
+
+def has_person_name_forms(frame: pd.DataFrame) -> bool:
+    return bool(frame["org_form"].isin(PERSON_NAME_FORMS).any())

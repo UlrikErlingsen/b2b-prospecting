@@ -188,6 +188,20 @@ UNDERENHETER_ROWS: list[dict[str, str]] = [
         "overordnetEnhet": "100011379",
         "nedleggelsesdato": "2024-12-31",
     },
+    {
+        "organisasjonsnummer": "100090950",
+        "navn": "OLA FIXTURESEN SNEKKERVERKSTED",
+        "organisasjonsform.kode": "BEDR",
+        "naeringskode1.kode": "16.230",
+        "harRegistrertAntallAnsatte": "false",
+        "beliggenhetsadresse.adresse": "Heimveien 4",
+        "beliggenhetsadresse.postnummer": "3015",
+        "beliggenhetsadresse.poststed": "DRAMMEN",
+        "beliggenhetsadresse.kommune": "DRAMMEN",
+        "beliggenhetsadresse.kommunenummer": "3301",
+        "beliggenhetsadresse.landkode": "NO",
+        "overordnetEnhet": "100101900",  # parent not in the enheter file (removed from open data)
+    },
 ]
 FAKE_CONTACT_VALUES = (
     "kari.fixture@fixture-ol.example",

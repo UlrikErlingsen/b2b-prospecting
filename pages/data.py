@@ -29,7 +29,7 @@ st.markdown(
     "Optionally it also loads **underenheter** (sub-units such as branches and plants) so you can filter on where "
     "work actually happens. Nothing about people is read: no roles, e-mail addresses or phone numbers."
 )
-include_sub = st.checkbox("Also load underenheter (sub-units / locations, about 90 MB more)", value=False)
+include_sub = st.checkbox("Also load underenheter (sub-units / locations, about 60 MB more)", value=False)
 check_col, load_col = st.columns([1, 1])
 if check_col.button("Check today's file"):
     try:

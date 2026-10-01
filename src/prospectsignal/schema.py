@@ -132,7 +132,13 @@ DEFAULT_ORG_FORMS: tuple[str, ...] = ()  # empty = any form (ENK still excluded 
 
 SHORTLIST_STATUSES: tuple[str, ...] = ("new", "researching", "qualified", "not a fit", "sent to CRM")
 
+# A sub-unit whose parent is not in the open register has an unknown legal form; it may belong to a sole
+# proprietor, so it is handled like ENK (2,858 such sub-units in the 2026-10-01 bulk files).
+UNKNOWN_FORM = "UKJENT"
+PERSON_NAME_FORMS: tuple[str, ...] = ("ENK", UNKNOWN_FORM)
+
 ENK_WARNING = (
     "ENK (enkeltpersonforetak): the company name is usually a person's name, so this row is personal data. "
-    "ProspectSignal excludes ENK by default and never stores an ENK street address."
+    "ProspectSignal excludes ENK by default and never stores an ENK street address. Sub-units whose parent is "
+    "missing from the open register (legal form unknown) are treated the same way."
 )

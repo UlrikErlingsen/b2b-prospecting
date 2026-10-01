@@ -18,7 +18,7 @@ First release of **ProspectSignal**, the Signal suite's prospecting tool for the
 
 ### Boundaries
 
-- No person data: roles, e-mail addresses and phone numbers are never read; ENK excluded by default, flagged, and stored without street address.
+- No person data: roles, e-mail addresses and phone numbers are never read; ENK excluded by default, flagged, and stored without street address. Sub-units whose parent is missing from open data (legal form unknown) get the same treatment.
 - Registry data is described as not marketing consent on the shortlist and export screens.
 - No scraping, telemetry, accounts or external AI calls. Network calls only to Brønnøysundregistrene, on request, with TLS verified against the OS trust store.
 

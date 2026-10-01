@@ -10,7 +10,7 @@ Source: [API documentation](https://data.brreg.no/enhetsregisteret/api/dokumenta
 
 | Fact | How it is used |
 |---|---|
-| Bulk CSV: `GET /enhetsregisteret/api/enheter/lastned/csv` (gzip, ~155 MB, `application/vnd.brreg.enhetsregisteret.enhet.v2+gzip`); underenheter at `/underenheter/lastned/csv` (~89 MB as JSON gzip). | `brreg.BULK_URLS`, streamed download with progress. |
+| Bulk CSV: `GET /enhetsregisteret/api/enheter/lastned/csv` (gzip, ~155 MB, `application/vnd.brreg.enhetsregisteret.enhet.v2+gzip`); underenheter at `/underenheter/lastned/csv` (~61 MB gzip, 866,726 units). | `brreg.BULK_URLS`, streamed download with progress. |
 | Bulk files are produced every night around 05:00; `etag` and `last-modified` headers identify a version. | Stored per load as metadata; `last-modified` is stored on every row. |
 | CSV cells are all quoted and can contain line breaks and doubled quotes. | DuckDB `read_csv(..., quote='"', escape='"', parallel=false)`; multi-line addresses are joined with “, ”. |
 | Search (`/api/enheter`) is limited to 10,000 results per query ((page+1)·size ≤ 10,000); the documentation points to the bulk download for the full set. | Bulk download is the primary loader; REST is used for single lookups only. |
@@ -20,6 +20,8 @@ Source: [API documentation](https://data.brreg.no/enhetsregisteret/api/dokumenta
 | The bulk CSV contains `epostadresse`, `telefon` and `mobil`; separate endpoints expose roles (`/roller`), some with birth numbers behind Maskinporten. | These columns and endpoints are never read. |
 | Industry codes in the register are SN2025 subclasses (`10.110`); 717 of 718 distinct main codes in the 1 October 2026 file exist in SN2025 level 5, the other being `00.000` (“Uoppgitt”). | Prefix matching on the dotted code. |
 | Kommune numbers in the register use the 2024 county structure (no `30` Viken). | Fylke = first two digits of the kommune number. |
+| The underenheter bulk file has a `nedleggelsesdato` column, but it was empty on every row of the 1 October 2026 file (closed sub-units appear not to be published in bulk). | The “closed” flag stays as a guard for single API lookups. |
+| 2,858 underenheter in the 1 October 2026 files point to a parent (`overordnetEnhet`) that is not in the enheter file, so their legal form is unknown and could be ENK. | Stored as legal form `UKJENT`, without street address, and excluded with ENK by default. |
 | Official register page: `https://virksomhet.brreg.no/nb/oppslag/enheter/{orgnr}` (200 OK). | Company card link. |
 | Licence: Norsk lisens for offentlige data (NLOD); no registration needed ([brreg.no open data](https://www.brreg.no/produkter-og-tjenester/apne-data/)). | Attribution on screen and in every export. |
 

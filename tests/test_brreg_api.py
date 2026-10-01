@@ -81,6 +81,13 @@ def test_underenhet_payload_inherits_parent_form():
     assert record["founded"] == date(2009, 1, 1)
 
 
+def test_underenhet_without_known_parent_gets_no_street_address():
+    record = brreg.normalise_api_unit(UNDERENHET, "underenhet", parent=None)
+    assert record["org_form"] == "UKJENT"
+    assert record["address"] == ""
+    assert record["kommune"] == "NARVIK"
+
+
 def test_fetch_falls_back_to_underenhet_and_reports_missing():
     api = brreg.API_ROOT
     session = FakeSession({f"{api}/underenheter/994667084": FakeResponse(200, UNDERENHET)})

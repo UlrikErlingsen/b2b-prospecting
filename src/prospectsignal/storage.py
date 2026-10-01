@@ -21,6 +21,7 @@ from .errors import DataProblem
 from .icp import ICP
 from .schema import (
     PERSON_FIELD_MARKERS,
+    PERSON_NAME_FORMS,
     SHORTLIST_STATUSES,
     UNIT_COLUMNS,
     UNIT_SCHEMA,
@@ -388,7 +389,7 @@ class Store:
                 coalesce(parent.winding_up, false) AS winding_up,
                 coalesce(parent.forced_winding_up, false) AS forced_winding_up,
                 m.closed,
-                CASE WHEN coalesce(parent.org_form, '') = 'ENK' THEN ''
+                CASE WHEN parent.org_nr IS NULL OR parent.org_form = 'ENK' THEN ''
                      ELSE regexp_replace(coalesce(m.address_raw, ''), '\\s*[\\r\\n]+\\s*', ', ', 'g') END AS address,
                 m.postcode, m.poststed, m.kommune_nr, m.kommune,
                 {_fylke_sql("m.kommune_nr", "m.country_code")} AS fylke_nr,
@@ -542,7 +543,9 @@ class Store:
             clauses.append("list_contains(?, org_form)")
             params.append(list(icp.org_forms))
         if not icp.include_enk:
-            clauses.append("coalesce(org_form, '') <> 'ENK'")
+            # ENK names are personal data; sub-units with an unknown legal form may belong to an ENK.
+            clauses.append("NOT list_contains(?, coalesce(org_form, ''))")
+            params.append(list(PERSON_NAME_FORMS))
         if icp.vat_registered is not None:
             clauses.append("vat_registered = ?")
             params.append(icp.vat_registered)

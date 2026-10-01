@@ -29,7 +29,7 @@ from . import orgnr as orgnr_rules
 from .errors import DataProblem, RegisterUnavailable
 from .http import make_session
 from .regions import fylke_for_kommune
-from .schema import UNIT_COLUMNS, band_for
+from .schema import PERSON_NAME_FORMS, UNIT_COLUMNS, UNKNOWN_FORM, band_for
 
 API_ROOT = "https://data.brreg.no/enhetsregisteret/api"
 BULK_URLS = {
@@ -211,7 +211,7 @@ def normalise_api_unit(
         location = payload.get("postadresse") or {}
     own_form, own_form_desc = _code(payload.get("organisasjonsform"))
     if is_sub:
-        org_form = (parent or {}).get("org_form") or "UKJENT"
+        org_form = (parent or {}).get("org_form") or UNKNOWN_FORM
         org_form_desc = (parent or {}).get("org_form_desc") or "Parent not in the local register"
     else:
         org_form, org_form_desc = own_form, own_form_desc
@@ -251,7 +251,7 @@ def normalise_api_unit(
             else payload.get("underTvangsavviklingEllerTvangsopplosning")
         ),
         "closed": bool(payload.get("nedleggelsesdato")) if is_sub else False,
-        "address": "" if org_form == "ENK" else _lines(location),
+        "address": "" if org_form in PERSON_NAME_FORMS else _lines(location),
         "postcode": location.get("postnummer") or None,
         "poststed": location.get("poststed") or None,
         "kommune_nr": kommune_nr,
