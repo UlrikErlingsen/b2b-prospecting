@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">ProspectSignal</title>
+  <desc id="desc">Which Norwegian companies fit your ideal customer profile, and which should you look at first?</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#173C3A"/><stop offset="1" stop-color="#102C2A"/></linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="36" fill="url(#bg)"/>
+  <circle cx="1085" cy="-10" r="210" fill="none" stroke="#83D2B4" stroke-width="64" opacity=".11"/>
+  <circle cx="80" cy="380" r="155" fill="#F2C66D" opacity=".08"/>
+  <g transform="translate(74 74)">
+    <rect width="114" height="114" rx="29" fill="#173C3A" stroke="#83D2B4" stroke-width="3"/>
+    <g fill="#83D2B4" opacity=".38">
+      <circle cx="26" cy="26" r="3.8"/><circle cx="45" cy="26" r="3.8"/><circle cx="64" cy="26" r="3.8"/><circle cx="88" cy="26" r="3.8"/>
+      <circle cx="26" cy="45" r="3.8"/><circle cx="45" cy="45" r="3.8"/><circle cx="88" cy="45" r="3.8"/>
+      <circle cx="26" cy="69" r="3.8"/><circle cx="88" cy="69" r="3.8"/>
+      <circle cx="26" cy="88" r="3.8"/><circle cx="45" cy="88" r="3.8"/><circle cx="64" cy="88" r="3.8"/><circle cx="88" cy="88" r="3.8"/>
+    </g>
+    <circle cx="59" cy="59" r="20" fill="none" stroke="#F8F5ED" stroke-width="5"/>
+    <path d="M59 31v11M59 76v11M31 59h11M76 59h11" stroke="#F2C66D" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="59" cy="59" r="7" fill="#D95B40"/>
+  </g>
+  <text x="222" y="136" fill="#F8F5ED" font-family="Inter,Arial,sans-serif" font-size="68" font-weight="800" letter-spacing="-3">Prospect<tspan fill="#F2C66D">Signal</tspan></text>
+  <text x="226" y="192" fill="#D7E3DF" font-family="Inter,Arial,sans-serif" font-size="25">Which Norwegian companies fit your ICP — and which first?</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">
+    <rect x="226" y="233" width="196" height="42" rx="21" fill="#ffffff" opacity=".08"/><text x="251" y="260" fill="#F8F5ED">OPEN REGISTER DATA</text>
+    <rect x="436" y="233" width="168" height="42" rx="21" fill="#ffffff" opacity=".08"/><text x="461" y="260" fill="#F8F5ED">NO PERSON DATA</text>
+    <rect x="618" y="233" width="196" height="42" rx="21" fill="#ffffff" opacity=".08"/><text x="643" y="260" fill="#F8F5ED">SHORTLIST → FREDDO</text>
+  </g>
+</svg>
