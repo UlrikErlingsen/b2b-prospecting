@@ -95,7 +95,7 @@ You need Python 3.10 or newer and a local copy of this folder.
 
 **Windows:** double-click `run_app.bat`. **macOS:** double-click `run_app.command`.
 
-The first launch creates a private `.venv` and installs the open-source dependencies; later launches reuse it. On Windows, if the first launch stops with *“The filename or extension is too long”* (WinError 206), the folder path is too deep for Windows' 260-character limit: move the folder somewhere shorter (for example `C:\Code2b-prospecting`), delete `.venv`, and launch again.
+The first launch creates a private `.venv` and installs the open-source dependencies; later launches reuse it. On Windows, if the first launch stops with *“The filename or extension is too long”* (WinError 206), the folder path is too deep for Windows' 260-character limit: move the folder somewhere shorter (for example `C:\Code\b2b-prospecting`), delete `.venv`, and launch again.
 
 Or use a terminal:
 
