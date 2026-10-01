@@ -100,7 +100,7 @@ def consent_note() -> None:
 
 
 def boundary(text: str) -> None:
-    """A boundary note. Supports **bold**, `code` and [links](https://...); no raw HTML."""
+    """A boundary note. Supports **bold**, `code`, [links](https://...) and blank-line paragraphs; no raw HTML."""
     sig.note("boundary", text)
 
 

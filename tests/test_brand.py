@@ -47,7 +47,8 @@ def test_app_and_pages_use_signal_theme_instead_of_pasted_styles():
     assert "sig.apply(_ui.KEY)" in standalone
     assert 'KEY = "prospect"' in pages
     assert "from prospectsignal.ui import signal_theme as sig" in standalone + pages
-    assert "sig.template(_ui.KEY)" in pages  # every market figure gets the per-app template
+    assert "sig.chart(_ui.KEY," in pages  # per-app template and theme=None on every market figure
+    assert "st.plotly_chart" not in standalone + pages
     assert "<style>" not in standalone + pages
     assert "ps-" not in standalone + pages  # old CSS classes are gone
     for old_colour in OLD_COLOURS:

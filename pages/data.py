@@ -95,9 +95,8 @@ if submitted:
             st.error(str(exc))
 
 st.markdown("### Licence and attribution")
-_ui.boundary(brreg.ATTRIBUTION)
 _ui.boundary(
-    f"{brreg.ATTRIBUTION_EN} Licence: [{brreg.LICENCE_NAME}]({brreg.LICENCE_URL}) · "
+    f"{brreg.ATTRIBUTION}\n\n{brreg.ATTRIBUTION_EN}\n\nLicence: [{brreg.LICENCE_NAME}]({brreg.LICENCE_URL}) · "
     f"Documentation: [data.brreg.no]({brreg.DOCS_URL})"
 )
 st.markdown(

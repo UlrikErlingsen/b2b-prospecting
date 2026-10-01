@@ -7,11 +7,6 @@ from prospectsignal import market, nace, regions
 from prospectsignal.ui import signal_theme as sig
 
 
-def _themed(figure):
-    """Give each figure the per-app Signal template (the process-wide default is shared across Hub sessions)."""
-    return figure.update_layout(template=sig.template(_ui.KEY))
-
-
 _ui.header(
     "Step 2 · Market size",
     "How big is the market?",
@@ -36,25 +31,30 @@ a.metric("Units in this market", f"{total:,}")
 b.metric("With registered employees", f"{with_staff:,}")
 c.metric("Counties represented", f"{tables['fylke']['key'].notna().sum():,}")
 
-st.plotly_chart(
-    _themed(market.fylke_map(tables["fylke"], colorscale=sig.sequential(_ui.KEY), line_color=sig.CORE["paper"])),
-    width="stretch",
+sig.chart(
+    _ui.KEY,
+    market.fylke_map(tables["fylke"], colorscale=sig.sequential(_ui.KEY), line_color=sig.CORE["paper"]),
+    key="prospect:fylke_map",
 )
 st.caption(regions.MAP_SOURCE)
 
 left, right = st.columns(2)
 with left:
-    st.plotly_chart(
-        _themed(market.bar(tables["nace_division"], "industry", "Units by industry division")), width="stretch"
+    sig.chart(
+        _ui.KEY,
+        market.bar(tables["nace_division"], "industry", "Units by industry division"),
+        key="prospect:industry_bar",
     )
     st.caption(nace.NACE_SOURCE)
 with right:
-    st.plotly_chart(
-        _themed(market.bar(tables["employee_band"], "key", "Units by employee band", horizontal=False)), width="stretch"
+    sig.chart(
+        _ui.KEY,
+        market.bar(tables["employee_band"], "key", "Units by employee band", horizontal=False),
+        key="prospect:band_bar",
     )
     st.caption("“0” = no employees registered; “1-4” = employees registered but the count is hidden below five.")
 
-st.plotly_chart(_themed(market.registrations_chart(tables["registered_year"])), width="stretch")
+sig.chart(_ui.KEY, market.registrations_chart(tables["registered_year"]), key="prospect:registrations")
 st.caption(
     "Registration year in Enhetsregisteret for units that are still registered (the bulk file lists current units "
     "only, so earlier years are undercounted by later deletions). Enhetsregisteret started in 1995; older companies "

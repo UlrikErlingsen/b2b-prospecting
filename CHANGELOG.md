@@ -7,7 +7,7 @@ Signal brand refresh (no version bump).
 ### Changed
 
 - The app uses the shared Signal theme (`prospectsignal.ui.signal_theme`, synced from Signal Hub): Organic look with the Market family colour `#728157`, Figtree, the shared sidebar lockup, masthead, hero, cards, page headers, notes and footer. The pasted CSS and hand-written lockup are gone; `st.navigation` with `pages/` is unchanged.
-- Market charts use the per-app Signal Plotly template and the family sequential scale instead of hard-coded colours.
+- Market charts use the per-app Signal Plotly template and the family sequential scale instead of hard-coded colours, shown with `sig.chart` so Streamlit's chart theme does not override Figtree and the palette.
 - Display name is now **Prospect Signal** (with a space) in the app, messages, attribution line, export metadata, launchers and docs. Technical identifiers (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs, HTTP user agent) are unchanged.
 - README follows the Signal README template (banner PNG, family badges, template section order, where-this-fits table, references, suite footer).
 - The architecture rule now reads "no Streamlit under `src/` except `src/prospectsignal/ui/`" (guard test, CLAUDE.md, AGENTS.md, CONTRIBUTING, PR template); a new test keeps the core package from importing the ui layer.

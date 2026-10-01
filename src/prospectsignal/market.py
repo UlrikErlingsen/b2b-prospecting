@@ -60,7 +60,7 @@ def fylke_map(
             colorbar=dict(title="Units"),
         )
     )
-    figure.update_geos(fitbounds="locations", visible=False, bgcolor="rgba(0,0,0,0)")
+    figure.update_geos(fitbounds="locations", visible=False)
     return _layout(figure, "Units by fylke", height=520)
 
 
