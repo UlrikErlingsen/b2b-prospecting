@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="assets/prospectsignal-banner.svg" alt="ProspectSignal — which Norwegian companies fit your ICP, and which first?" width="100%">
+  <img src="assets/prospectsignal-banner.png" alt="Prospect Signal: which Norwegian companies fit your ideal customer profile, and which should you look at first?" width="100%">
 </p>
 
 <p align="center">
-  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-173C3A?logo=python&logoColor=white">
-  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-D95B40?logo=streamlit&logoColor=white">
-  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/License-AGPL--3.0--or--later-36534E"></a>
+  <a href="https://github.com/UlrikErlingsen/b2b-prospecting/actions"><img alt="Tests" src="https://github.com/UlrikErlingsen/b2b-prospecting/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://github.com/UlrikErlingsen/signal-hub"><img alt="Signal · Market" src="https://img.shields.io/badge/Signal-Market-728157?labelColor=2e2b25"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-2e2b25?logo=python&logoColor=f9f4ed">
+  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-728157?logo=streamlit&logoColor=f9f4ed">
+  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/License-AGPL--3.0--or--later-645c50"></a>
 </p>
 
 <p align="center"><strong>Norwegian B2B prospecting from open Brønnøysund data: ideal-customer filters, market size and shortlists, run locally.</strong></p>
 
-> **Name status:** the name “ProspectSignal” has not been screened for trademarks or existing products yet. Treat it as a working name until it has been checked.
-
-**ProspectSignal** is an open, local-first prospecting tool for the Norwegian market, built on Enhetsregisteret, the open company register published by Brønnøysundregistrene. It is a free alternative to paid tools such as Proff Forvalt, Vainu, Enin and Infobel for small sales and marketing teams. It asks:
+**Prospect Signal** is an open, local-first prospecting tool for the Norwegian market, built on Enhetsregisteret, the open company register published by Brønnøysundregistrene. It is a free alternative to paid tools such as Proff Forvalt, Vainu, Enin and Infobel for small sales and marketing teams. It combines ideal-customer-profile (ICP) filters, market counts with a county map, a shortlist with visible fit weights, and a manual export to Freddo CRM.
 
 > Which Norwegian companies fit our ideal customer profile, how big is that market, and which ones should we look at first?
 
@@ -22,14 +22,29 @@ Everything runs on your computer with open-source Python packages. There is no a
 
 ## Read this first
 
-ProspectSignal works with **companies, never people**.
+Prospect Signal works with **companies, never people**.
 
 - It never reads roles (board members, CEO, contact persons), e-mail addresses or phone numbers, even though the register publishes some of them.
 - Sole proprietorships (ENK) usually carry the owner's name, so ENK is excluded by default, flagged when included, and its street address is never stored.
 - **Registry data never implies marketing consent.** The shortlist and export screens say so, and the export is preceded by an outreach checklist sourced from Forbrukertilsynet, Datatilsynet, Lovdata and Brønnøysundregistrene. The checklist is not legal advice.
 - There is no scraping of websites, LinkedIn or Proff. Open register data only.
 
-## Try the offline demo in three minutes
+**Name status:** the name “Prospect Signal” (written “ProspectSignal” in technical identifiers) has not been screened for trademarks or existing products yet. Treat it as a working name until it has been checked.
+
+## Scope
+
+**Version 1.0 supports:**
+
+- the official Enhetsregisteret bulk file (optionally underenheter) indexed into a local DuckDB file, plus single-unit refresh from the REST API;
+- ICP filters on industry (SN2025, any hierarchy level), fylke and kommune, employees, founding date, organisation form, VAT status, unit status and unit level, saved as named ICPs;
+- market counts by county (with a map), industry division, employee band, organisation form and registration year;
+- a shortlist with status, notes and an optional fit score with visible weights;
+- a company card with registry facts, the official register link and the registered website;
+- a Freddo CRM CSV and an XLSX workbook, preceded by a sourced outreach checklist.
+
+**It does not:** read or export people (roles, e-mail addresses, phone numbers), scrape websites, LinkedIn or Proff, show financial statements (the open accounts API's terms are not confirmed, see `TODO(verify)` in [docs/sources.md](docs/sources.md)), write into Freddo CRM, treat registry data as marketing consent, or give legal advice. For Norwegian media and social listening, use **[Listen Signal](https://github.com/UlrikErlingsen/media-listening)**.
+
+## Try the demo in three minutes
 
 1. Start the app (see *Run locally*). It opens with about 2,000 fictional companies; no network needed.
 2. Open **1 · ICP filters**. The demo ICP is “Fjellbrus — food & beverage producers, former Viken, 10–100 employees” for the fictional beverage brand Fjellbrus. Read the matching count.
@@ -40,15 +55,29 @@ ProspectSignal works with **companies, never people**.
 
 Demo companies are generated by code. Their names end in “(DEMO)”, their organisation numbers start with 0 and **fail the MOD11 check on purpose** (so they can never match a real unit, and Freddo's validator rejects them), and their websites use the reserved `.example` domain. Kommune numbers and names are real so the region filters behave as they do on real data.
 
-## Load the real register
+## Data contract
 
-On **Data & register**, press **Load real register**. ProspectSignal downloads the official nightly bulk file (`/enhetsregisteret/api/enheter/lastned/csv`, about 155 MB gzip, ~1.2 million units) with a progress bar and indexes it into a local DuckDB file in about 10–30 seconds. Underenheter (branches and other locations) are an optional extra download. The download date is stored on every row; the raw file is deleted after indexing.
+### Load the real register
+
+On **Data & register**, press **Load real register**. Prospect Signal downloads the official nightly bulk file (`/enhetsregisteret/api/enheter/lastned/csv`, about 155 MB gzip, ~1.2 million units) with a progress bar and indexes it into a local DuckDB file in about 10–30 seconds. Underenheter (branches and other locations) are an optional extra download. The download date is stored on every row; the raw file is deleted after indexing.
 
 On the real register, a typical ICP query returns counts and a shortlist in well under a second (the demo ICP took 0.05 s on 1,176,284 units on 1 October 2026).
 
 Single companies can be refreshed from the REST API (`/api/enheter/{orgnr}`, falling back to `/api/underenheter/{orgnr}`). A unit that is no longer in open data is removed from the local copy, as the API documentation requires.
 
-## What you can filter on
+### Sources and licences
+
+| Data | Source | Licence |
+|---|---|---|
+| Company register | Enhetsregisteret, Brønnøysundregistrene ([API docs](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html)) | [NLOD 2.0](https://data.norge.no/nlod/no/2.0) |
+| Industry code names | SN2025, Statistics Norway (SSB) Klass, classification 6 | [CC BY 4.0](https://www.ssb.no/diverse/lisens) |
+| County map | Administrative enheter fylker, Kartverket (simplified) | CC BY 4.0 |
+
+Attribution used in the app and every export: *«Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Brønnøysundregistrene. Prospect Signal har filtrert dataene og avledet ansattintervall og fylke.»* Every external fact the code relies on is listed with its source and date in [docs/sources.md](docs/sources.md), including the open `TODO(verify)` items.
+
+## Analysis contract
+
+The ICP is written down before any company names are shown. These are the filters it records:
 
 | Filter | Notes |
 |---|---|
@@ -63,13 +92,25 @@ Single companies can be refreshed from the REST API (`/api/enheter/{orgnr}`, fal
 
 Filter sets can be saved as named ICPs.
 
-## Shortlist and fit score
+## Methods
 
-Each shortlisted company has a status (*new, researching, qualified, not a fit, sent to CRM*) and free-text notes. The optional fit score is a weighted share of four checks — size band in your targets, county in your targets, industry match (main code = 1, secondary code only = ½), and age in your range — scaled to 0–100. The weights are sliders on screen and every component is shown next to the total. It is a sorting aid, not a prediction.
+The workflow runs filter → size → shortlist → export: the ICP filters select matching units, the market view counts them (counts size a market; they are not a contact list), you choose companies for the shortlist deliberately, and the export follows the outreach checklist.
 
-## Export to Freddo CRM
+Each shortlisted company has a status and free-text notes. The optional fit score is a weighted share of four checks — size band in your targets, county in your targets, industry match (main code = 1, secondary code only = ½), and age in your range — scaled to 0–100. The weights are sliders on screen and every component is shown next to the total. It is a sorting aid, not a prediction.
 
-ProspectSignal never writes into Freddo. You export a file and decide in Freddo whether to import it; people are never part of the bridge.
+## Decision statuses
+
+Shortlist statuses are set by you; the app sets only the first one and, on request, the last.
+
+- **NEW**: the company was just added to the shortlist.
+- **RESEARCHING**: you are looking into the company.
+- **QUALIFIED**: you judge the company a fit.
+- **NOT A FIT**: you ruled the company out; it is left out of the export by default.
+- **SENT TO CRM**: set by you, or by **Mark exported rows as “sent to CRM”** on the Export page after the checklist acknowledgement.
+
+## Exports
+
+Prospect Signal never writes into Freddo. You export a file and decide in Freddo whether to import it; people are never part of the bridge.
 
 The **Freddo CSV** has the header on the first line, UTF-8 without BOM, every value quoted, organisation numbers and postcodes as text with leading zeros intact, and these columns:
 
@@ -78,16 +119,6 @@ The **Freddo CSV** has the header on the first line, UTF-8 without BOM, every va
 They follow the fields Freddo adds to Frappe CRM's *CRM Organization* (`org_nr`, `entity_kind`, `parent_org_nr`, `nace`, `employee_band`, `region_postcode`) plus the upstream `organization_name` and `website`. Attribution and download date travel in every row (`brreg_source`, `brreg_refreshed_at`) because a leading comment line would break a header-first importer. See [docs/freddo-import.md](docs/freddo-import.md) for the open questions about Freddo's importer, which is planned but not yet built.
 
 The **XLSX workbook** contains the shortlist with status and notes, a *Source & licence* sheet (attribution, licence, download date, consent note), the ICP used, and the outreach checklist. All exported cells are sanitised against spreadsheet formula injection.
-
-## Sources and licences
-
-| Data | Source | Licence |
-|---|---|---|
-| Company register | Enhetsregisteret, Brønnøysundregistrene ([API docs](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html)) | [NLOD 2.0](https://data.norge.no/nlod/no/2.0) |
-| Industry code names | SN2025, Statistics Norway (SSB) Klass, classification 6 | [CC BY 4.0](https://www.ssb.no/diverse/lisens) |
-| County map | Administrative enheter fylker, Kartverket (simplified) | CC BY 4.0 |
-
-Attribution used in the app and every export: *«Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Brønnøysundregistrene. ProspectSignal har filtrert dataene og avledet ansattintervall og fylke.»* Every external fact the code relies on is listed with its source and date in [docs/sources.md](docs/sources.md), including the open `TODO(verify)` items.
 
 ## Run locally
 
@@ -106,7 +137,7 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-ProspectSignal uses local port `8589`. Set `PROSPECTSIGNAL_PORT` to choose another, `PROSPECTSIGNAL_DATA_DIR` to keep the databases elsewhere (default `./data`, git-ignored), `PROSPECTSIGNAL_CHECKLIST` to use your own checklist YAML, or `PROSPECTSIGNAL_DEBUG=1` to reveal technical error details.
+Prospect Signal uses local port `8589`. Set `PROSPECTSIGNAL_PORT` to choose another, `PROSPECTSIGNAL_DATA_DIR` to keep the databases elsewhere (default `./data`, git-ignored), `PROSPECTSIGNAL_CHECKLIST` to use your own checklist YAML, or `PROSPECTSIGNAL_DEBUG=1` to reveal technical error details.
 
 HTTPS certificates are checked against your operating system's trust store (`truststore`), so the download also works on machines where antivirus or corporate HTTPS inspection adds its own root certificate. Verification is never switched off.
 
@@ -119,9 +150,24 @@ docker run --rm -p 8589:8589 -v prospectsignal-data:/data prospectsignal
 
 Then open `http://127.0.0.1:8589`. The container runs as a non-root user, keeps its databases in the `/data` volume and includes a health check.
 
-## Use it as a package
+## Privacy
 
-The logic lives in `src/prospectsignal/` and does not import Streamlit, so it can be reused (for example in a merged Signal Hub):
+Prospect Signal stores company facts only, on your computer. See [PRIVACY.md](PRIVACY.md) for exactly what is and is not stored, and why ENK rows need care.
+
+## Development
+
+```bash
+python -m pip install -e ".[test]"
+python -m pytest
+python -m ruff check .
+python -m build
+```
+
+Tests use recorded API responses and the recorded bulk-file header with fictional rows; a guard fails any test that tries a live network call. The suite covers organisation numbers as strings with MOD11, leading-zero postcodes, Æ/Ø/Å round trips, the NACE hierarchy filter, ENK exclusion, the absence of person fields in storage and export, the Freddo CSV format, the outreach checklist's sources, the architecture rules (no Streamlit under `src/` except the `src/prospectsignal/ui/` theme layer, SQL only in `storage.py`), the Signal brand, and every Streamlit page.
+
+### Use it as a package
+
+The logic lives in `src/prospectsignal/` and does not import Streamlit outside `src/prospectsignal/ui/` (the shared Signal theme), so it can be reused (for example in a merged Signal Hub):
 
 ```python
 from prospectsignal import ICP, Store, demo_icp, load_demo, freddo_csv_bytes
@@ -136,30 +182,56 @@ open("shortlist.csv", "wb").write(freddo_csv_bytes(store.shortlist_frame()))
 
 All database access sits behind `prospectsignal.storage.Store`, so another engine can replace DuckDB without touching the rest.
 
-## Privacy
+## Where this fits in Signal
 
-ProspectSignal stores company facts only, on your computer. See [PRIVACY.md](PRIVACY.md) for exactly what is and is not stored, and why ENK rows need care.
+Prospect Signal is the Market-family tool that finds and sizes the Norwegian B2B market before any relationship work starts. It shares the suite's local-first, fictional-demo and explicit-boundary standard.
 
-## Development checks
+- **Freddo CRM** manages relationships. Its rule: *NACE counts may size a market; they never become a contact list.* Prospect Signal is the separate tool where a deliberate shortlist is allowed, and the bridge is one-way and manual.
+- **Track Signal**, **Season Signal**, **Influence Signal** and **Listen Signal** share the same house style, privacy stance and explicit boundaries.
 
-```bash
-python -m pip install -e ".[test]"
-python -m pytest
-python -m ruff check .
-python -m build
-```
+| App | Asks |
+|---|---|
+| [Track Signal](https://github.com/UlrikErlingsen/brand-tracking) | Is the brand moving, or is the tracker just noisy? |
+| [Position Signal](https://github.com/UlrikErlingsen/brand-positioning) | Where do brands sit relative to competitors? |
+| [Prospect Signal](https://github.com/UlrikErlingsen/b2b-prospecting) | Which Norwegian companies fit the ideal customer? |
+| [Listen Signal](https://github.com/UlrikErlingsen/media-listening) | What are Norwegian media and social channels saying? |
+| [Influence Signal](https://github.com/UlrikErlingsen/influencer-campaigns) | Which creators delivered, and was every post labelled? |
+| [Season Signal](https://github.com/UlrikErlingsen/marketing-calendar) | What does the Norwegian marketing year look like, worked backwards? |
+| [Adopt Signal](https://github.com/UlrikErlingsen/adoption-forecasting) | When will a new product be adopted? |
+| [Worth Signal](https://github.com/UlrikErlingsen/customer-value-analytics) | What are customers and relationships worth? |
+| [Segment Signal](https://github.com/UlrikErlingsen/customer-segmentation) | Do customers form stable, useful groups? |
+| [Trace Signal](https://github.com/UlrikErlingsen/journey-path-analysis) | How do logged customer journeys actually unfold? |
+| [Recommend Signal](https://github.com/UlrikErlingsen/recommender-evaluation) | Which recommendation policy should be tested live? |
+| [Choice Signal](https://github.com/UlrikErlingsen/conjoint-analysis) | How do product attributes drive choice? |
+| [Driver Signal](https://github.com/UlrikErlingsen/survey-driver-analysis) | Which measured experiences move with satisfaction? |
+| [Measure Signal](https://github.com/UlrikErlingsen/measurement-validation) | Does a multi-item score have a defensible structure? |
+| [Text Signal](https://github.com/UlrikErlingsen/open-text-analysis) | What recurring patterns appear in open-ended responses? |
+| [Tag Signal](https://github.com/UlrikErlingsen/pricing-analysis) | What price range is supported, and how does profit move? |
+| [Experiment Signal](https://github.com/UlrikErlingsen/experiment-analysis) | Did the treatment cause a practically meaningful change? |
+| [Gate Signal](https://github.com/UlrikErlingsen/launch-decision-gate) | Does a concept deserve the next investment? |
+| [Alloc Signal](https://github.com/UlrikErlingsen/marketing-mix-allocation) | Where should the next marketing budget go? |
 
-Tests use recorded API responses and the recorded bulk-file header with fictional rows; a guard fails any test that tries a live network call. The suite covers organisation numbers as strings with MOD11, leading-zero postcodes, Æ/Ø/Å round trips, the NACE hierarchy filter, ENK exclusion, the absence of person fields in storage and export, the Freddo CSV format, the outreach checklist's sources, the architecture rules (no Streamlit under `src/`, SQL only in `storage.py`), and every Streamlit page.
+The maintained public suite is listed at [ulrikerlingsen.com](https://ulrikerlingsen.com) and in [Signal Hub](https://github.com/UlrikErlingsen/signal-hub).
 
-## Relationship to the Signal suite
+## References
 
-ProspectSignal is part of the [Signal suite](https://ulrikerlingsen.com/) of local-first marketing tools.
+- Brønnøysundregistrene. *Enhetsregisteret API documentation.* https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html
+- *Norsk lisens for offentlige data (NLOD) 2.0.* data.norge.no. https://data.norge.no/nlod/no/2.0
+- Statistics Norway (SSB). *SN2025 industry classification, Klass classification 6 (version 3218).* https://www.ssb.no/klass/klassifikasjoner/6
+- Kartverket. *Administrative enheter fylker.* https://kartkatalog.geonorge.no/metadata/6093c8a8-fa80-11e6-bc64-92361f002671
+- The outreach checklist's legal sources (Lovdata, Forbrukertilsynet, Datatilsynet, Brønnøysundregistrene) are listed with URLs and retrieval dates in [docs/sources.md](docs/sources.md) and the checklist YAML.
 
-- **Freddo CRM** manages relationships. Its rule: *NACE counts may size a market; they never become a contact list.* ProspectSignal is the separate tool where a deliberate shortlist is allowed, and the bridge is one-way and manual.
-- **TrackSignal**, **SeasonSignal**, **CreatorSignal** and **ListenSignal** share the same house style, privacy stance and explicit boundaries.
+## Originality and license
 
-## License
+Prospect Signal is an independent implementation based on Brønnøysundregistrene's open register data and documentation, public classification and map data, and original fictional demo data. It does not reproduce lecture slides, institution-specific cases, teaching diagrams, exercises, exam questions, screenshots, tables or other institution-specific teaching material. See [sources](docs/sources.md).
 
 The software and documentation are free under **AGPL-3.0-or-later**. See [LICENSE](LICENSE). Register data remains under NLOD 2.0, SSB code names and Kartverket boundaries under CC BY 4.0.
 
 This application was developed with AI coding assistance and checked through source review, recorded-fixture tests, a full real-register load and visual inspection. Verify material decisions independently; no warranty is provided. The outreach checklist is not legal advice.
+
+---
+
+<p>
+  <img src="assets/prospectsignal-mark-64.png" width="20" height="20" alt="" align="absmiddle">
+  <strong>Prospect Signal</strong> is part of <a href="https://github.com/UlrikErlingsen/signal-hub"><strong>Signal</strong></a>, open marketing-evidence tools by <a href="https://ulrikerlingsen.com">Ulrik Erlingsen</a>.
+</p>

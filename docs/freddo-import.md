@@ -1,6 +1,6 @@
-# Importing a ProspectSignal shortlist into Freddo CRM
+# Importing a Prospect Signal shortlist into Freddo CRM
 
-The bridge is **one-way and manual**: ProspectSignal writes a file, and you decide in Freddo whether to import it. ProspectSignal never connects to Freddo and never exports people.
+The bridge is **one-way and manual**: Prospect Signal writes a file, and you decide in Freddo whether to import it. Prospect Signal never connects to Freddo and never exports people.
 
 ## The file
 

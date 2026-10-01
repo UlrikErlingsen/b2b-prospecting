@@ -1,4 +1,4 @@
-"""All persistence for ProspectSignal, behind one class.
+"""All persistence for Prospect Signal, behind one class.
 
 Everything that touches the database lives here: bulk import of the register files, ICP filtering, market counts,
 saved ICPs, the shortlist, and metadata. The rest of the package works with plain Python objects and pandas
@@ -175,7 +175,7 @@ def _fylke_sql(kommune_nr: str, country: str) -> str:
 
 
 class Store:
-    """A ProspectSignal database file (or ``":memory:"``)."""
+    """A Prospect Signal database file (or ``":memory:"``)."""
 
     def __init__(self, path: str | Path = ":memory:") -> None:
         self.path = str(path)
@@ -673,4 +673,4 @@ def assert_no_person_columns(columns: list[str] | tuple[str, ...]) -> None:
     """Raise if any column name looks like a person field. Used for storage and export checks."""
     offending = [column for column in columns if any(marker in str(column).lower() for marker in PERSON_FIELD_MARKERS)]
     if offending:
-        raise DataProblem("Person fields are not allowed in ProspectSignal: " + ", ".join(offending))
+        raise DataProblem("Person fields are not allowed in Prospect Signal: " + ", ".join(offending))

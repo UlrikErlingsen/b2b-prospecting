@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "prospectsignal"
 version = "1.0.0"
-description = "ProspectSignal: open, local-first B2B prospecting from Norway's Enhetsregisteret"
+description = "Prospect Signal: open, local-first B2B prospecting from Norway's Enhetsregisteret"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "AGPL-3.0-or-later"

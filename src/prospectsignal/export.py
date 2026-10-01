@@ -147,7 +147,7 @@ def xlsx_bytes(
         ("Attribution", brreg.DEMO_ATTRIBUTION if is_demo else brreg.ATTRIBUTION),
         ("Attribution (English)", brreg.DEMO_ATTRIBUTION if is_demo else brreg.ATTRIBUTION_EN),
         ("Licence", "Not applicable (fictional data)" if is_demo else f"{brreg.LICENCE_NAME} — {brreg.LICENCE_URL}"),
-        ("Source", "ProspectSignal demo generator" if is_demo else brreg.DOCS_URL),
+        ("Source", "Prospect Signal demo generator" if is_demo else brreg.DOCS_URL),
         ("Register downloaded", meta.get("downloaded_at", "")),
         ("Bulk file published (Last-Modified)", meta.get("enheter_last_modified", "")),
         ("Exported", exported_on.isoformat()),

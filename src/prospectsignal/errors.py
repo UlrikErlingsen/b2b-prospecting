@@ -1,4 +1,4 @@
-"""User-facing errors raised by ProspectSignal."""
+"""User-facing errors raised by Prospect Signal."""
 
 from __future__ import annotations
 
@@ -16,8 +16,8 @@ def friendly_message(exc: Exception) -> str:
     if isinstance(exc, (DataProblem, RegisterUnavailable)):
         return str(exc)
     if isinstance(exc, ValueError):
-        return f"ProspectSignal could not complete that step: {exc}"
+        return f"Prospect Signal could not complete that step: {exc}"
     return (
-        "ProspectSignal could not complete that step. Try again, or set PROSPECTSIGNAL_DEBUG=1 before launch "
+        "Prospect Signal could not complete that step. Try again, or set PROSPECTSIGNAL_DEBUG=1 before launch "
         "if you need technical details."
     )

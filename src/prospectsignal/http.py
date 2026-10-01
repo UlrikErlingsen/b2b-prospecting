@@ -1,4 +1,4 @@
-"""One HTTP session for every outbound call ProspectSignal makes.
+"""One HTTP session for every outbound call Prospect Signal makes.
 
 Outbound calls go only to official open-data hosts (Brønnøysundregistrene, and for maintainers rebuilding the
 bundled reference data, SSB and Kartverket). TLS certificates are verified against the operating system's trust

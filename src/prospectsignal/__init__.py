@@ -1,4 +1,4 @@
-"""ProspectSignal: open, local-first B2B prospecting from Norway's Enhetsregisteret.
+"""Prospect Signal: open, local-first B2B prospecting from Norway's Enhetsregisteret.
 
 Public API (stable for the Signal suite; nothing here imports Streamlit)::
 

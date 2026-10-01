@@ -267,7 +267,7 @@ def make_demo_units(size: int = DEMO_SIZE, seed: int = DEMO_SEED) -> pd.DataFram
                 "fylke_nr": fylke_for_kommune(kommune_nr),
                 "country_code": "NO",
                 "website": f"www.{slug}.example" if org_form != "ENK" and rng.random() < 0.45 else None,
-                "activity": "Fiktiv virksomhet laget for demonstrasjon av ProspectSignal.",
+                "activity": "Fiktiv virksomhet laget for demonstrasjon av Prospect Signal.",
                 "sector_code": None,
                 "is_demo": True,
                 "source": "demo",

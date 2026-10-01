@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-# Every column ProspectSignal stores about a unit, in order, with its DuckDB type. Nothing about people:
+# Every column Prospect Signal stores about a unit, in order, with its DuckDB type. Nothing about people:
 # no roller (board, CEO, contact persons), no e-mail address, no telephone or mobile number.
 UNIT_SCHEMA: tuple[tuple[str, str], ...] = (
     ("org_nr", "VARCHAR"),  # nine-character string, never a number
@@ -139,6 +139,6 @@ PERSON_NAME_FORMS: tuple[str, ...] = ("ENK", UNKNOWN_FORM)
 
 ENK_WARNING = (
     "ENK (enkeltpersonforetak): the company name is usually a person's name, so this row is personal data. "
-    "ProspectSignal excludes ENK by default and never stores an ENK street address. Sub-units whose parent is "
+    "Prospect Signal excludes ENK by default and never stores an ENK street address. Sub-units whose parent is "
     "missing from the open register (legal form unknown) are treated the same way."
 )

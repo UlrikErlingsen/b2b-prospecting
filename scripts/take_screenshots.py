@@ -1,4 +1,4 @@
-"""Capture README screenshots of a running ProspectSignal (maintainers only; uses fictional demo data).
+"""Capture README screenshots of a running Prospect Signal (maintainers only; uses fictional demo data).
 
     python -m pip install playwright      # dev-only; uses your installed Edge or Chrome, downloads no browser
     python -m streamlit run app.py --server.port 8589
