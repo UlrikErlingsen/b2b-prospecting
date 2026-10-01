@@ -56,6 +56,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 prospectsignal = ["data/*.csv", "data/*.geojson", "data/*.yaml"]
+"prospectsignal.ui" = ["assets/marks/*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "."]

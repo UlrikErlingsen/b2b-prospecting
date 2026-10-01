@@ -5,12 +5,13 @@ import streamlit as st
 from pages import _ui
 from prospectsignal import SHORTLIST_STATUSES, freddo_csv_bytes, freddo_frame, load_checklist, xlsx_bytes
 from prospectsignal.errors import DataProblem
+from prospectsignal.ui import signal_theme as sig
 
 _ui.header(
     "Step 4 · Export",
     "Hand the shortlist to Freddo CRM",
     "Read the outreach checklist first. Then download a CSV in Freddo's company-import format, or an XLSX workbook "
-    "with the source, licence and checklist. ProspectSignal never writes into Freddo; you choose what to import.",
+    "with the source, licence and checklist. Prospect Signal never writes into Freddo; you choose what to import.",
 )
 store = _ui.require_data()
 frame = store.shortlist_frame()
@@ -26,9 +27,7 @@ except DataProblem as exc:
     st.error(str(exc))
     st.stop()
 st.markdown("### Outreach checklist")
-st.markdown(
-    f'<div class="ps-warning"><strong>Not legal advice.</strong> {checklist.disclaimer}</div>', unsafe_allow_html=True
-)
+sig.note("warn", f"**Not legal advice.** {checklist.disclaimer}")
 for item in checklist.items:
     badge = "✅ verified" if not item.needs_verification else "⚠️ TODO(verify)"
     with st.expander(f"{item.title} · {item.applies_to} · {badge}"):
@@ -101,4 +100,4 @@ if st.button("Mark exported rows as “sent to CRM”", disabled=not acknowledge
         store.update_shortlist(org_nr, status="sent to CRM")
     st.toast(f"Marked {len(exportable)} as sent to CRM.")
     st.rerun()
-st.markdown(f"<small>{_ui.attribution_text(store)}</small>", unsafe_allow_html=True)
+sig.note("muted", _ui.attribution_text(store))

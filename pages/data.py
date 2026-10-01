@@ -24,7 +24,7 @@ st.caption(_ui.attribution_text(current))
 
 st.markdown("### Load the real register")
 st.markdown(
-    "ProspectSignal downloads the official bulk CSV of **Enhetsregisteret** (about 150 MB compressed, produced "
+    "Prospect Signal downloads the official bulk CSV of **Enhetsregisteret** (about 150 MB compressed, produced "
     "every night around 05:00), then indexes it locally in DuckDB. The download date is stored on every row. "
     "Optionally it also loads **underenheter** (sub-units such as branches and plants) so you can filter on where "
     "work actually happens. Nothing about people is read: no roles, e-mail addresses or phone numbers."
@@ -95,10 +95,10 @@ if submitted:
             st.error(str(exc))
 
 st.markdown("### Licence and attribution")
+_ui.boundary(brreg.ATTRIBUTION)
 _ui.boundary(
-    f"{brreg.ATTRIBUTION}<br><br>{brreg.ATTRIBUTION_EN}<br><br>Licence: "
-    f'<a href="{brreg.LICENCE_URL}">{brreg.LICENCE_NAME}</a> · Documentation: '
-    f'<a href="{brreg.DOCS_URL}">data.brreg.no</a>'
+    f"{brreg.ATTRIBUTION_EN} Licence: [{brreg.LICENCE_NAME}]({brreg.LICENCE_URL}) · "
+    f"Documentation: [data.brreg.no]({brreg.DOCS_URL})"
 )
 st.markdown(
     "**Stored per unit:** name, organisation number (as text), legal form, industry codes, employee count and band, "

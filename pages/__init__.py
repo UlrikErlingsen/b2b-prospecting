@@ -1,1 +1,1 @@
-"""ProspectSignal Streamlit pages (UI only; logic lives in src/prospectsignal)."""
+"""Prospect Signal Streamlit pages (UI only; logic lives in src/prospectsignal)."""

@@ -1,36 +1,48 @@
 import streamlit as st
 
 from pages import _ui
+from prospectsignal.ui import signal_theme as sig
 
-st.markdown(
-    """
-    <section class="ps-hero">
-      <div class="ps-eyebrow">NORWEGIAN B2B PROSPECTING · OPEN REGISTER DATA</div>
-      <h1>Which companies fit your ICP — and <em>which first?</em></h1>
-      <p>Filter Enhetsregisteret by industry, county, size and age; see how big the market is; shortlist the
-      companies worth a closer look; and hand the shortlist to Freddo CRM. Everything runs on your computer.</p>
-      <div class="ps-pills"><span class="ps-pill">NACE hierarchy (SN2025)</span>
-      <span class="ps-pill">fylke &amp; kommune</span><span class="ps-pill">employee bands</span>
-      <span class="ps-pill">market counts &amp; map</span><span class="ps-pill">shortlist with notes</span>
-      <span class="ps-pill">visible fit weights</span><span class="ps-pill">Freddo CSV export</span></div>
-    </section>
-    """,
-    unsafe_allow_html=True,
+sig.hero(
+    _ui.KEY,
+    eyebrow="NORWEGIAN B2B PROSPECTING · OPEN REGISTER DATA",
+    title="Which companies fit your ICP — and",
+    em="which first?",
+    body=(
+        "Filter Enhetsregisteret by industry, county, size and age; see how big the market is; shortlist the "
+        "companies worth a closer look; and hand the shortlist to Freddo CRM. Everything runs on your computer."
+    ),
+    pills=[
+        "NACE hierarchy (SN2025)",
+        "fylke & kommune",
+        "employee bands",
+        "market counts & map",
+        "shortlist with notes",
+        "visible fit weights",
+        "Freddo CSV export",
+    ],
 )
-st.markdown(
-    """
-    <div class="ps-grid">
-      <div class="ps-card"><b>01 · FILTER</b><h3>Describe your ideal customer</h3><p>Industry codes with their
-      hierarchy (10 → 10.1 → 10.11), county or kommune, employee range, founding dates, legal form, VAT status.
-      Inactive companies and sole proprietorships are excluded by default.</p></div>
-      <div class="ps-card"><b>02 · SIZE</b><h3>See the market before the names</h3><p>Counts by county, industry,
-      size band and registration year, with a county map. Counts size a market; they are not a contact list.</p></div>
-      <div class="ps-card"><b>03 · SHORTLIST</b><h3>Choose deliberately, then export</h3><p>Pick companies, set a
-      status and notes, sort by a fit score whose weights you can see, read the outreach checklist, and export a
-      CSV in Freddo CRM's import format.</p></div>
-    </div>
-    """,
-    unsafe_allow_html=True,
+sig.cards(
+    [
+        (
+            "01 · FILTER",
+            "Describe your ideal customer",
+            "Industry codes with their hierarchy (10 → 10.1 → 10.11), county or kommune, employee range, founding "
+            "dates, legal form, VAT status. Inactive companies and sole proprietorships are excluded by default.",
+        ),
+        (
+            "02 · SIZE",
+            "See the market before the names",
+            "Counts by county, industry, size band and registration year, with a county map. Counts size a market; "
+            "they are not a contact list.",
+        ),
+        (
+            "03 · SHORTLIST",
+            "Choose deliberately, then export",
+            "Pick companies, set a status and notes, sort by a fit score whose weights you can see, read the outreach "
+            "checklist, and export a CSV in Freddo CRM's import format.",
+        ),
+    ]
 )
 
 if _ui.dataset() == "demo":
@@ -48,9 +60,9 @@ st.markdown(
     "4. **Export** — read the outreach checklist, then download the Freddo CSV or the XLSX workbook."
 )
 _ui.boundary(
-    "<strong>Hard boundaries.</strong> ProspectSignal reads only Brønnøysundregistrene's open Enhetsregisteret data. "
+    "**Hard boundaries.** Prospect Signal reads only Brønnøysundregistrene's open Enhetsregisteret data. "
     "It never imports roles (board members, CEO, contact persons), e-mail addresses or phone numbers; never "
     "scrapes websites, LinkedIn or Proff; and has no telemetry, accounts or external AI calls. Export to Freddo is "
-    "a file you choose to import — ProspectSignal never writes into the CRM."
+    "a file you choose to import — Prospect Signal never writes into the CRM."
 )
 _ui.consent_note()

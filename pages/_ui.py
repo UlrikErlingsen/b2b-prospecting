@@ -1,4 +1,6 @@
-"""Shared Streamlit helpers for the ProspectSignal pages. Streamlit lives only in app.py and pages/."""
+"""Shared Streamlit helpers for the Prospect Signal pages.
+
+Streamlit lives only in app.py, pages/ and src/prospectsignal/ui/ (the synced Signal theme)."""
 
 from __future__ import annotations
 
@@ -24,8 +26,10 @@ from prospectsignal import (
 )
 from prospectsignal.demo import DEMO_SEED, DEMO_SIZE
 from prospectsignal.schema import PERSON_NAME_FORMS, UNKNOWN_FORM
+from prospectsignal.ui import signal_theme as sig
 
 ROOT = Path(__file__).resolve().parents[1]
+KEY = "prospect"  # signal_theme app key (Market family)
 DATASETS = {"demo": "Offline demo (fictional)", "register": "Real register (Brønnøysund)"}
 
 
@@ -88,17 +92,16 @@ def set_icp(icp: ICP) -> None:
 
 
 def header(kicker: str, title: str, subtitle: str) -> None:
-    st.markdown(f'<div class="ps-page-kicker">{kicker}</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="ps-page-title">{title}</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="ps-page-subtitle">{subtitle}</div>', unsafe_allow_html=True)
+    sig.header(kicker, title, subtitle)
 
 
 def consent_note() -> None:
-    st.markdown(f'<div class="ps-warning"><strong>Not consent.</strong> {CONSENT_NOTE}</div>', unsafe_allow_html=True)
+    sig.note("warn", f"**Not consent.** {CONSENT_NOTE}")
 
 
 def boundary(text: str) -> None:
-    st.markdown(f'<div class="ps-boundary">{text}</div>', unsafe_allow_html=True)
+    """A boundary note. Supports **bold**, `code` and [links](https://...); no raw HTML."""
+    sig.note("boundary", text)
 
 
 def attribution_text(current: Store) -> str:

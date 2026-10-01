@@ -71,6 +71,11 @@ brand "Fjellbrus".
 
 - Python 3.10+, Streamlit `app.py`, package `src/prospectsignal/`, tests in `tests/`.
 - pandas, duckdb (or sqlite3), requests, plotly, openpyxl, pyyaml.
+- Streamlit only in `app.py`, `pages/` and `src/prospectsignal/ui/`: nothing else under `src/prospectsignal/`
+  imports Streamlit (guard test). `ui/` holds the shared Signal theme (`signal_theme.py`, `assets/marks/`),
+  synced from Signal Hub with `.streamlit/config.toml` and `assets/prospectsignal-*`; never edit those copies.
+- Display name is **Prospect Signal** (with a space) in user-facing text; technical identifiers
+  (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs) stay unchanged.
 - `pyproject.toml` (setuptools, AGPL-3.0-or-later, author "Ulrik Erlingsen"), `requirements.txt`,
   `Dockerfile`, `run_app.bat` — mirror `brand-tracking`.
 - ruff (line length 120) + pytest with recorded API fixtures (no live calls in tests).

@@ -1,4 +1,7 @@
-"""Market-size views: counts only, never contact lists. Chart builders return plotly figures."""
+"""Market-size views: counts only, never contact lists. Chart builders return plotly figures.
+
+The builders set no brand colours or fonts: the Streamlit pages apply the Signal theme (template and palette from
+``prospectsignal.ui.signal_theme``), so this module stays free of Streamlit."""
 
 from __future__ import annotations
 
@@ -8,9 +11,6 @@ import plotly.graph_objects as go
 from . import nace, regions
 from .icp import ICP
 from .schema import EMPLOYEE_BANDS
-
-COLORS = {"ink": "#17322E", "teal": "#173C3A", "coral": "#D95B40", "mint": "#83D2B4", "gold": "#F2C66D"}
-FONT = dict(family="Inter, Arial, sans-serif", color=COLORS["ink"])
 
 
 def market_tables(store, icp: ICP) -> dict[str, pd.DataFrame]:
@@ -34,18 +34,14 @@ def market_tables(store, icp: ICP) -> dict[str, pd.DataFrame]:
 
 
 def _layout(figure: go.Figure, title: str, height: int = 380) -> go.Figure:
-    figure.update_layout(
-        title=dict(text=title, font=dict(size=16)),
-        font=FONT,
-        height=height,
-        margin=dict(l=10, r=10, t=50, b=10),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-    )
+    figure.update_layout(title=dict(text=title), height=height)
     return figure
 
 
-def fylke_map(fylke_counts: pd.DataFrame) -> go.Figure:
+def fylke_map(
+    fylke_counts: pd.DataFrame, colorscale: list | None = None, line_color: str | None = None
+) -> go.Figure:
+    """Choropleth of units per fylke. ``colorscale`` and ``line_color`` come from the caller's theme."""
     geojson = regions.fylker_geojson()
     data = pd.DataFrame({"key": list(regions.FYLKER)})
     data = data.merge(fylke_counts[["key", "units"]], on="key", how="left").fillna({"units": 0})
@@ -58,13 +54,13 @@ def fylke_map(fylke_counts: pd.DataFrame) -> go.Figure:
             z=data["units"],
             text=data["name"],
             hovertemplate="%{text}: %{z:,} units<extra></extra>",
-            colorscale=[[0, "#EEF2EB"], [0.5, COLORS["mint"]], [1, COLORS["teal"]]],
-            marker_line_color="white",
+            colorscale=colorscale,
+            marker_line_color=line_color,
             marker_line_width=0.6,
             colorbar=dict(title="Units"),
         )
     )
-    figure.update_geos(fitbounds="locations", visible=False)
+    figure.update_geos(fitbounds="locations", visible=False, bgcolor="rgba(0,0,0,0)")
     return _layout(figure, "Units by fylke", height=520)
 
 
@@ -72,9 +68,9 @@ def bar(frame: pd.DataFrame, label: str, title: str, horizontal: bool = True, li
     data = frame.head(limit)
     if horizontal:
         data = data.iloc[::-1]
-        trace = go.Bar(x=data["units"], y=data[label].astype(str), orientation="h", marker_color=COLORS["teal"])
+        trace = go.Bar(x=data["units"], y=data[label].astype(str), orientation="h")
     else:
-        trace = go.Bar(x=data[label].astype(str), y=data["units"], marker_color=COLORS["teal"])
+        trace = go.Bar(x=data[label].astype(str), y=data["units"])
     figure = go.Figure(trace)
     figure.update_traces(hovertemplate="%{y}: %{x:,}<extra></extra>" if horizontal else "%{x}: %{y:,}<extra></extra>")
     return _layout(figure, title, height=max(320, 28 * len(data) + 80) if horizontal else 360)
@@ -82,6 +78,6 @@ def bar(frame: pd.DataFrame, label: str, title: str, horizontal: bool = True, li
 
 def registrations_chart(years: pd.DataFrame, since: int = 2000) -> go.Figure:
     data = years.loc[years["key"] >= since]
-    figure = go.Figure(go.Bar(x=data["key"], y=data["units"], marker_color=COLORS["coral"]))
+    figure = go.Figure(go.Bar(x=data["key"], y=data["units"]))
     figure.update_traces(hovertemplate="%{x}: %{y:,} registered<extra></extra>")
     return _layout(figure, f"Registered in Enhetsregisteret per year (still registered today, since {since})")

@@ -6,7 +6,7 @@ from prospectsignal import brreg, nace, regions
 
 _ui.header(
     "Sources & boundaries",
-    "What ProspectSignal uses, and what it refuses to do",
+    "What Prospect Signal uses, and what it refuses to do",
     "Every external fact below was checked against an official source on the date shown. Open questions are marked "
     "TODO(verify) rather than guessed.",
 )
@@ -55,7 +55,7 @@ st.markdown(
 )
 st.markdown("### Open questions — TODO(verify)")
 st.markdown(
-    "- **Rate limits:** the API documentation publishes none. ProspectSignal calls the API only on request, one call at a time.\n"
+    "- **Rate limits:** the API documentation publishes none. Prospect Signal calls the API only on request, one call at a time.\n"
     "- **Deleted units in single lookups:** the documented status code for a deleted unit is not stated; 404 and 410 are both treated as “not in open data”.\n"
     "- **Financial statements:** the open accounts API's terms of use are not confirmed, so v1 shows no financials.\n"
     "- **Freddo import:** Freddo's own importer is planned, not built; the CSV targets the CRM Organization fields Freddo defines. "
@@ -71,7 +71,7 @@ _ui.boundary(
 )
 st.markdown("### Relationship to Freddo CRM")
 st.markdown(
-    "Freddo's rule is that *NACE counts may size a market; they never become a contact list.* ProspectSignal is the "
+    "Freddo's rule is that *NACE counts may size a market; they never become a contact list.* Prospect Signal is the "
     "separate tool where a deliberate shortlist is allowed. The bridge is one-way and manual: export a CSV here, then "
     "decide in Freddo whether to import it. People are never part of the bridge."
 )

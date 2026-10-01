@@ -28,8 +28,31 @@ def _imports(path: Path) -> set[str]:
     return names
 
 
-def test_nothing_under_src_imports_streamlit():
-    offenders = [str(path) for path in (ROOT / "src").rglob("*.py") if "streamlit" in _imports(path)]
+def test_nothing_under_src_imports_streamlit_except_ui():
+    ui = ROOT / "src" / "prospectsignal" / "ui"
+    offenders = [
+        str(path)
+        for path in (ROOT / "src").rglob("*.py")
+        if ui not in path.parents and "streamlit" in _imports(path)
+    ]
+    assert offenders == []
+
+
+def test_core_package_does_not_import_the_ui_layer():
+    # The Streamlit-free core must not reach Streamlit indirectly through prospectsignal.ui either.
+    offenders = []
+    for path in (ROOT / "src" / "prospectsignal").glob("*.py"):
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            if isinstance(node, ast.ImportFrom):
+                module = ("." * node.level) + (node.module or "")
+                names = {alias.name for alias in node.names}
+                if module in {"prospectsignal.ui", ".ui"} or module.startswith(("prospectsignal.ui.", ".ui.")):
+                    offenders.append(path.name)
+                elif module in {"prospectsignal", "."} and "ui" in names:
+                    offenders.append(path.name)
+            elif isinstance(node, ast.Import) and any(a.name.startswith("prospectsignal.ui") for a in node.names):
+                offenders.append(path.name)
     assert offenders == []
 
 
