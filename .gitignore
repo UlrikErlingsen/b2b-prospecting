@@ -10,6 +10,9 @@ dist/
 .ruff_cache/
 data/
 *.db
+*.duckdb
+*.duckdb.wal
 *.sqlite
+.streamlit/secrets.toml
 .DS_Store
 Thumbs.db

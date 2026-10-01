@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prospectsignal"
+version = "1.0.0"
+description = "ProspectSignal: open, local-first B2B prospecting from Norway's Enhetsregisteret"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+authors = [{ name = "Ulrik Erlingsen" }]
+keywords = [
+  "b2b prospecting",
+  "ideal customer profile",
+  "enhetsregisteret",
+  "bronnoysundregistrene",
+  "market sizing",
+  "streamlit",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business",
+]
+dependencies = [
+  "duckdb>=1.1,<2",
+  "openpyxl>=3.1,<4",
+  "pandas>=2.0,<3",
+  "plotly>=5.18,<8",
+  "pyyaml>=6,<7",
+  "requests>=2.31,<3",
+  "truststore>=0.9,<1",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.40,<2"]
+test = [
+  "build>=1.2,<2",
+  "pytest>=8,<10",
+  "ruff>=0.8,<1",
+  "streamlit>=1.40,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/UlrikErlingsen/b2b-prospecting"
+Source = "https://github.com/UlrikErlingsen/b2b-prospecting"
+Issues = "https://github.com/UlrikErlingsen/b2b-prospecting/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+prospectsignal = ["data/*.csv", "data/*.geojson", "data/*.yaml"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+"app.py" = ["E402"]
