@@ -1,0 +1,1786 @@
+code,parent,level,name
+01,A,2,"Jordbruk og tjenester tilknyttet jordbruk, jakt og viltstell"
+01.1,01,3,Dyrking av ettårige vekster
+01.2,01,3,Dyrking av flerårige vekster
+01.3,01,3,Planteformering
+01.4,01,3,Husdyrhold
+01.5,01,3,Kombinert husdyrhold og planteproduksjon
+01.6,01,3,Tjenester tilknyttet jordbruk og etterbehandling av vekster etter innhøsting
+01.7,01,3,"Jakt, fangst, viltstell og tilknyttede tjenester"
+01.11,01.1,4,"Dyrking av korn, unntatt ris, belgvekster og oljeholdige vekster"
+01.12,01.1,4,Dyrking av ris
+01.13,01.1,4,"Dyrking av grønnsaker, meloner, rot- og knollvekster"
+01.14,01.1,4,Dyrking av sukkerrør
+01.15,01.1,4,Dyrking av tobakk
+01.16,01.1,4,Dyrking av fibervekster
+01.19,01.1,4,Dyrking av ettårige vekster ellers
+01.21,01.2,4,Dyrking av druer
+01.22,01.2,4,Dyrking av tropiske og subtropiske frukter
+01.23,01.2,4,Dyrking av sitrusfrukter
+01.24,01.2,4,Dyrking av kjernefrukter og steinfrukter
+01.25,01.2,4,Dyrking av annen frukt som vokser på trær eller busker samt nøtter
+01.26,01.2,4,Dyrking av oljeholdige frukter
+01.27,01.2,4,Dyrking av vekster for produksjon av drikkevarer
+01.28,01.2,4,"Dyrking av krydder og aromatiske, medisinske og farmasøytiske vekster"
+01.29,01.2,4,Dyrking av flerårige vekster ellers
+01.30,01.3,4,Planteformering
+01.41,01.4,4,Melkeproduksjon på storfe og oppdrett av melkekyr
+01.42,01.4,4,Oppdrett av annet storfe til kjøttproduksjon og sædproduksjon
+01.43,01.4,4,Hestehold
+01.44,01.4,4,Oppdrett av kameler og andre kameldyr
+01.45,01.4,4,Saue- og geitehold
+01.46,01.4,4,Svinehold
+01.47,01.4,4,Fjørfehold
+01.48,01.4,4,Husdyrhold ellers
+01.50,01.5,4,Kombinert husdyrhold og planteproduksjon
+01.61,01.6,4,Tjenester tilknyttet planteproduksjon
+01.62,01.6,4,Tjenester tilknyttet husdyrhold
+01.63,01.6,4,Etterbehandling av vekster etter innhøsting og behandling av såfrø
+01.70,01.7,4,"Jakt, fangst, viltstell og tilknyttede tjenester"
+01.110,01.11,5,"Dyrking av korn, unntatt ris, belgvekster og oljeholdige vekster"
+01.120,01.12,5,Dyrking av ris
+01.130,01.13,5,"Dyrking av grønnsaker, meloner, rot- og knollvekster"
+01.140,01.14,5,Dyrking av sukkerrør
+01.150,01.15,5,Dyrking av tobakk
+01.160,01.16,5,Dyrking av fibervekster
+01.190,01.19,5,Dyrking av ettårige vekster ellers
+01.210,01.21,5,Dyrking av druer
+01.220,01.22,5,Dyrking av tropiske og subtropiske frukter
+01.230,01.23,5,Dyrking av sitrusfrukter
+01.240,01.24,5,Dyrking av kjernefrukter og steinfrukter
+01.250,01.25,5,Dyrking av annen frukt som vokser på trær eller busker samt nøtter
+01.260,01.26,5,Dyrking av oljeholdige frukter
+01.270,01.27,5,Dyrking av vekster for produksjon av drikkevarer
+01.280,01.28,5,"Dyrking av krydder og aromatiske, medisinske og farmasøytiske vekster"
+01.290,01.29,5,Dyrking av flerårige vekster ellers
+01.300,01.30,5,Planteformering
+01.410,01.41,5,Melkeproduksjon på storfe og oppdrett av melkekyr
+01.420,01.42,5,Oppdrett av annet storfe til kjøttproduksjon og sædproduksjon
+01.430,01.43,5,Hestehold
+01.440,01.44,5,Oppdrett av kameler og andre kameldyr
+01.451,01.45,5,Sauehold
+01.452,01.45,5,Geitehold
+01.460,01.46,5,Svinehold
+01.471,01.47,5,Hold av verpehøner for konsumeggproduksjon
+01.479,01.47,5,Annet fjørfehold
+01.481,01.48,5,Reindrift
+01.489,01.48,5,Husdyrhold ikke nevnt annet sted
+01.500,01.50,5,Kombinert husdyrhold og planteproduksjon
+01.610,01.61,5,Tjenester tilknyttet planteproduksjon
+01.620,01.62,5,Tjenester tilknyttet husdyrhold
+01.630,01.63,5,Etterbehandling av vekster etter innhøsting og behandling av såfrø
+01.700,01.70,5,"Jakt, fangst, viltstell og tilknyttede tjenester"
+02,A,2,Skogbruk og tjenester tilknyttet skogbruk
+02.1,02,3,Skogskjøtsel og andre skogbruksaktiviteter
+02.2,02,3,Avvirkning
+02.3,02,3,Innsamling av viltvoksende produkter av annet enn tre
+02.4,02,3,Tjenester tilknyttet skogbruk
+02.10,02.1,4,Skogskjøtsel og andre skogbruksaktiviteter
+02.20,02.2,4,Avvirkning
+02.30,02.3,4,Innsamling av viltvoksende produkter av annet enn tre
+02.40,02.4,4,Tjenester tilknyttet skogbruk
+02.100,02.10,5,Skogskjøtsel og andre skogbruksaktiviteter
+02.200,02.20,5,Avvirkning
+02.300,02.30,5,Innsamling av viltvoksende produkter av annet enn tre
+02.400,02.40,5,Tjenester tilknyttet skogbruk
+03,A,2,"Fiske, fangst og akvakultur"
+03.1,03,3,Fiske og fangst
+03.2,03,3,Akvakultur
+03.3,03,3,"Tjenester tilknyttet fiske, fangst og akvakultur"
+03.11,03.1,4,Fiske og fangst i sjø
+03.12,03.1,4,Fiske og fangst i ferskvann
+03.21,03.2,4,Akvakultur i sjø og brakkvann
+03.22,03.2,4,Akvakultur i ferskvann
+03.30,03.3,4,"Tjenester tilknyttet fiske, fangst og akvakultur"
+03.110,03.11,5,Fiske og fangst i sjø
+03.120,03.12,5,Fiske og fangst i ferskvann
+03.211,03.21,5,"Produksjon av fisk, bløtdyr, krepsdyr og pigghuder i sjø og brakkvann"
+03.212,03.21,5,Produksjon av yngel og settefisk i sjø og brakkvann
+03.221,03.22,5,"Produksjon av fisk, bløtdyr, krepsdyr og andre dyr som lever i ferskvann"
+03.222,03.22,5,Produksjon av yngel og settefisk i ferskvann
+03.300,03.30,5,"Tjenester tilknyttet fiske, fangst og akvakultur"
+05,B,2,Bryting av steinkull og brunkull
+05.1,05,3,Bryting av steinkull
+05.2,05,3,Bryting av brunkull
+05.10,05.1,4,Bryting av steinkull
+05.20,05.2,4,Bryting av brunkull
+05.100,05.10,5,Bryting av steinkull
+05.200,05.20,5,Bryting av brunkull
+06,B,2,Utvinning av råolje og naturgass
+06.1,06,3,Utvinning av råolje
+06.2,06,3,Utvinning av naturgass
+06.10,06.1,4,Utvinning av råolje
+06.20,06.2,4,Utvinning av naturgass
+06.100,06.10,5,Utvinning av råolje
+06.200,06.20,5,Utvinning av naturgass
+07,B,2,Bryting av metallholdig malm
+07.1,07,3,Bryting av jernmalm
+07.2,07,3,Bryting av ikke-jernholdig malm
+07.10,07.1,4,Bryting av jernmalm
+07.21,07.2,4,Bryting av uran- og thoriummalm
+07.29,07.2,4,Bryting av ikke-jernholdig malm ellers
+07.100,07.10,5,Bryting av jernmalm
+07.210,07.21,5,Bryting av uran- og thoriummalm
+07.290,07.29,5,Bryting av ikke-jernholdig malm ellers
+08,B,2,Bryting og bergverksdrift ellers
+08.1,08,3,"Bryting av stein, utvinning av sand og leire"
+08.9,08,3,Bryting og utvinning ikke nevnt annet sted
+08.11,08.1,4,"Bryting av dekorstein, kalkstein, gips, skifer og annen stein"
+08.12,08.1,4,"Utvinning fra grus- og sandtak, og utvinning av leire og kaolin"
+08.91,08.9,4,Bryting og utvinning av kjemiske mineraler og gjødselmineraler
+08.92,08.9,4,Stikking av torv
+08.93,08.9,4,Utvinning av salt
+08.99,08.9,4,Annen bryting og utvinning ikke nevnt annet sted
+08.110,08.11,5,"Bryting av dekorstein, kalkstein, gips, skifer og annen stein"
+08.120,08.12,5,"Utvinning fra grus- og sandtak, og utvinning av leire og kaolin"
+08.910,08.91,5,Bryting og utvinning av kjemiske mineraler og gjødselmineraler
+08.920,08.92,5,Stikking av torv
+08.930,08.93,5,Utvinning av salt
+08.990,08.99,5,Annen bryting og utvinning ikke nevnt annet sted
+09,B,2,Tjenester tilknyttet bergverksdrift og utvinning
+09.1,09,3,Tjenester tilknyttet utvinning av råolje og naturgass
+09.9,09,3,Tjenester tilknyttet annen bergverksdrift
+09.10,09.1,4,Tjenester tilknyttet utvinning av råolje og naturgass
+09.90,09.9,4,Tjenester tilknyttet annen bergverksdrift
+09.101,09.10,5,Boretjenester tilknyttet utvinning av råolje og naturgass
+09.109,09.10,5,Andre tjenester tilknyttet utvinning av råolje og naturgass
+09.900,09.90,5,Tjenester tilknyttet annen bergverksdrift
+10,C,2,Produksjon av nærings- og nytelsesmidler
+10.1,10,3,"Produksjon, bearbeiding og konservering av kjøtt og kjøttvarer"
+10.2,10,3,"Bearbeiding og konservering av fisk, skalldyr og bløtdyr"
+10.3,10,3,Bearbeiding og konservering av frukt og grønnsaker
+10.4,10,3,Produksjon av vegetabilske og animalske oljer og fettstoffer
+10.5,10,3,Produksjon av meierivarer og spiselige isprodukter
+10.6,10,3,"Produksjon av kornvarer, stivelse og stivelsesprodukter"
+10.7,10,3,Produksjon av bakervarer og melprodukter
+10.8,10,3,Produksjon av andre næringsmidler
+10.9,10,3,Produksjon av fôrvarer
+10.11,10.1,4,Bearbeiding og konservering av kjøtt unntatt fjørfekjøtt
+10.12,10.1,4,Bearbeiding og konservering av fjørfekjøtt
+10.13,10.1,4,Produksjon av kjøtt- og fjørfevarer
+10.20,10.2,4,"Bearbeiding og konservering av fisk, skalldyr og bløtdyr"
+10.31,10.3,4,Bearbeiding og konservering av poteter
+10.32,10.3,4,Produksjon av juice av frukt og grønnsaker
+10.39,10.3,4,Bearbeiding og konservering av frukt og grønnsaker ellers
+10.41,10.4,4,Produksjon av oljer og fettstoffer
+10.42,10.4,4,Produksjon av margarin og lignende spiselige fettstoffer
+10.51,10.5,4,Produksjon av meierivarer
+10.52,10.5,4,Produksjon av iskrem og andre spiselige isprodukter
+10.61,10.6,4,Produksjon av kornvarer
+10.62,10.6,4,Produksjon av stivelse og stivelsesprodukter
+10.71,10.7,4,Produksjon av brød og ferske konditorvarer
+10.72,10.7,4,"Produksjon av kavringer, kjeks og konserverte konditorvarer"
+10.73,10.7,4,Produksjon av melprodukter ellers
+10.81,10.8,4,Produksjon av sukker
+10.82,10.8,4,"Produksjon av kakao, sjokolade og sukkervarer"
+10.83,10.8,4,Bearbeiding av te og kaffe
+10.84,10.8,4,Produksjon av smakstilsettingsstoffer og krydderier
+10.85,10.8,4,Produksjon av ferdigmat
+10.86,10.8,4,Produksjon av homogeniserte matprodukter og diettmat
+10.89,10.8,4,Produksjon av næringsmidler ikke nevnt annet sted
+10.91,10.9,4,Produksjon av fôrvarer til husdyrhold
+10.92,10.9,4,Produksjon av fôrvarer til kjæledyr
+10.110,10.11,5,Bearbeiding og konservering av kjøtt unntatt fjørfekjøtt
+10.120,10.12,5,Bearbeiding og konservering av fjørfekjøtt
+10.130,10.13,5,Produksjon av kjøtt- og fjørfevarer
+10.201,10.20,5,"Produksjon av saltfisk, tørrfisk og klippfisk"
+10.202,10.20,5,"Slakting av fisk, skalldyr og bløtdyr"
+10.203,10.20,5,"Frysing og videre bearbeiding av fisk, skalldyr og bløtdyr"
+10.310,10.31,5,Bearbeiding og konservering av poteter
+10.320,10.32,5,Produksjon av juice av frukt og grønnsaker
+10.390,10.39,5,Bearbeiding og konservering av frukt og grønnsaker ellers
+10.410,10.41,5,Produksjon av oljer og fettstoffer
+10.420,10.42,5,Produksjon av margarin og lignende spiselige fettstoffer
+10.510,10.51,5,Produksjon av meierivarer
+10.520,10.52,5,Produksjon av iskrem og andre spiselige isprodukter
+10.610,10.61,5,Produksjon av kornvarer
+10.620,10.62,5,Produksjon av stivelse og stivelsesprodukter
+10.710,10.71,5,Produksjon av brød og ferske konditorvarer
+10.720,10.72,5,"Produksjon av kavringer, kjeks og konserverte konditorvarer"
+10.730,10.73,5,Produksjon av melprodukter ellers
+10.810,10.81,5,Produksjon av sukker
+10.820,10.82,5,"Produksjon av kakao, sjokolade og sukkervarer"
+10.830,10.83,5,Bearbeiding av te og kaffe
+10.840,10.84,5,Produksjon av smakstilsettingsstoffer og krydderier
+10.850,10.85,5,Produksjon av ferdigmat
+10.860,10.86,5,Produksjon av homogeniserte matprodukter og diettmat
+10.890,10.89,5,Produksjon av næringsmidler ikke nevnt annet sted
+10.911,10.91,5,Produksjon av fôrvarer for husdyr i landbruk
+10.912,10.91,5,Produksjon av fôrvarer for akvakultur
+10.920,10.92,5,Produksjon av fôrvarer til kjæledyr
+11,C,2,Produksjon av drikkevarer
+11.0,11,3,Produksjon av drikkevarer
+11.01,11.0,4,"Destillering, rektifisering og blanding av sprit"
+11.02,11.0,4,Produksjon av vin
+11.03,11.0,4,Produksjon av sider og andre gjærede fruktdrikker
+11.04,11.0,4,Produksjon av andre ikke-destillerte gjærede drikkevarer
+11.05,11.0,4,Produksjon av øl
+11.06,11.0,4,Produksjon av malt
+11.07,11.0,4,Produksjon av leskedrikker og flaskevann
+11.010,11.01,5,"Destillering, rektifisering og blanding av sprit"
+11.020,11.02,5,Produksjon av vin
+11.030,11.03,5,Produksjon av sider og andre gjærede fruktdrikker
+11.040,11.04,5,Produksjon av andre ikke-destillerte gjærede drikkevarer
+11.050,11.05,5,Produksjon av øl
+11.060,11.06,5,Produksjon av malt
+11.070,11.07,5,Produksjon av leskedrikker og flaskevann
+12,C,2,Produksjon av tobakksvarer
+12.0,12,3,Produksjon av tobakksvarer
+12.00,12.0,4,Produksjon av tobakksvarer
+12.000,12.00,5,Produksjon av tobakksvarer
+13,C,2,Produksjon av tekstiler
+13.1,13,3,Bearbeiding og spinning av tekstilfibre
+13.2,13,3,Veving av tekstiler
+13.3,13,3,Etterbehandling av tekstiler
+13.9,13,3,Produksjon av andre tekstiler
+13.10,13.1,4,Bearbeiding og spinning av tekstilfibre
+13.20,13.2,4,Veving av tekstiler
+13.30,13.3,4,Etterbehandling av tekstiler
+13.91,13.9,4,Produksjon av trikotasjestoffer og heklede stoffer
+13.92,13.9,4,Produksjon av husholdningstekstiler og innredningsvarer i stoff klare til bruk
+13.93,13.9,4,"Produksjon av gulvtepper, -matter og -ryer"
+13.94,13.9,4,"Produksjon av tauverk, rep, hyssing og nett"
+13.95,13.9,4,Produksjon av ikke-vevde tekstiler og tekstilvarer
+13.96,13.9,4,Produksjon av tekstiler til teknisk og industriell bruk
+13.99,13.9,4,Produksjon av tekstiler ikke nevnt annet sted
+13.100,13.10,5,Bearbeiding og spinning av tekstilfibre
+13.200,13.20,5,Veving av tekstiler
+13.300,13.30,5,Etterbehandling av tekstiler
+13.910,13.91,5,Produksjon av trikotasjestoffer og heklede stoffer
+13.920,13.92,5,Produksjon av husholdningstekstiler og innredningsvarer i stoff klare til bruk
+13.930,13.93,5,"Produksjon av gulvtepper, -matter og -ryer"
+13.940,13.94,5,"Produksjon av tauverk, rep, hyssing og nett"
+13.950,13.95,5,Produksjon av ikke-vevde tekstiler og tekstilvarer
+13.960,13.96,5,Produksjon av tekstiler til teknisk og industriell bruk
+13.990,13.99,5,Produksjon av tekstiler ikke nevnt annet sted
+14,C,2,Produksjon av klær
+14.1,14,3,Produksjon av klær av trikotasje og heklede klær
+14.2,14,3,Produksjon av andre klær og tilbehør
+14.10,14.1,4,Produksjon av klær av trikotasje og heklede klær
+14.21,14.2,4,Produksjon av yttertøy
+14.22,14.2,4,Produksjon av undertøy
+14.23,14.2,4,Produksjon av arbeidstøy
+14.24,14.2,4,Produksjon av klær av lær og pelsvarer
+14.29,14.2,4,Produksjon av klær og tilbehør ikke nevnt annet sted
+14.100,14.10,5,Produksjon av klær av trikotasje og heklede klær
+14.210,14.21,5,Produksjon av yttertøy
+14.220,14.22,5,Produksjon av undertøy
+14.230,14.23,5,Produksjon av arbeidstøy
+14.240,14.24,5,Produksjon av klær av lær og pelsvarer
+14.290,14.29,5,Produksjon av klær og tilbehør ikke nevnt annet sted
+15,C,2,Produksjon av lær og andre relaterte produkter
+15.1,15,3,"Beredning og farging av lær og pelsskinn, produksjon av reiseeffekter og salmakerartikler"
+15.2,15,3,Produksjon av skotøy
+15.11,15.1,4,Beredning og farging av lær og pelsskinn
+15.12,15.1,4,Produksjon av reiseeffekter og salmakerartikler
+15.20,15.2,4,Produksjon av skotøy
+15.110,15.11,5,Beredning og farging av lær og pelsskinn
+15.120,15.12,5,Produksjon av reiseeffekter og salmakerartikler
+15.200,15.20,5,Produksjon av skotøy
+16,C,2,"Produksjon av trelast og varer av tre, kork, strå og flettematerialer, unntatt møbler"
+16.1,16,3,"Saging, høvling, bearbeiding og etterbehandling av tre"
+16.2,16,3,"Produksjon av varer av tre, kork, strå og flettematerialer"
+16.11,16.1,4,Saging og høvling av tre
+16.12,16.1,4,Bearbeiding og etterbehandling av tre
+16.21,16.2,4,Produksjon av finerplater og andre bygnings- og møbelplater av tre
+16.22,16.2,4,Produksjon av sammensatte parkettstaver
+16.23,16.2,4,Produksjon av andre bygningsartikler
+16.24,16.2,4,Produksjon av treemballasje
+16.25,16.2,4,Produksjon av dører og vinduer i tre
+16.26,16.2,4,Produksjon av fast brensel av vegetabilsk biomasse
+16.27,16.2,4,Etterbehandling av treprodukter
+16.28,16.2,4,"Produksjon av andre trevarer og varer av kork, strå og flettematerialer"
+16.110,16.11,5,Saging og høvling av tre
+16.120,16.12,5,Bearbeiding og etterbehandling av tre
+16.210,16.21,5,Produksjon av finerplater og andre bygnings- og møbelplater av tre
+16.220,16.22,5,Produksjon av sammensatte parkettstaver
+16.230,16.23,5,Produksjon av andre bygningsartikler
+16.240,16.24,5,Produksjon av treemballasje
+16.250,16.25,5,Produksjon av dører og vinduer i tre
+16.260,16.26,5,Produksjon av fast brensel av vegetabilsk biomasse
+16.270,16.27,5,Etterbehandling av treprodukter
+16.280,16.28,5,"Produksjon av andre trevarer og varer av kork, strå og flettematerialer"
+17,C,2,Produksjon av papir og papirvarer
+17.1,17,3,"Produksjon av papirmasse, papir og papp"
+17.2,17,3,Produksjon av varer av papir og papp
+17.11,17.1,4,Produksjon av papirmasse
+17.12,17.1,4,Produksjon av papir og papp
+17.21,17.2,4,"Produksjon av bølgepapp, papp og emballasje av papir og papp"
+17.22,17.2,4,"Produksjon av husholdnings-, sanitær- og toalettartikler"
+17.23,17.2,4,Produksjon av kontorartikler av papir
+17.24,17.2,4,Produksjon av tapet
+17.25,17.2,4,Produksjon av varer av papir og papp ellers
+17.110,17.11,5,Produksjon av papirmasse
+17.120,17.12,5,Produksjon av papir og papp
+17.210,17.21,5,"Produksjon av bølgepapp, papp og emballasje av papir og papp"
+17.220,17.22,5,"Produksjon av husholdnings-, sanitær- og toalettartikler"
+17.230,17.23,5,Produksjon av kontorartikler av papir
+17.240,17.24,5,Produksjon av tapet
+17.250,17.25,5,Produksjon av varer av papir og papp ellers
+18,C,2,Trykking og reproduksjon av innspilte opptak
+18.1,18,3,Trykking og tjenester tilknyttet trykking
+18.2,18,3,Reproduksjon av innspilte opptak
+18.11,18.1,4,Trykking av aviser
+18.12,18.1,4,Trykking ellers
+18.13,18.1,4,Ferdiggjøring før trykking og publisering
+18.14,18.1,4,Bokbinding og tilknyttede tjenester
+18.20,18.2,4,Reproduksjon av innspilte opptak
+18.110,18.11,5,Trykking av aviser
+18.120,18.12,5,Trykking ellers
+18.130,18.13,5,Ferdiggjøring før trykking og publisering
+18.140,18.14,5,Bokbinding og tilknyttede tjenester
+18.200,18.20,5,Reproduksjon av innspilte opptak
+19,C,2,Produksjon av kullprodukter og raffinerte petroleumsprodukter
+19.1,19,3,Produksjon av kullprodukter
+19.2,19,3,Produksjon av raffinerte petroleumsprodukter og fossile brenselsprodukter
+19.10,19.1,4,Produksjon av kullprodukter
+19.20,19.2,4,Produksjon av raffinerte petroleumsprodukter og fossile brenselsprodukter
+19.100,19.10,5,Produksjon av kullprodukter
+19.200,19.20,5,Produksjon av raffinerte petroleumsprodukter og fossile brenselsprodukter
+20,C,2,Produksjon av kjemikalier og kjemiske produkter
+20.1,20,3,"Produksjon av kjemiske råvarer, gjødsel og nitrogenforbindelser, basisplast og syntetisk gummi"
+20.2,20,3,"Produksjon av plantevern-, skadedyr- og desinfeksjonsmidler og andre landbrukskjemiske produkter"
+20.3,20,3,"Produksjon av maling, lakk og lignende ytterbelegg, trykkfarger og tetningsmidler"
+20.4,20,3,"Produksjon av vaske-, rense- og poleringsmidler"
+20.5,20,3,Produksjon av andre kjemiske produkter
+20.6,20,3,Produksjon av kunstfibre
+20.11,20.1,4,Produksjon av industrigasser
+20.12,20.1,4,Produksjon av fargestoffer og pigmenter
+20.13,20.1,4,Produksjon av andre uorganiske kjemiske råvarer
+20.14,20.1,4,Produksjon av andre organiske kjemiske råvarer
+20.15,20.1,4,Produksjon av gjødsel og nitrogenforbindelser
+20.16,20.1,4,Produksjon av basisplast
+20.17,20.1,4,Produksjon av syntetisk gummi
+20.20,20.2,4,"Produksjon av plantevern-, skadedyr- og desinfeksjonsmidler og andre landbrukskjemiske produkter"
+20.30,20.3,4,"Produksjon av maling, lakk og lignende ytterbelegg, trykkfarger og tetningsmidler"
+20.41,20.4,4,"Produksjon av såpe og vaske-, rense- og poleringsmidler"
+20.42,20.4,4,Produksjon av parfyme og toalettartikler
+20.51,20.5,4,Produksjon av flytende biobrensel
+20.59,20.5,4,Produksjon av andre kjemiske produkter ikke nevnt annet sted
+20.60,20.6,4,Produksjon av kunstfibre
+20.110,20.11,5,Produksjon av industrigasser
+20.120,20.12,5,Produksjon av fargestoffer og pigmenter
+20.130,20.13,5,Produksjon av andre uorganiske kjemiske råvarer
+20.140,20.14,5,Produksjon av andre organiske kjemiske råvarer
+20.150,20.15,5,Produksjon av gjødsel og nitrogenforbindelser
+20.160,20.16,5,Produksjon av basisplast
+20.170,20.17,5,Produksjon av syntetisk gummi
+20.200,20.20,5,"Produksjon av plantevern-, skadedyr- og desinfeksjonsmidler og andre landbrukskjemiske produkter"
+20.300,20.30,5,"Produksjon av maling, lakk og lignende ytterbelegg, trykkfarger og tetningsmidler"
+20.410,20.41,5,"Produksjon av såpe og vaske-, rense- og poleringsmidler"
+20.420,20.42,5,Produksjon av parfyme og toalettartikler
+20.510,20.51,5,Produksjon av flytende biobrensel
+20.590,20.59,5,Produksjon av andre kjemiske produkter ikke nevnt annet sted
+20.600,20.60,5,Produksjon av kunstfibre
+21,C,2,Produksjon av farmasøytiske råvarer og preparater
+21.1,21,3,Produksjon av farmasøytiske råvarer
+21.2,21,3,Produksjon av farmasøytiske preparater
+21.10,21.1,4,Produksjon av farmasøytiske råvarer
+21.20,21.2,4,Produksjon av farmasøytiske preparater
+21.100,21.10,5,Produksjon av farmasøytiske råvarer
+21.200,21.20,5,Produksjon av farmasøytiske preparater
+22,C,2,Produksjon av gummi- og plastprodukter
+22.1,22,3,Produksjon av gummiprodukter
+22.2,22,3,Produksjon av plastprodukter
+22.11,22.1,4,"Produksjon av gummidekk og slanger til gummidekk, og regummiering og mønsterskjæring av gummidekk"
+22.12,22.1,4,Produksjon av gummiprodukter ellers
+22.21,22.2,4,"Produksjon av plater, film, rør og profiler av plast"
+22.22,22.2,4,Produksjon av plastemballasje
+22.23,22.2,4,Produksjon av dører og vinduer av plast
+22.24,22.2,4,Produksjon av byggevarer av plast
+22.25,22.2,4,Bearbeiding og etterbehandling av plastprodukter
+22.26,22.2,4,Produksjon av plastprodukter ellers
+22.110,22.11,5,"Produksjon av gummidekk og slanger til gummidekk, og regummiering og mønsterskjæring av gummidekk"
+22.120,22.12,5,Produksjon av gummiprodukter ellers
+22.210,22.21,5,"Produksjon av plater, film, rør og profiler av plast"
+22.220,22.22,5,Produksjon av plastemballasje
+22.230,22.23,5,Produksjon av dører og vinduer av plast
+22.240,22.24,5,Produksjon av byggevarer av plast
+22.250,22.25,5,Bearbeiding og etterbehandling av plastprodukter
+22.260,22.26,5,Produksjon av plastprodukter ellers
+23,C,2,Produksjon av andre ikke-metalliske mineralprodukter
+23.1,23,3,Produksjon av glass og glassprodukter
+23.2,23,3,Produksjon av ildfaste produkter
+23.3,23,3,Produksjon av byggevarer av brent leire
+23.4,23,3,Produksjon av andre porselensprodukter og keramiske produkter
+23.5,23,3,"Produksjon av sement, kalk og gips"
+23.6,23,3,"Produksjon av betong-, sement- og gipsprodukter"
+23.7,23,3,Hogging og bearbeiding av monument- og bygningsstein
+23.9,23,3,Produksjon av slipestoffer og ikke-metalliske mineralprodukter ikke nevnt annet sted
+23.11,23.1,4,Produksjon av planglass
+23.12,23.1,4,Bearbeiding av planglass
+23.13,23.1,4,Produksjon av emballasje og husholdningsartikler av glass og krystall
+23.14,23.1,4,Produksjon av glassfibre
+23.15,23.1,4,Produksjon av teknisk glass og andre glassvarer
+23.20,23.2,4,Produksjon av ildfaste produkter
+23.31,23.3,4,Produksjon av keramiske vegg- og gulvfliser
+23.32,23.3,4,"Produksjon av murstein, teglstein og andre byggevarer av brent leire"
+23.41,23.4,4,Produksjon av keramiske husholdningsartikler og dekorasjonsgjenstander
+23.42,23.4,4,Produksjon av sanitærutstyr av keramisk materiale
+23.43,23.4,4,Produksjon av isolatorer og isoleringsdeler av keramisk materiale
+23.44,23.4,4,Produksjon av andre keramiske produkter for teknisk bruk
+23.45,23.4,4,Produksjon av andre keramiske produkter
+23.51,23.5,4,Produksjon av sement
+23.52,23.5,4,Produksjon av kalk og gips
+23.61,23.6,4,Produksjon av betongprodukter for bygge- og anleggsvirksomhet
+23.62,23.6,4,Produksjon av gipsprodukter for bygge- og anleggsvirksomhet
+23.63,23.6,4,Produksjon av ferdigblandet betong
+23.64,23.6,4,Produksjon av mørtel
+23.65,23.6,4,Produksjon av fibersement
+23.66,23.6,4,"Produksjon av betong-, sement- og gipsprodukter ellers"
+23.70,23.7,4,Hogging og bearbeiding av monument- og bygningsstein
+23.91,23.9,4,Produksjon av slipestoffer
+23.99,23.9,4,Produksjon av andre ikke-metalliske mineralprodukter ikke nevnt annet sted
+23.110,23.11,5,Produksjon av planglass
+23.120,23.12,5,Bearbeiding av planglass
+23.130,23.13,5,Produksjon av emballasje og husholdningsartikler av glass og krystall
+23.140,23.14,5,Produksjon av glassfibre
+23.150,23.15,5,Produksjon av teknisk glass og andre glassvarer
+23.200,23.20,5,Produksjon av ildfaste produkter
+23.310,23.31,5,Produksjon av keramiske vegg- og gulvfliser
+23.320,23.32,5,"Produksjon av murstein, teglstein og andre byggevarer av brent leire"
+23.410,23.41,5,Produksjon av keramiske husholdningsartikler og dekorasjonsgjenstander
+23.420,23.42,5,Produksjon av sanitærutstyr av keramisk materiale
+23.430,23.43,5,Produksjon av isolatorer og isoleringsdeler av keramisk materiale
+23.440,23.44,5,Produksjon av andre keramiske produkter for teknisk bruk
+23.450,23.45,5,Produksjon av andre keramiske produkter
+23.510,23.51,5,Produksjon av sement
+23.520,23.52,5,Produksjon av kalk og gips
+23.610,23.61,5,Produksjon av betongprodukter for bygge- og anleggsvirksomhet
+23.620,23.62,5,Produksjon av gipsprodukter for bygge- og anleggsvirksomhet
+23.630,23.63,5,Produksjon av ferdigblandet betong
+23.640,23.64,5,Produksjon av mørtel
+23.650,23.65,5,Produksjon av fibersement
+23.660,23.66,5,"Produksjon av betong-, sement- og gipsprodukter ellers"
+23.700,23.70,5,Hogging og bearbeiding av monument- og bygningsstein
+23.910,23.91,5,Produksjon av slipestoffer
+23.990,23.99,5,Produksjon av andre ikke-metalliske mineralprodukter ikke nevnt annet sted
+24,C,2,Produksjon av metaller
+24.1,24,3,"Produksjon av jern og stål, samt ferrolegeringer"
+24.2,24,3,"Produksjon av rør, rørdeler og andre hule konstruksjoner av stål"
+24.3,24,3,Annen bearbeiding av stål
+24.4,24,3,Produksjon av edelmetaller og ikke-jernholdige metaller
+24.5,24,3,Støping av metaller
+24.10,24.1,4,"Produksjon av jern og stål, samt ferrolegeringer"
+24.20,24.2,4,"Produksjon av rør, rørdeler og andre hule konstruksjoner av stål"
+24.31,24.3,4,Kaldtrekking av stenger og profiler
+24.32,24.3,4,Kaldvalsing av bånd
+24.33,24.3,4,Kaldvalsing og pressing av profilerte plater og profiler
+24.34,24.3,4,Kaldtrekking av tråd
+24.41,24.4,4,Produksjon av edelmetaller
+24.42,24.4,4,Produksjon av aluminium
+24.43,24.4,4,"Produksjon av bly, sink og tinn"
+24.44,24.4,4,Produksjon av kobber
+24.45,24.4,4,Produksjon av ikke-jernholdige metaller ellers
+24.46,24.4,4,Produksjon av kjernebrensel
+24.51,24.5,4,Støping av jern
+24.52,24.5,4,Støping av stål
+24.53,24.5,4,Støping av lettmetaller
+24.54,24.5,4,Støping av andre ikke-jernholdige metaller
+24.100,24.10,5,"Produksjon av jern og stål, samt ferrolegeringer"
+24.200,24.20,5,"Produksjon av rør, rørdeler og andre hule konstruksjoner av stål"
+24.310,24.31,5,Kaldtrekking av stenger og profiler
+24.320,24.32,5,Kaldvalsing av bånd
+24.330,24.33,5,Kaldvalsing og pressing av profilerte plater og profiler
+24.340,24.34,5,Kaldtrekking av tråd
+24.410,24.41,5,Produksjon av edelmetaller
+24.420,24.42,5,Produksjon av aluminium
+24.430,24.43,5,"Produksjon av bly, sink og tinn"
+24.440,24.44,5,Produksjon av kobber
+24.450,24.45,5,Produksjon av ikke-jernholdige metaller ellers
+24.460,24.46,5,Produksjon av kjernebrensel
+24.510,24.51,5,Støping av jern
+24.520,24.52,5,Støping av stål
+24.530,24.53,5,Støping av lettmetaller
+24.540,24.54,5,Støping av andre ikke-jernholdige metaller
+25,C,2,"Produksjon av metallvarer, unntatt maskiner og utstyr"
+25.1,25,3,Produksjon av metallkonstruksjoner
+25.2,25,3,"Produksjon av tanker, cisterner og andre beholdere av metall"
+25.3,25,3,Produksjon av våpen og ammunisjon
+25.4,25,3,"Smiing, stansing og valsing av metall, og pulvermetallurgi"
+25.5,25,3,Overflatebehandling og bearbeiding av metaller
+25.6,25,3,"Produksjon av kjøkkenredskaper, håndverktøy og andre jernvarer"
+25.9,25,3,Produksjon av andre metallvarer
+25.11,25.1,4,Produksjon av metallkonstruksjoner og deler
+25.12,25.1,4,Produksjon av dører og vinduer av metall
+25.21,25.2,4,Produksjon av radiatorer til sentralvarmeanlegg og dampgeneratorer og -kjeler
+25.22,25.2,4,"Produksjon av andre tanker, cisterner og beholdere av metall"
+25.30,25.3,4,Produksjon av våpen og ammunisjon
+25.40,25.4,4,"Smiing, stansing og valsing av metall, og pulvermetallurgi"
+25.51,25.5,4,Overflatebehandling av metaller
+25.52,25.5,4,Varmebehandling av metaller
+25.53,25.5,4,Bearbeiding av metaller
+25.61,25.6,4,Produksjon av kjøkkenredskaper
+25.62,25.6,4,Produksjon av låser og beslag
+25.63,25.6,4,Produksjon av håndverktøy
+25.91,25.9,4,Produksjon av stålfat og lignende beholdere av jern og stål
+25.92,25.9,4,Produksjon av emballasje av lettmetall
+25.93,25.9,4,"Produksjon av varer av metalltråd, kjetting og fjærer"
+25.94,25.9,4,Produksjon av bolter og skruer
+25.99,25.9,4,Produksjon av andre metallvarer ikke nevnt annet sted
+25.110,25.11,5,Produksjon av metallkonstruksjoner og deler
+25.120,25.12,5,Produksjon av dører og vinduer av metall
+25.210,25.21,5,Produksjon av radiatorer til sentralvarmeanlegg og dampgeneratorer og -kjeler
+25.220,25.22,5,"Produksjon av andre tanker, cisterner og beholdere av metall"
+25.300,25.30,5,Produksjon av våpen og ammunisjon
+25.400,25.40,5,"Smiing, stansing og valsing av metall, og pulvermetallurgi"
+25.510,25.51,5,Overflatebehandling av metaller
+25.520,25.52,5,Varmebehandling av metaller
+25.530,25.53,5,Bearbeiding av metaller
+25.610,25.61,5,Produksjon av kjøkkenredskaper
+25.620,25.62,5,Produksjon av låser og beslag
+25.630,25.63,5,Produksjon av håndverktøy
+25.910,25.91,5,Produksjon av stålfat og lignende beholdere av jern og stål
+25.920,25.92,5,Produksjon av emballasje av lettmetall
+25.930,25.93,5,"Produksjon av varer av metalltråd, kjetting og fjærer"
+25.940,25.94,5,Produksjon av bolter og skruer
+25.990,25.99,5,Produksjon av andre metallvarer ikke nevnt annet sted
+26,C,2,Produksjon av datamaskiner og elektroniske og optiske produkter
+26.1,26,3,Produksjon av elektroniske komponenter og kretskort
+26.2,26,3,Produksjon av datamaskiner og tilleggsutstyr
+26.3,26,3,Produksjon av kommunikasjonsutstyr
+26.4,26,3,Produksjon av elektronikk til husholdningsbruk
+26.5,26,3,"Produksjon av måle- og kontrollinstrumenter, klokker og ur"
+26.6,26,3,"Produksjon av strålingsutstyr, elektromedisinsk og elektroterapeutisk utstyr"
+26.7,26,3,"Produksjon av optiske instrumenter, magnetiske og optiske medier og fotografisk utstyr"
+26.11,26.1,4,Produksjon av elektroniske komponenter
+26.12,26.1,4,Produksjon av kretskort
+26.20,26.2,4,Produksjon av datamaskiner og tilleggsutstyr
+26.30,26.3,4,Produksjon av kommunikasjonsutstyr
+26.40,26.4,4,Produksjon av elektronikk til husholdningsbruk
+26.51,26.5,4,"Produksjon av måle-, kontroll- og navigasjonsinstrumenter"
+26.52,26.5,4,Produksjon av klokker og ur
+26.60,26.6,4,"Produksjon av strålingsutstyr, elektromedisinsk og elektroterapeutisk utstyr"
+26.70,26.7,4,"Produksjon av optiske instrumenter, magnetiske og optiske medier og fotografisk utstyr"
+26.110,26.11,5,Produksjon av elektroniske komponenter
+26.120,26.12,5,Produksjon av kretskort
+26.200,26.20,5,Produksjon av datamaskiner og tilleggsutstyr
+26.300,26.30,5,Produksjon av kommunikasjonsutstyr
+26.400,26.40,5,Produksjon av elektronikk til husholdningsbruk
+26.510,26.51,5,"Produksjon av måle-, kontroll- og navigasjonsinstrumenter"
+26.520,26.52,5,Produksjon av klokker og ur
+26.600,26.60,5,"Produksjon av strålingsutstyr, elektromedisinsk og elektroterapeutisk utstyr"
+26.700,26.70,5,"Produksjon av optiske instrumenter, magnetiske og optiske medier og fotografisk utstyr"
+27,C,2,Produksjon av elektrisk utstyr
+27.1,27,3,"Produksjon av elektromotorer, generatorer, transformatorer og elektriske fordelings- og kontrolltavler og paneler"
+27.2,27,3,Produksjon av batterier og akkumulatorer
+27.3,27,3,Produksjon av ledninger og ledningsmateriell
+27.4,27,3,Produksjon av belysningsutstyr
+27.5,27,3,Produksjon av husholdningsmaskiner og -apparater
+27.9,27,3,Produksjon av annet elektrisk utstyr
+27.11,27.1,4,"Produksjon av elektromotorer, generatorer og transformatorer"
+27.12,27.1,4,Produksjon av elektriske fordelings- og kontrolltavler og paneler
+27.20,27.2,4,Produksjon av batterier og akkumulatorer
+27.31,27.3,4,Produksjon av optiske fiberkabler
+27.32,27.3,4,Produksjon av andre elektroniske og elektriske ledninger og kabler
+27.33,27.3,4,Produksjon av ledningsmateriell
+27.40,27.4,4,Produksjon av belysningsutstyr
+27.51,27.5,4,Produksjon av elektriske husholdningsmaskiner og -apparater
+27.52,27.5,4,Produksjon av ikke-elektriske husholdningsmaskiner og -apparater
+27.90,27.9,4,Produksjon av annet elektrisk utstyr
+27.110,27.11,5,"Produksjon av elektromotorer, generatorer og transformatorer"
+27.120,27.12,5,Produksjon av elektriske fordelings- og kontrolltavler og paneler
+27.200,27.20,5,Produksjon av batterier og akkumulatorer
+27.310,27.31,5,Produksjon av optiske fiberkabler
+27.320,27.32,5,Produksjon av andre elektroniske og elektriske ledninger og kabler
+27.330,27.33,5,Produksjon av ledningsmateriell
+27.400,27.40,5,Produksjon av belysningsutstyr
+27.510,27.51,5,Produksjon av elektriske husholdningsmaskiner og -apparater
+27.520,27.52,5,Produksjon av ikke-elektriske husholdningsmaskiner og -apparater
+27.900,27.90,5,Produksjon av annet elektrisk utstyr
+28,C,2,Produksjon av maskiner og utstyr ikke nevnt annet sted
+28.1,28,3,Produksjon av maskiner og utstyr til generell bruk
+28.2,28,3,Produksjon av andre maskiner og annet utstyr til generell bruk
+28.3,28,3,Produksjon av jordbruks- og skogbruksmaskiner
+28.4,28,3,Produksjon av maskiner til metallbearbeiding og maskinverktøy
+28.9,28,3,Produksjon av andre spesialmaskiner
+28.11,28.1,4,"Produksjon av motorer og turbiner, unntatt motorer til luftfartøy og motorvogner"
+28.12,28.1,4,Produksjon av komponenter til hydraulisk og pneumatisk utstyr
+28.13,28.1,4,Produksjon av pumper og kompressorer ellers
+28.14,28.1,4,Produksjon av kraner og ventiler ellers
+28.15,28.1,4,"Produksjon av lagre, gir, tannhjulsutvekslinger og andre innretninger for kraftoverføring"
+28.21,28.2,4,Produksjon av ovner og permanente varmeapparater til bruk i husholdninger
+28.22,28.2,4,Produksjon av løfte- og håndteringsutstyr
+28.23,28.2,4,"Produksjon av kontormaskiner og utstyr, unntatt datamaskiner og tilleggsutstyr"
+28.24,28.2,4,Produksjon av motordrevet håndverktøy
+28.25,28.2,4,"Produksjon av kjøle- og ventilasjonsanlegg, unntatt til husholdningsbruk"
+28.29,28.2,4,Produksjon av maskiner og utstyr til generell bruk ikke nevnt annet sted
+28.30,28.3,4,Produksjon av jordbruks- og skogbruksmaskiner
+28.41,28.4,4,Produksjon av maskiner og maskinverktøy til metallbearbeiding
+28.42,28.4,4,Produksjon av maskinverktøy ellers
+28.91,28.9,4,Produksjon av maskiner og utstyr til metallurgisk industri
+28.92,28.9,4,Produksjon av maskiner og utstyr til bergverksdrift og bygge- og anleggsvirksomhet
+28.93,28.9,4,"Produksjon av maskiner og utstyr til nærings-, nytelsesmiddel-, drikke- og tobakksindustri"
+28.94,28.9,4,"Produksjon av maskiner og utstyr til tekstil-, konfeksjons- og lærvareindustri"
+28.95,28.9,4,Produksjon av maskiner og utstyr til papir- og pappvareindustri
+28.96,28.9,4,Produksjon av maskiner og utstyr til plast- og gummiindustri
+28.97,28.9,4,Produksjon av maskiner og utstyr til additiv tilvirkning
+28.99,28.9,4,Produksjon av andre spesialmaskiner ikke nevnt annet sted
+28.110,28.11,5,"Produksjon av motorer og turbiner, unntatt motorer til luftfartøy og motorvogner"
+28.120,28.12,5,Produksjon av komponenter til hydraulisk og pneumatisk utstyr
+28.130,28.13,5,Produksjon av pumper og kompressorer ellers
+28.140,28.14,5,Produksjon av kraner og ventiler ellers
+28.150,28.15,5,"Produksjon av lagre, gir, tannhjulsutvekslinger og andre innretninger for kraftoverføring"
+28.210,28.21,5,Produksjon av ovner og permanente varmeapparater til bruk i husholdninger
+28.220,28.22,5,Produksjon av løfte- og håndteringsutstyr
+28.230,28.23,5,"Produksjon av kontormaskiner og utstyr, unntatt datamaskiner og tilleggsutstyr"
+28.240,28.24,5,Produksjon av motordrevet håndverktøy
+28.250,28.25,5,"Produksjon av kjøle- og ventilasjonsanlegg, unntatt til husholdningsbruk"
+28.290,28.29,5,Produksjon av maskiner og utstyr til generell bruk ikke nevnt annet sted
+28.300,28.30,5,Produksjon av jordbruks- og skogbruksmaskiner
+28.410,28.41,5,Produksjon av maskiner og maskinverktøy til metallbearbeiding
+28.420,28.42,5,Produksjon av maskinverktøy ellers
+28.910,28.91,5,Produksjon av maskiner og utstyr til metallurgisk industri
+28.920,28.92,5,Produksjon av maskiner og utstyr til bergverksdrift og bygge- og anleggsvirksomhet
+28.930,28.93,5,"Produksjon av maskiner og utstyr til nærings-, nytelsesmiddel-, drikke- og tobakksindustri"
+28.940,28.94,5,"Produksjon av maskiner og utstyr til tekstil-, konfeksjons- og lærvareindustri"
+28.950,28.95,5,Produksjon av maskiner og utstyr til papir- og pappvareindustri
+28.960,28.96,5,Produksjon av maskiner og utstyr til plast- og gummiindustri
+28.970,28.97,5,Produksjon av maskiner og utstyr til additiv tilvirkning
+28.990,28.99,5,Produksjon av andre spesialmaskiner ikke nevnt annet sted
+29,C,2,Produksjon av motorvogner og tilhengere
+29.1,29,3,Produksjon av motorvogner
+29.2,29,3,Produksjon av karosserier og tilhengere
+29.3,29,3,Produksjon av deler og utstyr til motorvogner
+29.10,29.1,4,Produksjon av motorvogner
+29.20,29.2,4,Produksjon av karosserier og tilhengere
+29.31,29.3,4,Produksjon av elektrisk og elektronisk utstyr til motorvogner
+29.32,29.3,4,Produksjon av andre deler og annet utstyr til motorvogner
+29.100,29.10,5,Produksjon av motorvogner
+29.200,29.20,5,Produksjon av karosserier og tilhengere
+29.310,29.31,5,Produksjon av elektrisk og elektronisk utstyr til motorvogner
+29.320,29.32,5,Produksjon av andre deler og annet utstyr til motorvogner
+30,C,2,Produksjon av andre transportmidler
+30.1,30,3,Bygging av skip og båter
+30.2,30,3,Produksjon av lokomotiver og annet rullende materiell til jernbane og sporvei
+30.3,30,3,Produksjon av luft- og romfartøy og tilhørende utstyr
+30.4,30,3,Produksjon av militære stridskjøretøy
+30.9,30,3,Produksjon av transportmidler ikke nevnt annet sted
+30.11,30.1,4,Bygging av sivile skip og flytende materiell
+30.12,30.1,4,Bygging av fritidsbåter
+30.13,30.1,4,Bygging av militære skip og fartøy
+30.20,30.2,4,Produksjon av lokomotiver og annet rullende materiell til jernbane og sporvei
+30.31,30.3,4,Produksjon av sivile luft- og romfartøy og tilhørende utstyr
+30.32,30.3,4,Produksjon av militære luft- og romfartøy og tilhørende utstyr
+30.40,30.4,4,Produksjon av militære stridskjøretøy
+30.91,30.9,4,Produksjon av motorsykler
+30.92,30.9,4,"Produksjon av sykler, rullestoler, elektriske mobilitetsscootere og lignende fremkomstmidler"
+30.99,30.9,4,Produksjon av andre transportmidler ikke nevnt annet sted
+30.110,30.11,5,Bygging av sivile skip og flytende materiell
+30.120,30.12,5,Bygging av fritidsbåter
+30.130,30.13,5,Bygging av militære skip og fartøy
+30.200,30.20,5,Produksjon av lokomotiver og annet rullende materiell til jernbane og sporvei
+30.310,30.31,5,Produksjon av sivile luft- og romfartøy og tilhørende utstyr
+30.320,30.32,5,Produksjon av militære luft- og romfartøy og tilhørende utstyr
+30.400,30.40,5,Produksjon av militære stridskjøretøy
+30.910,30.91,5,Produksjon av motorsykler
+30.920,30.92,5,"Produksjon av sykler, rullestoler, elektriske mobilitetsscootere og lignende fremkomstmidler"
+30.990,30.99,5,Produksjon av andre transportmidler ikke nevnt annet sted
+31,C,2,Produksjon av møbler
+31.0,31,3,Produksjon av møbler
+31.00,31.0,4,Produksjon av møbler
+31.000,31.00,5,Produksjon av møbler
+32,C,2,Annen industriproduksjon
+32.1,32,3,"Produksjon av smykker, bijouteri og lignende artikler"
+32.2,32,3,Produksjon av musikkinstrumenter
+32.3,32,3,Produksjon av sportsartikler
+32.4,32,3,Produksjon av spill og leker
+32.5,32,3,Produksjon av medisinske og tanntekniske instrumenter og utstyr
+32.9,32,3,Industriproduksjon ikke nevnt annet sted
+32.11,32.1,4,Preging av mynter
+32.12,32.1,4,Produksjon av smykker og lignende artikler
+32.13,32.1,4,Produksjon av bijouteri og lignende artikler
+32.20,32.2,4,Produksjon av musikkinstrumenter
+32.30,32.3,4,Produksjon av sportsartikler
+32.40,32.4,4,Produksjon av spill og leker
+32.50,32.5,4,Produksjon av medisinske og tanntekniske instrumenter og utstyr
+32.91,32.9,4,Produksjon av koster og børster
+32.99,32.9,4,Annen industriproduksjon ikke nevnt annet sted
+32.110,32.11,5,Preging av mynter
+32.120,32.12,5,Produksjon av smykker og lignende artikler
+32.130,32.13,5,Produksjon av bijouteri og lignende artikler
+32.200,32.20,5,Produksjon av musikkinstrumenter
+32.300,32.30,5,Produksjon av sportsartikler
+32.400,32.40,5,Produksjon av spill og leker
+32.500,32.50,5,Produksjon av medisinske og tanntekniske instrumenter og utstyr
+32.910,32.91,5,Produksjon av koster og børster
+32.990,32.99,5,Annen industriproduksjon ikke nevnt annet sted
+33,C,2,"Reparasjon, vedlikehold og installasjon av maskiner og utstyr"
+33.1,33,3,"Reparasjon og vedlikehold av bearbeidede metallprodukter, maskiner og utstyr"
+33.2,33,3,Installasjon av industrimaskiner og -utstyr
+33.11,33.1,4,Reparasjon og vedlikehold av bearbeidede metallprodukter
+33.12,33.1,4,Reparasjon og vedlikehold av maskiner
+33.13,33.1,4,Reparasjon og vedlikehold av elektronisk og optisk utstyr
+33.14,33.1,4,Reparasjon og vedlikehold av elektrisk utstyr
+33.15,33.1,4,Reparasjon og vedlikehold av sivile skip og båter
+33.16,33.1,4,Reparasjon og vedlikehold av sivile luft- og romfartøy
+33.17,33.1,4,Reparasjon og vedlikehold av andre sivile transportmidler
+33.18,33.1,4,"Reparasjon og vedlikehold av militære stridskjøretøy, skip, båter, luft- og romfartøy"
+33.19,33.1,4,Reparasjon og vedlikehold av annet utstyr
+33.20,33.2,4,Installasjon av industrimaskiner og -utstyr
+33.110,33.11,5,Reparasjon og vedlikehold av bearbeidede metallprodukter
+33.120,33.12,5,Reparasjon og vedlikehold av maskiner
+33.130,33.13,5,Reparasjon og vedlikehold av elektronisk og optisk utstyr
+33.140,33.14,5,Reparasjon og vedlikehold av elektrisk utstyr
+33.150,33.15,5,Reparasjon og vedlikehold av sivile skip og båter
+33.160,33.16,5,Reparasjon og vedlikehold av sivile luft- og romfartøy
+33.170,33.17,5,Reparasjon og vedlikehold av andre sivile transportmidler
+33.180,33.18,5,"Reparasjon og vedlikehold av militære stridskjøretøy, skip, båter, luft- og romfartøy"
+33.190,33.19,5,Reparasjon og vedlikehold av annet utstyr
+33.200,33.20,5,Installasjon av industrimaskiner og -utstyr
+35,D,2,"Forsyning av elektrisitet, gass, damp og kjøleluft"
+35.1,35,3,"Produksjon, overføring og distribusjon av elektrisitet"
+35.2,35,3,Produksjon av gass og distribusjon av gass gjennom ledningsnett
+35.3,35,3,Vannbåren og luftbåren varme- og kjøleforsyning
+35.4,35,3,Aktiviteter til meglere og agenter knyttet til elektrisk kraft og naturgass
+35.11,35.1,4,Produksjon av elektrisitet fra ikke-fornybare kilder
+35.12,35.1,4,Produksjon av elektrisitet fra fornybare kilder
+35.13,35.1,4,Overføring av elektrisitet
+35.14,35.1,4,Distribusjon av elektrisitet
+35.15,35.1,4,Handel med elektrisitet
+35.16,35.1,4,Lagring av elektrisitet
+35.21,35.2,4,Produksjon av gass
+35.22,35.2,4,Distribusjon av gass gjennom ledningsnett
+35.23,35.2,4,Handel med gass gjennom ledningsnett
+35.24,35.2,4,Lagring av gass som del av distribusjonstjenester
+35.30,35.3,4,Vannbåren og luftbåren varme- og kjøleforsyning
+35.40,35.4,4,Aktiviteter til meglere og agenter knyttet til elektrisk kraft og naturgass
+35.110,35.11,5,Produksjon av elektrisitet fra ikke-fornybare kilder
+35.121,35.12,5,Produksjon av elektrisitet fra vannkraft
+35.122,35.12,5,Produksjon av elektrisitet fra vindkraft
+35.123,35.12,5,Produksjon av elektrisitet fra solenergi
+35.129,35.12,5,Produksjon av elektrisitet fra fornybare kilder ikke nevnt annet sted
+35.130,35.13,5,Overføring av elektrisitet
+35.140,35.14,5,Distribusjon av elektrisitet
+35.150,35.15,5,Handel med elektrisitet
+35.160,35.16,5,Lagring av elektrisitet
+35.210,35.21,5,Produksjon av gass
+35.220,35.22,5,Distribusjon av gass gjennom ledningsnett
+35.230,35.23,5,Handel med gass gjennom ledningsnett
+35.240,35.24,5,Lagring av gass som del av distribusjonstjenester
+35.300,35.30,5,Vannbåren og luftbåren varme- og kjøleforsyning
+35.400,35.40,5,Aktiviteter til meglere og agenter knyttet til elektrisk kraft og naturgass
+36,E,2,"Uttak fra kilde, rensing og distribusjon av vann"
+36.0,36,3,"Uttak fra kilde, rensing og distribusjon av vann"
+36.00,36.0,4,"Uttak fra kilde, rensing og distribusjon av vann"
+36.000,36.00,5,"Uttak fra kilde, rensing og distribusjon av vann"
+37,E,2,Oppsamling og behandling av avløpsvann
+37.0,37,3,Oppsamling og behandling av avløpsvann
+37.00,37.0,4,Oppsamling og behandling av avløpsvann
+37.000,37.00,5,Oppsamling og behandling av avløpsvann
+38,E,2,"Innsamling, gjenvinning og behandling av avfall"
+38.1,38,3,Innsamling av avfall
+38.2,38,3,Gjenvinning av avfall
+38.3,38,3,Avfallshåndtering uten gjenvinning
+38.11,38.1,4,Innsamling av ikke-farlig avfall
+38.12,38.1,4,Innsamling av farlig avfall
+38.21,38.2,4,Materialgjenvinning
+38.22,38.2,4,Energigjenvinning
+38.23,38.2,4,Annen gjenvinning av avfall
+38.31,38.3,4,Forbrenning av avfall uten energigjenvinning
+38.32,38.3,4,Drift av deponi og permanent lagring av avfall
+38.33,38.3,4,Annen avfallshåndtering uten gjenvinning
+38.110,38.11,5,Innsamling av ikke-farlig avfall
+38.120,38.12,5,Innsamling av farlig avfall
+38.210,38.21,5,Materialgjenvinning
+38.220,38.22,5,Energigjenvinning
+38.230,38.23,5,Annen gjenvinning av avfall
+38.310,38.31,5,Forbrenning av avfall uten energigjenvinning
+38.320,38.32,5,Drift av deponi og permanent lagring av avfall
+38.330,38.33,5,Annen avfallshåndtering uten gjenvinning
+39,E,2,"Miljøutbedring, opprydding og lignende aktivitet"
+39.0,39,3,"Miljøutbedring, opprydding og lignende aktivitet"
+39.00,39.0,4,"Miljøutbedring, opprydding og lignende aktivitet"
+39.000,39.00,5,"Miljøutbedring, opprydding og lignende aktivitet"
+41,F,2,Oppføring av bygninger
+41.0,41,3,Oppføring av bygninger
+41.00,41.0,4,Oppføring av bygninger
+41.000,41.00,5,Oppføring av bygninger
+42,F,2,Anleggsvirksomhet
+42.1,42,3,Bygging av veier og jernbaner
+42.2,42,3,"Bygging av vann- og kloakkanlegg, og anlegg for elektrisitet og telekommunikasjon"
+42.9,42,3,Bygging av andre anlegg
+42.11,42.1,4,Bygging av veier og motorveier
+42.12,42.1,4,Bygging av jernbaner og undergrunnsbaner
+42.13,42.1,4,Bygging av broer og tunneler
+42.21,42.2,4,Bygging av vann- og kloakkanlegg
+42.22,42.2,4,Bygging av anlegg for elektrisitet og telekommunikasjon
+42.91,42.9,4,Bygging av havne- og damanlegg
+42.99,42.9,4,Bygging av andre anlegg ikke nevnt annet sted
+42.110,42.11,5,Bygging av veier og motorveier
+42.120,42.12,5,Bygging av jernbaner og undergrunnsbaner
+42.130,42.13,5,Bygging av broer og tunneler
+42.210,42.21,5,Bygging av vann- og kloakkanlegg
+42.221,42.22,5,Bygging av anlegg for elektrisitet og telekommunikasjon til sjøs
+42.222,42.22,5,Bygging av anlegg for elektrisitet og telekommunikasjon på land
+42.910,42.91,5,Bygging av havne- og damanlegg
+42.990,42.99,5,Bygging av andre anlegg ikke nevnt annet sted
+43,F,2,Spesialisert bygge- og anleggsvirksomhet
+43.1,43,3,Riving og grunnarbeid
+43.2,43,3,"Elektrisk installasjonsarbeid, VVS-arbeid og annet installasjonsarbeid"
+43.3,43,3,Ferdiggjøring av bygninger
+43.4,43,3,Spesialisert byggevirksomhet i forbindelse med oppføring av bygninger
+43.5,43,3,Spesialisert byggevirksomhet i forbindelse med anleggsarbeid
+43.6,43,3,Formidlingstjenester innenfor spesialisert bygge- og anleggsvirksomhet
+43.9,43,3,Annen spesialisert bygge- og anleggsvirksomhet
+43.11,43.1,4,Riving av bygninger og andre byggverk
+43.12,43.1,4,Grunnarbeid
+43.13,43.1,4,Prøveboring
+43.21,43.2,4,Elektrisk installasjonsarbeid
+43.22,43.2,4,VVS-arbeid
+43.23,43.2,4,Installasjon av isoleringsmateriale
+43.24,43.2,4,Annet installasjonsarbeid
+43.31,43.3,4,Stukkatørarbeid og pussing
+43.32,43.3,4,Snekkerarbeid
+43.33,43.3,4,Gulvlegging og tapetsering
+43.34,43.3,4,Maler- og glassarbeid
+43.35,43.3,4,Annen ferdiggjøring av bygninger
+43.41,43.4,4,Takarbeid
+43.42,43.4,4,Annen spesialisert byggevirksomhet i forbindelse med oppføring av bygninger
+43.50,43.5,4,Spesialisert byggevirksomhet i forbindelse med anleggsarbeid
+43.60,43.6,4,Formidlingstjenester innenfor spesialisert bygge- og anleggsvirksomhet
+43.91,43.9,4,Murerarbeid
+43.99,43.9,4,Annen spesialisert bygge- og anleggsvirksomhet ikke nevnt annet sted
+43.110,43.11,5,Riving av bygninger og andre byggverk
+43.120,43.12,5,Grunnarbeid
+43.130,43.13,5,Prøveboring
+43.210,43.21,5,Elektrisk installasjonsarbeid
+43.221,43.22,5,Rørleggerarbeid
+43.222,43.22,5,"Kuldeanlegg-, varmepumpearbeid og installasjon av peiser"
+43.223,43.22,5,Ventilasjonsarbeid
+43.230,43.23,5,Installasjon av isoleringsmateriale
+43.240,43.24,5,Annet installasjonsarbeid
+43.310,43.31,5,Stukkatørarbeid og pussing
+43.320,43.32,5,Snekkerarbeid
+43.330,43.33,5,Gulvlegging og tapetsering
+43.340,43.34,5,Maler- og glassarbeid
+43.350,43.35,5,Annen ferdiggjøring av bygninger
+43.410,43.41,5,Takarbeid
+43.420,43.42,5,Annen spesialisert byggevirksomhet i forbindelse med oppføring av bygninger
+43.500,43.50,5,Spesialisert byggevirksomhet i forbindelse med anleggsarbeid
+43.600,43.60,5,Formidlingstjenester innenfor spesialisert bygge- og anleggsvirksomhet
+43.910,43.91,5,Murerarbeid
+43.990,43.99,5,Annen spesialisert bygge- og anleggsvirksomhet ikke nevnt annet sted
+46,G,2,Engroshandel
+46.1,46,3,Agenturhandel
+46.2,46,3,Engroshandel med jordbruksråvarer og levende dyr
+46.3,46,3,Engroshandel med nærings- og nytelsesmidler
+46.4,46,3,Engroshandel med husholdningsvarer
+46.5,46,3,Engroshandel med informasjons- og kommunikasjonsteknologiutstyr
+46.6,46,3,Engroshandel med andre maskiner og annet utstyr
+46.7,46,3,"Engroshandel med motorvogner, motorsykler og tilhørende deler og utstyr"
+46.8,46,3,Engroshandel med spesialisert vareutvalg ellers
+46.9,46,3,Uspesifisert engroshandel
+46.11,46.1,4,"Agenturhandel med jordbruksråvarer, levende dyr, tekstilråvarer og halvfabrikater"
+46.12,46.1,4,"Agenturhandel med brensel, drivstoff, malm, metaller og industrikjemikalier"
+46.13,46.1,4,"Agenturhandel med tømmer, trelast og byggevarer"
+46.14,46.1,4,"Agenturhandel med maskiner, produksjonsutstyr, båter og luftfartøy"
+46.15,46.1,4,"Agenturhandel med møbler, husholdningsvarer og jernvarer"
+46.16,46.1,4,"Agenturhandel med tekstiler, klær, pelsskinn, skotøy og lærvarer"
+46.17,46.1,4,Agenturhandel med nærings- og nytelsesmidler
+46.18,46.1,4,Agenturhandel med spesialisert vareutvalg ellers
+46.19,46.1,4,Agenturhandel med bredt vareutvalg
+46.21,46.2,4,"Engroshandel med korn, råtobakk, såvarer og fôrvarer"
+46.22,46.2,4,Engroshandel med blomster og planter
+46.23,46.2,4,Engroshandel med levende dyr
+46.24,46.2,4,"Engroshandel med huder, skinn og lær"
+46.31,46.3,4,Engroshandel med frukt og grønnsaker
+46.32,46.3,4,"Engroshandel med kjøtt, kjøttvarer, fisk og fiskeprodukter"
+46.33,46.3,4,"Engroshandel med meierivarer, egg, matolje og -fett"
+46.34,46.3,4,Engroshandel med drikkevarer
+46.35,46.3,4,Engroshandel med tobakksvarer
+46.36,46.3,4,"Engroshandel med sukker, sjokolade og sukkervarer"
+46.37,46.3,4,"Engroshandel med kaffe, te, kakao og krydder"
+46.38,46.3,4,Engroshandel med andre næringsmidler
+46.39,46.3,4,Engroshandel med bredt utvalg av nærings- og nytelsesmidler
+46.41,46.4,4,Engroshandel med tekstiler og utstyrsvarer
+46.42,46.4,4,Engroshandel med klær og skotøy
+46.43,46.4,4,Engroshandel med elektriske husholdningsapparater
+46.44,46.4,4,"Engroshandel med kjøkkenutstyr av porselen, glass og steintøy og rengjøringsmidler"
+46.45,46.4,4,Engroshandel med parfyme og kosmetikk
+46.46,46.4,4,Engroshandel med apotekvarer og medisinske varer
+46.47,46.4,4,"Engroshandel med husholdnings-, kontor- og butikkmøbler, gulvtepper og belysningsutstyr"
+46.48,46.4,4,"Engroshandel med klokker, ur og smykker"
+46.49,46.4,4,Engroshandel med andre husholdningsvarer
+46.50,46.5,4,Engroshandel med informasjons- og kommunikasjonsteknologiutstyr
+46.61,46.6,4,Engroshandel med maskiner og utstyr til jordbruk og skogbruk
+46.62,46.6,4,Engroshandel med maskinverktøy
+46.63,46.6,4,"Engroshandel med maskiner og utstyr til bergverksdrift, olje- og gassutvinning og bygge- og anleggsvirksomhet"
+46.64,46.6,4,Engroshandel med maskiner og utstyr ellers
+46.71,46.7,4,Engroshandel med motorvogner
+46.72,46.7,4,Engroshandel med deler og utstyr for motorvogner
+46.73,46.7,4,Engroshandel med motorsykler og tilhørende deler og utstyr
+46.81,46.8,4,"Engroshandel med drivstoff, brensel og beslektede produkter"
+46.82,46.8,4,Engroshandel med metaller og metallholdig malm
+46.83,46.8,4,"Engroshandel med tømmer, trelast, byggevarer og sanitærutstyr"
+46.84,46.8,4,"Engroshandel med jernvarer, rørleggerartikler og oppvarmingsutstyr"
+46.85,46.8,4,Engroshandel med kjemiske produkter
+46.86,46.8,4,Engroshandel med innsatsvarer ellers
+46.87,46.8,4,Engroshandel med avfall og skrap
+46.89,46.8,4,Engroshandel med spesialisert vareutvalg ikke nevnt annet sted
+46.90,46.9,4,Uspesifisert engroshandel
+46.110,46.11,5,"Agenturhandel med jordbruksråvarer, levende dyr, tekstilråvarer og halvfabrikater"
+46.120,46.12,5,"Agenturhandel med brensel, drivstoff, malm, metaller og industrikjemikalier"
+46.130,46.13,5,"Agenturhandel med tømmer, trelast og byggevarer"
+46.140,46.14,5,"Agenturhandel med maskiner, produksjonsutstyr, båter og luftfartøy"
+46.150,46.15,5,"Agenturhandel med møbler, husholdningsvarer og jernvarer"
+46.160,46.16,5,"Agenturhandel med tekstiler, klær, pelsskinn, skotøy og lærvarer"
+46.170,46.17,5,Agenturhandel med nærings- og nytelsesmidler
+46.180,46.18,5,Agenturhandel med spesialisert vareutvalg ellers
+46.190,46.19,5,Agenturhandel med bredt vareutvalg
+46.210,46.21,5,"Engroshandel med korn, råtobakk, såvarer og fôrvarer"
+46.220,46.22,5,Engroshandel med blomster og planter
+46.230,46.23,5,Engroshandel med levende dyr
+46.240,46.24,5,"Engroshandel med huder, skinn og lær"
+46.310,46.31,5,Engroshandel med frukt og grønnsaker
+46.321,46.32,5,Engroshandel med kjøtt og kjøttvarer
+46.322,46.32,5,"Engroshandel med fisk, skalldyr og bløtdyr"
+46.330,46.33,5,"Engroshandel med meierivarer, egg, matolje og -fett"
+46.340,46.34,5,Engroshandel med drikkevarer
+46.350,46.35,5,Engroshandel med tobakksvarer
+46.360,46.36,5,"Engroshandel med sukker, sjokolade og sukkervarer"
+46.370,46.37,5,"Engroshandel med kaffe, te, kakao og krydder"
+46.380,46.38,5,Engroshandel med andre næringsmidler
+46.390,46.39,5,Engroshandel med bredt utvalg av nærings- og nytelsesmidler
+46.410,46.41,5,Engroshandel med tekstiler og utstyrsvarer
+46.420,46.42,5,Engroshandel med klær og skotøy
+46.430,46.43,5,Engroshandel med elektriske husholdningsapparater
+46.440,46.44,5,"Engroshandel med kjøkkenutstyr av porselen, glass og steintøy og rengjøringsmidler"
+46.450,46.45,5,Engroshandel med parfyme og kosmetikk
+46.460,46.46,5,Engroshandel med apotekvarer og medisinske varer
+46.470,46.47,5,"Engroshandel med husholdnings-, kontor- og butikkmøbler, gulvtepper og belysningsutstyr"
+46.480,46.48,5,"Engroshandel med klokker, ur og smykker"
+46.490,46.49,5,Engroshandel med andre husholdningsvarer
+46.500,46.50,5,Engroshandel med informasjons- og kommunikasjonsteknologiutstyr
+46.610,46.61,5,Engroshandel med maskiner og utstyr til jordbruk og skogbruk
+46.620,46.62,5,Engroshandel med maskinverktøy
+46.630,46.63,5,"Engroshandel med maskiner og utstyr til bergverksdrift, olje- og gassutvinning og bygge- og anleggsvirksomhet"
+46.640,46.64,5,Engroshandel med maskiner og utstyr ellers
+46.710,46.71,5,Engroshandel med motorvogner
+46.720,46.72,5,Engroshandel med deler og utstyr for motorvogner
+46.730,46.73,5,Engroshandel med motorsykler og tilhørende deler og utstyr
+46.810,46.81,5,"Engroshandel med drivstoff, brensel og beslektede produkter"
+46.820,46.82,5,Engroshandel med metaller og metallholdig malm
+46.830,46.83,5,"Engroshandel med tømmer, trelast, byggevarer og sanitærutstyr"
+46.840,46.84,5,"Engroshandel med jernvarer, rørleggerartikler og oppvarmingsutstyr"
+46.850,46.85,5,Engroshandel med kjemiske produkter
+46.860,46.86,5,Engroshandel med innsatsvarer ellers
+46.870,46.87,5,Engroshandel med avfall og skrap
+46.890,46.89,5,Engroshandel med spesialisert vareutvalg ikke nevnt annet sted
+46.900,46.90,5,Uspesifisert engroshandel
+47,G,2,Detaljhandel
+47.1,47,3,Detaljhandel med bredt vareutvalg
+47.2,47,3,Detaljhandel med nærings- og nytelsesmidler i spesialforretninger
+47.3,47,3,Detaljhandel med drivstoff til motorvogner
+47.4,47,3,Detaljhandel med informasjons- og kommunikasjonsteknologiutstyr
+47.5,47,3,Detaljhandel med andre husholdningsvarer
+47.6,47,3,Detaljhandel med kultur- og fritidsvarer
+47.7,47,3,"Annen detaljhandel, unntatt med motorvogner og motorsykler"
+47.8,47,3,"Detaljhandel med motorvogner, motorsykler og tilhørende deler og utstyr"
+47.9,47,3,Formidlingstjenester tilknyttet detaljhandel
+47.11,47.1,4,Detaljhandel med bredt vareutvalg med hovedvekt på nærings- og nytelsesmidler
+47.12,47.1,4,Detaljhandel med bredt vareutvalg ellers
+47.21,47.2,4,Detaljhandel med frukt og grønnsaker
+47.22,47.2,4,Detaljhandel med kjøtt og kjøttvarer
+47.23,47.2,4,"Detaljhandel med fisk, skalldyr og bløtdyr"
+47.24,47.2,4,"Detaljhandel med bakervarer, konditorvarer og sukkervarer"
+47.25,47.2,4,Detaljhandel med drikkevarer
+47.26,47.2,4,Detaljhandel med tobakksvarer
+47.27,47.2,4,Detaljhandel med nærings- og nytelsesmidler ellers
+47.30,47.3,4,Detaljhandel med drivstoff til motorvogner
+47.40,47.4,4,Detaljhandel med informasjons- og kommunikasjonsteknologiutstyr
+47.51,47.5,4,Detaljhandel med tekstiler og utstyrsvarer
+47.52,47.5,4,"Detaljhandel med jernvarer, byggevarer, fargevarer og glass"
+47.53,47.5,4,"Detaljhandel med tapet, gulvtepper og gulvbelegg"
+47.54,47.5,4,Detaljhandel med elektriske husholdningsapparater
+47.55,47.5,4,"Detaljhandel med møbler, belysningsutstyr, dekketøy og andre innredningsartikler"
+47.61,47.6,4,Detaljhandel med bøker
+47.62,47.6,4,Detaljhandel med aviser og papirvarer
+47.63,47.6,4,Detaljhandel med sportsutstyr
+47.64,47.6,4,Detaljhandel med spill og leker
+47.69,47.6,4,Detaljhandel med kulturvarer ikke nevnt annet sted
+47.71,47.7,4,Detaljhandel med klær
+47.72,47.7,4,Detaljhandel med skotøy og lærvarer
+47.73,47.7,4,Detaljhandel med apotekvarer
+47.74,47.7,4,Detaljhandel med medisinske og ortopediske artikler
+47.75,47.7,4,Detaljhandel med kosmetikk og toalettartikler
+47.76,47.7,4,"Detaljhandel med blomster, planter og gjødsel, kjæledyr og fôrvarer til kjæledyr"
+47.77,47.7,4,"Detaljhandel med ur, klokker og smykker"
+47.78,47.7,4,Annen detaljhandel med andre nye varer
+47.79,47.7,4,Detaljhandel med brukte varer
+47.81,47.8,4,Detaljhandel med motorvogner
+47.82,47.8,4,Detaljhandel med deler og utstyr til motorvogner
+47.83,47.8,4,Detaljhandel med motorsykler og tilhørende deler og utstyr
+47.91,47.9,4,Formidlingstjenester tilknyttet detaljhandel med bredt vareutvalg
+47.92,47.9,4,Formidlingstjenester tilknyttet detaljhandel med spesialisert vareutvalg
+47.110,47.11,5,Detaljhandel med bredt vareutvalg med hovedvekt på nærings- og nytelsesmidler
+47.120,47.12,5,Detaljhandel med bredt vareutvalg ellers
+47.210,47.21,5,Detaljhandel med frukt og grønnsaker
+47.220,47.22,5,Detaljhandel med kjøtt og kjøttvarer
+47.230,47.23,5,"Detaljhandel med fisk, skalldyr og bløtdyr"
+47.240,47.24,5,"Detaljhandel med bakervarer, konditorvarer og sukkervarer"
+47.250,47.25,5,Detaljhandel med drikkevarer
+47.260,47.26,5,Detaljhandel med tobakksvarer
+47.270,47.27,5,Detaljhandel med nærings- og nytelsesmidler ellers
+47.300,47.30,5,Detaljhandel med drivstoff til motorvogner
+47.400,47.40,5,Detaljhandel med informasjons- og kommunikasjonsteknologiutstyr
+47.510,47.51,5,Detaljhandel med tekstiler og utstyrsvarer
+47.520,47.52,5,"Detaljhandel med jernvarer, byggevarer, fargevarer og glass"
+47.530,47.53,5,"Detaljhandel med tapet, gulvtepper og gulvbelegg"
+47.540,47.54,5,Detaljhandel med elektriske husholdningsapparater
+47.551,47.55,5,"Detaljhandel med møbler, gjelder også madrasser"
+47.552,47.55,5,Detaljhandel med belysningsartikler
+47.553,47.55,5,"Detaljhandel med husholdningsredskaper og bestikk, servise, glassvarer, porselen og keramikk"
+47.559,47.55,5,Detaljhandel med innredningsartikler ikke nevnt annet sted
+47.610,47.61,5,Detaljhandel med bøker
+47.620,47.62,5,Detaljhandel med aviser og papirvarer
+47.631,47.63,5,Detaljhandel med sportsvarer
+47.632,47.63,5,Detaljhandel med fritidsbåter og tilhørende utstyr
+47.640,47.64,5,Detaljhandel med spill og leker
+47.690,47.69,5,Detaljhandel med kulturvarer ikke nevnt annet sted
+47.710,47.71,5,Detaljhandel med klær
+47.720,47.72,5,Detaljhandel med skotøy og lærvarer
+47.730,47.73,5,Detaljhandel med apotekvarer
+47.740,47.74,5,Detaljhandel med medisinske og ortopediske artikler
+47.750,47.75,5,Detaljhandel med kosmetikk og toalettartikler
+47.761,47.76,5,"Detaljhandel med blomster, planter, gjødsel og plantevernmidler"
+47.762,47.76,5,Detaljhandel med kjæledyr og varer til kjæledyr
+47.770,47.77,5,"Detaljhandel med ur, klokker og smykker"
+47.780,47.78,5,Annen detaljhandel med andre nye varer
+47.790,47.79,5,Detaljhandel med brukte varer
+47.810,47.81,5,Detaljhandel med motorvogner
+47.820,47.82,5,Detaljhandel med deler og utstyr til motorvogner
+47.830,47.83,5,Detaljhandel med motorsykler og tilhørende deler og utstyr
+47.910,47.91,5,Formidlingstjenester tilknyttet detaljhandel med bredt vareutvalg
+47.920,47.92,5,Formidlingstjenester tilknyttet detaljhandel med spesialisert vareutvalg
+49,H,2,Landtransport og rørtransport
+49.1,49,3,Passasjertransport med jernbane og sporvei
+49.2,49,3,Godstransport med jernbane
+49.3,49,3,Annen landtransport med passasjerer
+49.4,49,3,Godstransport på vei og flyttetransport
+49.5,49,3,Rørtransport
+49.11,49.1,4,Passasjertransport med jernbane
+49.12,49.1,4,Passasjertransport med sporvei
+49.20,49.2,4,Godstransport med jernbane
+49.31,49.3,4,Passasjertransport med rutebil
+49.32,49.3,4,Passasjertransport utenom rutetabell
+49.33,49.3,4,Passasjertransport på forespørsel utført av fører med kjøretøy
+49.34,49.3,4,Passasjertransport med kabelbaner og skiheiser
+49.39,49.3,4,Annen landtransport med passasjerer ikke nevnt annet sted
+49.41,49.4,4,Godstransport på vei
+49.42,49.4,4,Flyttetransport
+49.50,49.5,4,Rørtransport
+49.110,49.11,5,Passasjertransport med jernbane
+49.120,49.12,5,Passasjertransport med sporvei
+49.200,49.20,5,Godstransport med jernbane
+49.310,49.31,5,Passasjertransport med rutebil
+49.320,49.32,5,Passasjertransport utenom rutetabell
+49.330,49.33,5,Passasjertransport på forespørsel utført av fører med kjøretøy
+49.340,49.34,5,Passasjertransport med kabelbaner og skiheiser
+49.390,49.39,5,Annen landtransport med passasjerer ikke nevnt annet sted
+49.410,49.41,5,Godstransport på vei
+49.420,49.42,5,Flyttetransport
+49.500,49.50,5,Rørtransport
+50,H,2,Sjøfart
+50.1,50,3,Sjøfart og kysttrafikk med passasjerer
+50.2,50,3,Sjøfart og kysttrafikk med gods
+50.3,50,3,Passasjertransport på elver og innsjøer
+50.4,50,3,Godstransport på elver og innsjøer
+50.10,50.1,4,Sjøfart og kysttrafikk med passasjerer
+50.20,50.2,4,Sjøfart og kysttrafikk med gods
+50.30,50.3,4,Passasjertransport på elver og innsjøer
+50.40,50.4,4,Godstransport på elver og innsjøer
+50.101,50.10,5,Utenriks sjøfart med passasjerer
+50.102,50.10,5,Innenriks kystruter med passasjerer
+50.109,50.10,5,Kysttrafikk med passasjerer ikke nevnt annet sted
+50.201,50.20,5,Utenriks sjøfart med gods
+50.202,50.20,5,Innenriks sjøfart med gods
+50.203,50.20,5,Forsyning for offshore
+50.300,50.30,5,Passasjertransport på elver og innsjøer
+50.400,50.40,5,Godstransport på elver og innsjøer
+51,H,2,Lufttransport
+51.1,51,3,Lufttransport med passasjerer
+51.2,51,3,Lufttransport med gods samt romfart
+51.10,51.1,4,Lufttransport med passasjerer
+51.21,51.2,4,Lufttransport med gods
+51.22,51.2,4,Romfart
+51.100,51.10,5,Lufttransport med passasjerer
+51.210,51.21,5,Lufttransport med gods
+51.220,51.22,5,Romfart
+52,H,2,Lagring og andre tjenester tilknyttet transport
+52.1,52,3,Lagring
+52.2,52,3,Andre tjenester tilknyttet transport
+52.3,52,3,Formidlingstjenester tilknyttet transport
+52.10,52.1,4,Lagring
+52.21,52.2,4,Andre tjenester tilknyttet landtransport
+52.22,52.2,4,Andre tjenester tilknyttet sjøtransport
+52.23,52.2,4,Andre tjenester tilknyttet lufttransport
+52.24,52.2,4,Lasting og lossing
+52.25,52.2,4,Logistikktjenester
+52.26,52.2,4,Andre støttetjenester for transport
+52.31,52.3,4,Formidlingstjenester tilknyttet godstransport
+52.32,52.3,4,Formidlingstjenester tilknyttet passasjertransport
+52.100,52.10,5,Lagring
+52.211,52.21,5,Drift av gods- og transportsentraler
+52.212,52.21,5,Drift av parkeringsplasser og parkeringshus
+52.219,52.21,5,Tjenester tilknyttet landtransport ikke nevnt annet sted
+52.220,52.22,5,Andre tjenester tilknyttet sjøtransport
+52.230,52.23,5,Andre tjenester tilknyttet lufttransport
+52.240,52.24,5,Lasting og lossing
+52.250,52.25,5,Logistikktjenester
+52.260,52.26,5,Andre støttetjenester for transport
+52.311,52.31,5,Formidlingstjenester tilknyttet godstransport via skip
+52.312,52.31,5,"Formidlingstjenester tilknyttet godstransport via jernbane, luftfartøy eller på vei"
+52.320,52.32,5,Formidlingstjenester tilknyttet passasjertransport
+53,H,2,Post- og budtjenester
+53.1,53,3,Landsdekkende posttjenester
+53.2,53,3,Andre post- og budtjenester
+53.3,53,3,Formidlingstjenester tilknyttet post- og budtjenester
+53.10,53.1,4,Landsdekkende posttjenester
+53.20,53.2,4,Andre post- og budtjenester
+53.30,53.3,4,Formidlingstjenester tilknyttet post- og budtjenester
+53.100,53.10,5,Landsdekkende posttjenester
+53.200,53.20,5,Andre post- og budtjenester
+53.300,53.30,5,Formidlingstjenester tilknyttet post- og budtjenester
+55,I,2,Overnattingsvirksomhet
+55.1,55,3,Drift av hoteller
+55.2,55,3,Drift av vandrerhjem og ferieleiligheter
+55.3,55,3,Drift av campingplasser
+55.4,55,3,Formidlingstjenester tilknyttet overnattingsvirksomhet
+55.9,55,3,Annen overnattingsvirksomhet
+55.10,55.1,4,Drift av hoteller
+55.20,55.2,4,Drift av vandrerhjem og ferieleiligheter
+55.30,55.3,4,Drift av campingplasser
+55.40,55.4,4,Formidlingstjenester tilknyttet overnattingsvirksomhet
+55.90,55.9,4,Annen overnattingsvirksomhet
+55.100,55.10,5,Drift av hoteller
+55.200,55.20,5,Drift av vandrerhjem og ferieleiligheter
+55.300,55.30,5,Drift av campingplasser
+55.400,55.40,5,Formidlingstjenester tilknyttet overnattingsvirksomhet
+55.900,55.90,5,Annen overnattingsvirksomhet
+56,I,2,Serveringsvirksomhet
+56.1,56,3,Drift av restauranter og mobile serveringssteder
+56.2,56,3,"Catering for arrangementer, kantinedrift og annen cateringvirksomhet"
+56.3,56,3,Drift av barer
+56.4,56,3,Formidlingstjenester tilknyttet serveringsvirksomhet
+56.11,56.1,4,Drift av restauranter
+56.12,56.1,4,Drift av mobile serveringssteder
+56.21,56.2,4,Catering for arrangementer
+56.22,56.2,4,Kantinedrift og annen cateringvirksomhet
+56.30,56.3,4,Drift av barer
+56.40,56.4,4,Formidlingstjenester tilknyttet serveringsvirksomhet
+56.110,56.11,5,Drift av restauranter
+56.120,56.12,5,Drift av mobile serveringssteder
+56.210,56.21,5,Catering for arrangementer
+56.220,56.22,5,Kantinedrift og annen cateringvirksomhet
+56.300,56.30,5,Drift av barer
+56.400,56.40,5,Formidlingstjenester tilknyttet serveringsvirksomhet
+58,J,2,Utgivelsesvirksomhet
+58.1,58,3,"Utgivelse av bøker, aviser og annen utgivelsesvirksomhet, unntatt utgivelse av programvare"
+58.2,58,3,Utgivelse av programvare
+58.11,58.1,4,Utgivelse av bøker
+58.12,58.1,4,Utgivelse av aviser
+58.13,58.1,4,Utgivelse av blader og tidsskrifter
+58.19,58.1,4,"Utgivelsesvirksomhet ellers, unntatt utgivelse av programvare"
+58.21,58.2,4,Utgivelse av programvare for dataspill
+58.29,58.2,4,Utgivelse av annen programvare
+58.110,58.11,5,Utgivelse av bøker
+58.120,58.12,5,Utgivelse av aviser
+58.130,58.13,5,Utgivelse av blader og tidsskrifter
+58.190,58.19,5,"Utgivelsesvirksomhet ellers, unntatt utgivelse av programvare"
+58.210,58.21,5,Utgivelse av programvare for dataspill
+58.290,58.29,5,Utgivelse av annen programvare
+59,J,2,"Film-, video- og fjernsynsprogramproduksjon, utgivelse av musikk- og lydopptak"
+59.1,59,3,"Virksomhet innenfor film, video og fjernsynsprogrammer"
+59.2,59,3,Produksjon og utgivelse av musikk- og lydopptak
+59.11,59.1,4,"Produksjon av film, video og fjernsynsprogrammer"
+59.12,59.1,4,"Etterarbeid knyttet til produksjon av film, video og fjernsynsprogrammer"
+59.13,59.1,4,Distribusjon av film og video
+59.14,59.1,4,Filmfremvisning
+59.20,59.2,4,Produksjon og utgivelse av musikk- og lydopptak
+59.110,59.11,5,"Produksjon av film, video og fjernsynsprogrammer"
+59.120,59.12,5,"Etterarbeid knyttet til produksjon av film, video og fjernsynsprogrammer"
+59.130,59.13,5,Distribusjon av film og video
+59.140,59.14,5,Filmfremvisning
+59.200,59.20,5,Produksjon og utgivelse av musikk- og lydopptak
+60,J,2,"Radio- og fjernsynsprogramvirksomhet, kringkasting, nyhetsbyråvirksomhet og distribuering av annet innhold"
+60.1,60,3,Radiokringkasting og distribuering av musikk og andre lydmedier
+60.2,60,3,"Fjernsynsprogramvirksomhet, kringkasting og distribuering av audiovisuelle medier"
+60.3,60,3,Nyhetsbyråvirksomhet og annen virksomhet for distribuering av innhold
+60.10,60.1,4,Radiokringkasting og distribuering av musikk og andre lydmedier
+60.20,60.2,4,"Fjernsynsprogramvirksomhet, kringkasting og distribuering av audiovisuelle medier"
+60.31,60.3,4,Nyhetsbyråvirksomhet
+60.39,60.3,4,Annen virksomhet for distribuering av innhold
+60.100,60.10,5,Radiokringkasting og distribuering av musikk og andre lydmedier
+60.200,60.20,5,"Fjernsynsprogramvirksomhet, kringkasting og distribuering av audiovisuelle medier"
+60.310,60.31,5,Nyhetsbyråvirksomhet
+60.390,60.39,5,Annen virksomhet for distribuering av innhold
+61,K,2,Telekommunikasjon
+61.1,61,3,"Kabelbasert, satellittbasert og trådløs telekommunikasjon"
+61.2,61,3,Videresalg av telekommunikasjon og formidlingstjenester tilknyttet telekommunikasjon
+61.9,61,3,Telekommunikasjon ellers
+61.10,61.1,4,"Kabelbasert, satellittbasert og trådløs telekommunikasjon"
+61.20,61.2,4,Videresalg av telekommunikasjon og formidlingstjenester tilknyttet telekommunikasjon
+61.90,61.9,4,Telekommunikasjon ellers
+61.100,61.10,5,"Kabelbasert, satellittbasert og trådløs telekommunikasjon"
+61.200,61.20,5,Videresalg av telekommunikasjon og formidlingstjenester tilknyttet telekommunikasjon
+61.900,61.90,5,Telekommunikasjon ellers
+62,K,2,"Dataprogrammering, konsulentvirksomhet og andre tjenester tilknyttet informasjonsteknologi"
+62.1,62,3,Dataprogrammeringstjenester
+62.2,62,3,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av IT-systemer
+62.9,62,3,Andre tjenester tilknyttet informasjonsteknologi
+62.10,62.1,4,Dataprogrammeringstjenester
+62.20,62.2,4,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av IT-systemer
+62.90,62.9,4,Andre tjenester tilknyttet informasjonsteknologi
+62.100,62.10,5,Dataprogrammeringstjenester
+62.200,62.20,5,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av IT-systemer
+62.900,62.90,5,Andre tjenester tilknyttet informasjonsteknologi
+63,K,2,"Datainfrastruktur, -behandling, -lagring og andre informasjonstjenester"
+63.1,63,3,"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester"
+63.9,63,3,Drift av søkemotorer og andre informasjonstjenester
+63.10,63.1,4,"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester"
+63.91,63.9,4,Drift av søkemotorer
+63.92,63.9,4,Andre informasjonstjenester
+63.100,63.10,5,"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester"
+63.910,63.91,5,Drift av søkemotorer
+63.920,63.92,5,Andre informasjonstjenester
+64,L,2,Finansieringsvirksomhet og kollektive investeringsfond
+64.1,64,3,Bankvirksomhet
+64.2,64,3,Finansielle holdingselskaper
+64.3,64,3,Kollektive investeringsfond og lignende
+64.9,64,3,Annen finansieringsvirksomhet
+64.11,64.1,4,Sentralbank
+64.19,64.1,4,Banker og kredittforetak
+64.21,64.2,4,Holdingforetak i finanskonsern
+64.22,64.2,4,Spesielle holdingselskaper
+64.31,64.3,4,Kollektive investeringsfond
+64.32,64.3,4,Finansstiftelser og egeninvesteringsselskaper
+64.91,64.9,4,Finansiell leasing
+64.92,64.9,4,Annen kredittgivning
+64.99,64.9,4,Annen finansieringsvirksomhet ikke nevnt annet sted
+64.110,64.11,5,Sentralbank
+64.190,64.19,5,Banker og kredittforetak
+64.210,64.21,5,Holdingforetak i finanskonsern
+64.220,64.22,5,Spesielle holdingselskaper
+64.311,64.31,5,Verdipapirfond
+64.312,64.31,5,Alternative investeringsfond (AIF) som ikke er verdipapirfond
+64.321,64.32,5,Finansstiftelser
+64.322,64.32,5,Egeninvesteringsselskaper i finansielle konsern og for offentlig forvaltning
+64.323,64.32,5,Andre egeninvesteringsselskaper
+64.910,64.91,5,Finansiell leasing
+64.920,64.92,5,Annen kredittgivning
+64.990,64.99,5,Annen finansieringsvirksomhet ikke nevnt annet sted
+65,L,2,"Forsikringsvirksomhet, unntatt trygdeordninger underlagt offentlig forvaltning"
+65.1,65,3,Forsikring
+65.2,65,3,Gjenforsikring
+65.3,65,3,Pensjonskasser
+65.11,65.1,4,Livsforsikring
+65.12,65.1,4,Skadeforsikring
+65.20,65.2,4,Gjenforsikring
+65.30,65.3,4,Pensjonskasser
+65.110,65.11,5,Livsforsikring
+65.120,65.12,5,Skadeforsikring
+65.200,65.20,5,Gjenforsikring
+65.300,65.30,5,Pensjonskasser
+66,L,2,Tjenester tilknyttet finansiell virksomhet
+66.1,66,3,Tjenester tilknyttet finansieringsvirksomhet og kollektive investeringsfond
+66.2,66,3,Tjenester tilknyttet forsikringsvirksomhet
+66.3,66,3,Fondsforvaltningsvirksomhet
+66.11,66.1,4,Administrasjon av finansmarkeder
+66.12,66.1,4,Verdipapirmegling
+66.19,66.1,4,Andre tjenester tilknyttet finansieringsvirksomhet og kollektive investeringsfond
+66.21,66.2,4,Risiko- og skadevurdering
+66.22,66.2,4,Forsikringsformidling
+66.29,66.2,4,Tjenester tilknyttet forsikringsvirksomhet ikke nevnt annet sted
+66.30,66.3,4,Fondsforvaltningsvirksomhet
+66.110,66.11,5,Administrasjon av finansmarkeder
+66.120,66.12,5,Verdipapirmegling
+66.190,66.19,5,Andre tjenester tilknyttet finansieringsvirksomhet og kollektive investeringsfond
+66.210,66.21,5,Risiko- og skadevurdering
+66.220,66.22,5,Forsikringsformidling
+66.290,66.29,5,Tjenester tilknyttet forsikringsvirksomhet ikke nevnt annet sted
+66.300,66.30,5,Fondsforvaltningsvirksomhet
+68,M,2,Eiendomsvirksomhet
+68.1,68,3,Eiendomsvirksomhet tilknyttet egen fast eiendom og utvikling av byggeprosjekter
+68.2,68,3,Utleie av egen eller leid fast eiendom
+68.3,68,3,Eiendomsvirksomhet og drift av fast eiendom på oppdrag
+68.11,68.1,4,Kjøp og salg av egen fast eiendom
+68.12,68.1,4,Utvikling og salg av byggeprosjekter
+68.20,68.2,4,Utleie av egen eller leid fast eiendom
+68.31,68.3,4,Eiendomsmegling og andre formidlingstjenester for eiendom
+68.32,68.3,4,Eiendomsforvaltning på oppdrag
+68.110,68.11,5,Kjøp og salg av egen fast eiendom
+68.120,68.12,5,Utvikling og salg av byggeprosjekter
+68.200,68.20,5,Utleie av egen eller leid fast eiendom
+68.310,68.31,5,Eiendomsmegling og andre formidlingstjenester for eiendom
+68.320,68.32,5,Eiendomsforvaltning på oppdrag
+69,N,2,Juridisk og regnskapsmessig tjenesteyting
+69.1,69,3,Juridisk tjenesteyting
+69.2,69,3,"Regnskapsføring, bokføring, revisjon og skatterådgivning"
+69.10,69.1,4,Juridisk tjenesteyting
+69.20,69.2,4,"Regnskapsføring, bokføring, revisjon og skatterådgivning"
+69.100,69.10,5,Juridisk tjenesteyting
+69.201,69.20,5,Revisjon
+69.202,69.20,5,Regnskapsføring og bokføring
+69.203,69.20,5,Skatterådgivning
+70,N,2,Hovedkontortjenester og administrativ rådgivning
+70.1,70,3,Hovedkontortjenester
+70.2,70,3,Bedriftsrådgivning og annen administrativ rådgivning
+70.10,70.1,4,Hovedkontortjenester
+70.20,70.2,4,Bedriftsrådgivning og annen administrativ rådgivning
+70.100,70.10,5,Hovedkontortjenester
+70.200,70.20,5,Bedriftsrådgivning og annen administrativ rådgivning
+71,N,2,"Arkitektvirksomhet og teknisk konsulentvirksomhet, og teknisk prøving og analyse"
+71.1,71,3,Arkitektvirksomhet og teknisk konsulentvirksomhet
+71.2,71,3,Teknisk prøving og analyse
+71.11,71.1,4,Arkitektvirksomhet
+71.12,71.1,4,Teknisk konsulentvirksomhet
+71.20,71.2,4,Teknisk prøving og analyse
+71.110,71.11,5,Arkitektvirksomhet
+71.121,71.12,5,Byggeteknisk konsulentvirksomhet
+71.122,71.12,5,Geologiske undersøkelser
+71.123,71.12,5,Utarbeidelse av kart og oppmåling
+71.129,71.12,5,Annen teknisk konsulentvirksomhet
+71.200,71.20,5,Teknisk prøving og analyse
+72,N,2,Forskning og eksperimentell utvikling
+72.1,72,3,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk
+72.2,72,3,Forskning og eksperimentell utvikling innenfor samfunnsvitenskap og humanistiske fag
+72.10,72.1,4,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk
+72.20,72.2,4,Forskning og eksperimentell utvikling innenfor samfunnsvitenskap og humanistiske fag
+72.100,72.10,5,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk
+72.200,72.20,5,Forskning og eksperimentell utvikling innenfor samfunnsvitenskap og humanistiske fag
+73,N,2,"Annonse- og reklamevirksomhet, markedsundersøkelser og PR og kommunikasjonstjenester"
+73.1,73,3,Annonse- og reklamevirksomhet
+73.2,73,3,Markeds- og opinionsundersøkelser
+73.3,73,3,PR og kommunikasjonstjenester
+73.11,73.1,4,Reklamebyråvirksomhet
+73.12,73.1,4,Medieformidlingstjenester
+73.20,73.2,4,Markeds- og opinionsundersøkelser
+73.30,73.3,4,PR og kommunikasjonstjenester
+73.110,73.11,5,Reklamebyråvirksomhet
+73.120,73.12,5,Medieformidlingstjenester
+73.200,73.20,5,Markeds- og opinionsundersøkelser
+73.300,73.30,5,PR og kommunikasjonstjenester
+74,N,2,"Annen faglig, vitenskapelig og teknisk virksomhet"
+74.1,74,3,Spesialisert designvirksomhet
+74.2,74,3,Fotografvirksomhet
+74.3,74,3,Oversettelses- og tolkevirksomhet
+74.9,74,3,"Annen faglig, vitenskapelig og teknisk virksomhet ikke nevnt annet sted"
+74.11,74.1,4,"Industri-, produkt- og motedesignvirksomhet"
+74.12,74.1,4,Grafisk design og visuell kommunikasjonsdesign
+74.13,74.1,4,Interiørdesignvirksomhet
+74.14,74.1,4,Annen spesialisert designvirksomhet
+74.20,74.2,4,Fotografvirksomhet
+74.30,74.3,4,Oversettelses- og tolkevirksomhet
+74.91,74.9,4,Patentmeglervirksomhet og markedsføringstjenester
+74.99,74.9,4,"All annen faglig, vitenskapelig og teknisk virksomhet ikke nevnt annet sted"
+74.110,74.11,5,"Industri-, produkt- og motedesignvirksomhet"
+74.120,74.12,5,Grafisk design og visuell kommunikasjonsdesign
+74.130,74.13,5,Interiørdesignvirksomhet
+74.140,74.14,5,Annen spesialisert designvirksomhet
+74.200,74.20,5,Fotografvirksomhet
+74.300,74.30,5,Oversettelses- og tolkevirksomhet
+74.910,74.91,5,Patentmeglervirksomhet og markedsføringstjenester
+74.990,74.99,5,"All annen faglig, vitenskapelig og teknisk virksomhet ikke nevnt annet sted"
+75,N,2,Veterinærtjenester
+75.0,75,3,Veterinærtjenester
+75.00,75.0,4,Veterinærtjenester
+75.000,75.00,5,Veterinærtjenester
+77,O,2,Utleie- og leasingvirksomhet
+77.1,77,3,Utleie og leasing av motorvogner
+77.2,77,3,Utleie og leasing av husholdningsvarer og varer til personlig bruk
+77.3,77,3,"Utleie og leasing av andre maskiner, og annet utstyr og materiell"
+77.4,77,3,"Leasing av immateriell eiendom og lignende produkter, unntatt opphavsrettsbeskyttede verker"
+77.5,77,3,"Formidlingstjenester tilknyttet utleie og leasing av materielle varer, immateriell eiendom og lignende produkter"
+77.11,77.1,4,Utleie og leasing av biler og andre lette motorvogner
+77.12,77.1,4,Utleie og leasing av lastebiler
+77.21,77.2,4,Utleie og leasing av sports- og fritidsutstyr
+77.22,77.2,4,Utleie og leasing av andre husholdningsvarer og varer til personlig bruk
+77.31,77.3,4,Utleie og leasing av landbruksmaskiner og -utstyr
+77.32,77.3,4,Utleie og leasing av bygge- og anleggsmaskiner og -utstyr
+77.33,77.3,4,Utleie og leasing av kontor- og datamaskiner
+77.34,77.3,4,Utleie og leasing av sjøtransportmateriell
+77.35,77.3,4,Utleie og leasing av lufttransportmateriell
+77.39,77.3,4,Utleie og leasing av andre maskiner og annet utstyr og materiell ikke nevnt annet sted
+77.40,77.4,4,"Leasing av immateriell eiendom og lignende produkter, unntatt opphavsrettsbeskyttede verker"
+77.51,77.5,4,"Formidlingstjenester tilknyttet utleie og leasing av biler, campingbiler og tilhengere"
+77.52,77.5,4,Formidlingstjenester tilknyttet utleie og leasing av andre materielle varer og immateriell eiendom og lignende produkter
+77.110,77.11,5,Utleie og leasing av biler og andre lette motorvogner
+77.120,77.12,5,Utleie og leasing av lastebiler
+77.210,77.21,5,Utleie og leasing av sports- og fritidsutstyr
+77.220,77.22,5,Utleie og leasing av andre husholdningsvarer og varer til personlig bruk
+77.310,77.31,5,Utleie og leasing av landbruksmaskiner og -utstyr
+77.320,77.32,5,Utleie og leasing av bygge- og anleggsmaskiner og -utstyr
+77.330,77.33,5,Utleie og leasing av kontor- og datamaskiner
+77.340,77.34,5,Utleie og leasing av sjøtransportmateriell
+77.350,77.35,5,Utleie og leasing av lufttransportmateriell
+77.390,77.39,5,Utleie og leasing av andre maskiner og annet utstyr og materiell ikke nevnt annet sted
+77.400,77.40,5,"Leasing av immateriell eiendom og lignende produkter, unntatt opphavsrettsbeskyttede verker"
+77.510,77.51,5,"Formidlingstjenester tilknyttet utleie og leasing av biler, campingbiler og tilhengere"
+77.520,77.52,5,Formidlingstjenester tilknyttet utleie og leasing av andre materielle varer og immateriell eiendom og lignende produkter
+78,O,2,Arbeidskrafttjenester
+78.1,78,3,Rekruttering og formidling av arbeidskraft
+78.2,78,3,Utleie av arbeidskraft og andre personaladministrative tjenester
+78.10,78.1,4,Rekruttering og formidling av arbeidskraft
+78.20,78.2,4,Utleie av arbeidskraft og andre personaladministrative tjenester
+78.100,78.10,5,Rekruttering og formidling av arbeidskraft
+78.200,78.20,5,Utleie av arbeidskraft og andre personaladministrative tjenester
+79,O,2,Reisebyrå- og reisearrangørvirksomhet og tilknyttede tjenester
+79.1,79,3,Reisebyrå- og reisearrangørvirksomhet
+79.9,79,3,Annen arrangørvirksomhet og tilknyttede tjenester
+79.11,79.1,4,Reisebyråvirksomhet
+79.12,79.1,4,Reisearrangørvirksomhet
+79.90,79.9,4,Annen arrangørvirksomhet og tilknyttede tjenester
+79.110,79.11,5,Reisebyråvirksomhet
+79.121,79.12,5,Aktiviteter utført av utflukts- og eventarrangører
+79.122,79.12,5,Reisearrangørvirksomhet ellers
+79.901,79.90,5,Aktiviteter utført av turistkontorer og destinasjonsselskaper
+79.902,79.90,5,Guide- og reiseledervirksomhet
+80,O,2,Etterforsknings- og vakttjenester
+80.0,80,3,Etterforsknings- og vakttjenester
+80.01,80.0,4,Etterforskningstjenester og private vakttjenester
+80.09,80.0,4,Vakttjenester ikke nevnt annet sted
+80.010,80.01,5,Etterforskningstjenester og private vakttjenester
+80.090,80.09,5,Vakttjenester ikke nevnt annet sted
+81,O,2,Tjenester tilknyttet eiendomsdrift og beplanting av hager og parkanlegg
+81.1,81,3,Kombinerte tjenester tilknyttet eiendomsdrift
+81.2,81,3,Rengjøringsvirksomhet
+81.3,81,3,Beplantning av hager og parkanlegg
+81.10,81.1,4,Kombinerte tjenester tilknyttet eiendomsdrift
+81.21,81.2,4,Rengjøring av bygninger
+81.22,81.2,4,Utvendig rengjøring av bygninger og industriell rengjøring
+81.23,81.2,4,Annen rengjøringsvirksomhet og snømåking
+81.30,81.3,4,Beplantning av hager og parkanlegg
+81.100,81.10,5,Kombinerte tjenester tilknyttet eiendomsdrift
+81.210,81.21,5,Rengjøring av bygninger
+81.220,81.22,5,Utvendig rengjøring av bygninger og industriell rengjøring
+81.230,81.23,5,Annen rengjøringsvirksomhet og snømåking
+81.300,81.30,5,Beplantning av hager og parkanlegg
+82,O,2,Annen forretningsmessig tjenesteyting
+82.1,82,3,Kontortjenester
+82.2,82,3,Callsentervirksomhet
+82.3,82,3,"Kongress-, messe- og utstillingsvirksomhet"
+82.4,82,3,Formidlingstjenester tilknyttet forretningsmessig tjenesteyting ikke nevnt annet sted
+82.9,82,3,Forretningsmessig tjenesteyting ikke nevnt annet sted
+82.10,82.1,4,Kontortjenester
+82.20,82.2,4,Callsentervirksomhet
+82.30,82.3,4,"Kongress-, messe- og utstillingsvirksomhet"
+82.40,82.4,4,Formidlingstjenester tilknyttet forretningsmessig tjenesteyting ikke nevnt annet sted
+82.91,82.9,4,Inkasso- og kredittopplysningsvirksomhet
+82.92,82.9,4,Pakkevirksomhet
+82.99,82.9,4,Annen forretningsmessig tjenesteyting ikke nevnt annet sted
+82.100,82.10,5,Kontortjenester
+82.200,82.20,5,Callsentervirksomhet
+82.300,82.30,5,"Kongress-, messe- og utstillingsvirksomhet"
+82.400,82.40,5,Formidlingstjenester tilknyttet forretningsmessig tjenesteyting ikke nevnt annet sted
+82.910,82.91,5,Inkasso- og kredittopplysningsvirksomhet
+82.920,82.92,5,Pakkevirksomhet
+82.990,82.99,5,Annen forretningsmessig tjenesteyting ikke nevnt annet sted
+84,P,2,"Offentlig administrasjon og forsvar, og trygdeordninger underlagt offentlig forvaltning"
+84.1,84,3,Offentlig administrasjon og forvaltning
+84.2,84,3,Offentlig administrasjon tilknyttet utenriks- og sikkerhetssaker
+84.3,84,3,Administrasjon av trygdeordninger underlagt offentlig forvaltning
+84.11,84.1,4,Generell offentlig administrasjon
+84.12,84.1,4,"Offentlig administrasjon tilknyttet helsestell, undervisning, kultur og annen sosial virksomhet"
+84.13,84.1,4,Offentlig administrasjon tilknyttet næringsvirksomhet og arbeidsmarked
+84.21,84.2,4,Utenrikssaker
+84.22,84.2,4,Forsvarsaktiviteter
+84.23,84.2,4,Aktiviteter i rettsvesen og kriminalomsorg
+84.24,84.2,4,Aktiviteter utført av politi- og påtalemyndighet
+84.25,84.2,4,Brannvernaktiviteter
+84.30,84.3,4,Administrasjon av trygdeordninger underlagt offentlig forvaltning
+84.110,84.11,5,Generell offentlig administrasjon
+84.120,84.12,5,"Offentlig administrasjon tilknyttet helsestell, undervisning, kultur og annen sosial virksomhet"
+84.130,84.13,5,Offentlig administrasjon tilknyttet næringsvirksomhet og arbeidsmarked
+84.210,84.21,5,Utenrikssaker
+84.220,84.22,5,Forsvarsaktiviteter
+84.230,84.23,5,Aktiviteter i rettsvesen og kriminalomsorg
+84.240,84.24,5,Aktiviteter utført av politi- og påtalemyndighet
+84.250,84.25,5,Brannvernaktiviteter
+84.300,84.30,5,Administrasjon av trygdeordninger underlagt offentlig forvaltning
+85,Q,2,Undervisning
+85.1,85,3,Førskoleundervisning og drift av barnehager
+85.2,85,3,Grunnskoleundervisning
+85.3,85,3,Videregående opplæring
+85.4,85,3,Undervisning innenfor høyere utdanning
+85.5,85,3,Annen undervisning
+85.6,85,3,Tjenester tilknyttet undervisning
+85.10,85.1,4,Førskoleundervisning og drift av barnehager
+85.20,85.2,4,Grunnskoleundervisning
+85.31,85.3,4,Videregående opplæring innenfor studieforberedende utdanningsprogram
+85.32,85.3,4,Videregående opplæring innenfor yrkesfaglige utdanningsprogram
+85.33,85.3,4,Undervisning innenfor kort høyere yrkesfaglig utdanning
+85.40,85.4,4,Undervisning innenfor høyere utdanning
+85.51,85.5,4,Undervisning innenfor idrett og rekreasjon
+85.52,85.5,4,Undervisning innenfor kultur
+85.53,85.5,4,Trafikkskoleundervisning
+85.59,85.5,4,Annen undervisning ikke nevnt annet sted
+85.61,85.6,4,Formidlingstjenester tilknyttet kurs og veiledere
+85.69,85.6,4,Tjenester tilknyttet undervisning ikke nevnt annet sted
+85.100,85.10,5,Førskoleundervisning og drift av barnehager
+85.201,85.20,5,Ordinær grunnskoleundervisning
+85.202,85.20,5,Spesialskoleundervisning på grunnskolenivå
+85.310,85.31,5,Videregående opplæring innenfor studieforberedende utdanningsprogram
+85.320,85.32,5,Videregående opplæring innenfor yrkesfaglige utdanningsprogram
+85.330,85.33,5,Undervisning innenfor kort høyere yrkesfaglig utdanning
+85.401,85.40,5,Undervisning ved universiteter
+85.402,85.40,5,Undervisning ved vitenskapelige høgskoler
+85.403,85.40,5,Undervisning ved andre høgskoler
+85.404,85.40,5,Undervisning innenfor lang høyere yrkesfaglig utdanning
+85.510,85.51,5,Undervisning innenfor idrett og rekreasjon
+85.521,85.52,5,Kulturskoleundervisning til barn og unge
+85.529,85.52,5,Annen undervisning innenfor kultur
+85.531,85.53,5,Undervisning ved godkjente trafikkskoler
+85.532,85.53,5,Annen trafikkskoleundervisning
+85.591,85.59,5,Undervisning ved folkehøgskoler
+85.592,85.59,5,Undervisning i form av arbeidsmarkedskurs/arbeidsrettede kurs
+85.593,85.59,5,"Undervisning ved voksenopplæringssentre, aktiviteter i studieforbund og undervisning i form av frivillige organisasjoners kurs"
+85.594,85.59,5,Privatundervisning
+85.595,85.59,5,Undervisning innenfor religion
+85.596,85.59,5,Aktiviteter utført ved leirskoler
+85.597,85.59,5,Annen undervisning ellers
+85.610,85.61,5,Formidlingstjenester tilknyttet kurs og veiledere
+85.691,85.69,5,Pedagogisk-psykologisk rådgivningstjeneste
+85.692,85.69,5,Tjenester utført ved spesialpedagogiske kompetansesentre og tjenester utenom PPT
+85.699,85.69,5,Andre tjenester tilknyttet undervisning ikke nevnt annet sted
+86,R,2,Helsetjenester
+86.1,86,3,Sykehustjenester
+86.2,86,3,Lege- og tannlegetjenester
+86.9,86,3,Andre helsetjenester
+86.10,86.1,4,Sykehustjenester
+86.21,86.2,4,Allmennlegetjenester
+86.22,86.2,4,Spesialiserte legetjenester
+86.23,86.2,4,Tannlegetjenester
+86.91,86.9,4,Medisinske laboratorietjenester og bildediagnostikk
+86.92,86.9,4,Ambulansetransport
+86.93,86.9,4,"Psykolog- og psykoterapitjenester, unntatt legetjenester innenfor psykiatri"
+86.94,86.9,4,Sykepleie- og jordmortjenester
+86.95,86.9,4,Fysioterapi- og ergoterapitjenester
+86.96,86.9,4,"Aktiviteter innenfor tradisjonell, komplementær og alternativ medisin"
+86.97,86.9,4,"Formidlingstjenester tilknyttet lege-, tannlegetjenester og andre helsetjenester"
+86.99,86.9,4,Andre helsetjenester ikke nevnt annet sted
+86.101,86.10,5,Somatiske sykehustjenester
+86.102,86.10,5,Psykiatriske sykehustjenester for voksne
+86.103,86.10,5,Spesialisert rusbehandling
+86.104,86.10,5,Psykiatriske sykehustjenester for barn og ungdom
+86.210,86.21,5,Allmennlegetjenester
+86.221,86.22,5,"Spesialiserte legetjenester, unntatt psykiatriske legetjenester"
+86.222,86.22,5,Psykiatriske legetjenester
+86.230,86.23,5,Tannlegetjenester
+86.910,86.91,5,Medisinske laboratorietjenester og bildediagnostikk
+86.921,86.92,5,Ambulansetransport unntatt luftambulanse
+86.922,86.92,5,Luftambulansetransport med fly eller helikopter
+86.930,86.93,5,"Psykolog- og psykoterapitjenester, unntatt legetjenester innenfor psykiatri"
+86.941,86.94,5,Sykepleietjenester og andre helsetjenester i hjemmet
+86.942,86.94,5,Helsestasjons- og skolehelsetjenester
+86.950,86.95,5,Fysioterapi- og ergoterapitjenester
+86.960,86.96,5,"Aktiviteter innenfor tradisjonell, komplementær og alternativ medisin"
+86.970,86.97,5,"Formidlingstjenester tilknyttet lege-, tannlegetjenester og andre helsetjenester"
+86.991,86.99,5,Ortopedi- og fotterapitjenester
+86.992,86.99,5,Forebyggende helsearbeid
+86.993,86.99,5,Andre helsetjenester ellers
+87,R,2,Helse- og omsorgstjenester i institusjoner og andre botilbud
+87.1,87,3,Helse- og omsorgstjenester med sykepleie i institusjoner og andre botilbud
+87.2,87,3,"Omsorgstjenester i botilbud for personer med psykiske helseproblemer, utviklingshemming eller rusmiddelproblemer"
+87.3,87,3,Omsorgstjenester i botilbud for eldre eller personer med fysisk funksjonsnedsettelse
+87.9,87,3,Omsorgstjenester i andre institusjoner og botilbud
+87.10,87.1,4,Helse- og omsorgstjenester med sykepleie i institusjoner og andre botilbud
+87.20,87.2,4,"Omsorgstjenester i botilbud for personer med psykiske helseproblemer, utviklingshemming eller rusmiddelproblemer"
+87.30,87.3,4,Omsorgstjenester i botilbud for eldre eller personer med fysisk funksjonsnedsettelse
+87.91,87.9,4,Formidlingstjenester tilknyttet omsorgstjenester i botilbud
+87.99,87.9,4,Andre omsorgs- og sosialtjenester i botilbud ikke nevnt annet sted
+87.101,87.10,5,Tjenester i spesialinstitusjon innenfor helse- og omsorg
+87.102,87.10,5,Sykehjemstjenester
+87.103,87.10,5,Øyeblikkelig hjelp døgntilbud
+87.104,87.10,5,Tjenester i avlastningsboliger/-institusjoner
+87.105,87.10,5,Tjenester i barneboliger
+87.106,87.10,5,"Helse- og omsorgstjenester i bofellesskap, samlokaliserte omsorgsboliger og lignende"
+87.201,87.20,5,Omsorgstjenester i botilbud for personer med psykiske helseproblemer og/eller rusmiddelproblemer
+87.202,87.20,5,Omsorgstjenester i botilbud for personer med utviklingshemming eller med tilsvarende funksjonsnedsettelse
+87.300,87.30,5,Omsorgstjenester i botilbud for eldre eller personer med fysisk funksjonsnedsettelse
+87.910,87.91,5,Formidlingstjenester tilknyttet omsorgstjenester i botilbud
+87.991,87.99,5,Tjenester i barneverninstitusjoner
+87.992,87.99,5,Asylmottakstjenester
+87.999,87.99,5,Andre botilbud innenfor sosiale tjenester ikke nevnt annet sted
+88,R,2,Omsorgs- og sosialtjenester uten botilbud
+88.1,88,3,Omsorgs- og sosialtjenester uten botilbud for eldre og personer med funksjonsnedsettelse
+88.9,88,3,Andre sosialtjenester uten botilbud
+88.10,88.1,4,Omsorgs- og sosialtjenester uten botilbud for eldre og personer med funksjonsnedsettelse
+88.91,88.9,4,Dagaktivitetstilbud for barn
+88.99,88.9,4,Andre sosialtjenester uten botilbud ikke nevnt annet sted
+88.101,88.10,5,Praktisk bistand i hjemmet
+88.102,88.10,5,Dagaktivitetstilbud tilpasset målgrupper
+88.103,88.10,5,Tjenester i seniorsentre
+88.104,88.10,5,Brukerstyrt personlig assistanse (BPA)
+88.105,88.10,5,Avlastning utenfor institusjon
+88.106,88.10,5,Støttekontakt- og besøkstjeneste
+88.910,88.91,5,Dagaktivitetstilbud for barn
+88.991,88.99,5,Barneverntjenester
+88.992,88.99,5,Familieverntjenester
+88.993,88.99,5,Arbeidstrening og varig tilrettelagt arbeid
+88.994,88.99,5,Velferdstjenester til sårbare grupper
+88.995,88.99,5,Sosialkontortjenester
+88.996,88.99,5,Andre sosialtjenester uten botilbud ellers
+90,S,2,Kunstnerisk virksomhet og underholdningsvirksomhet
+90.1,90,3,Kunstnerisk virksomhet
+90.2,90,3,Utøvende kunstnerisk virksomhet og underholdningsvirksomhet
+90.3,90,3,Tjenester tilknyttet kunstnerisk virksomhet og underholdningsvirksomhet
+90.11,90.1,4,Skapende kunstnerisk virksomhet innenfor litteratur og musikalsk komposisjon
+90.12,90.1,4,Skapende kunstnerisk virksomhet innenfor visuell kunst
+90.13,90.1,4,Annen kunstnerisk virksomhet
+90.20,90.2,4,Utøvende kunstnerisk virksomhet og underholdningsvirksomhet
+90.31,90.3,4,Drift av lokaler tilknyttet kunstnerisk virksomhet og underholdningsvirksomhet
+90.39,90.3,4,Andre tjenester tilknyttet kunstnerisk virksomhet og underholdningsvirksomhet
+90.111,90.11,5,Skapende kunstnerisk virksomhet innenfor litteratur
+90.112,90.11,5,Skapende kunstnerisk virksomhet innenfor komposisjon av musikk
+90.120,90.12,5,Skapende kunstnerisk virksomhet innenfor visuell kunst
+90.130,90.13,5,Annen kunstnerisk virksomhet
+90.201,90.20,5,Utøvende kunstnerisk virksomhet og underholdningsvirksomhet innenfor musikk
+90.202,90.20,5,Utøvende kunstnerisk virksomhet og underholdningsvirksomhet innenfor scenekunst
+90.209,90.20,5,Annen utøvende kunstnerisk virksomhet og underholdningsvirksomhet ikke nevnt annet sted
+90.310,90.31,5,Drift av lokaler tilknyttet kunstnerisk virksomhet og underholdningsvirksomhet
+90.390,90.39,5,Andre tjenester tilknyttet kunstnerisk virksomhet og underholdningsvirksomhet
+91,S,2,"Drift av biblioteker, arkiver, museer og annen kulturvirksomhet"
+91.1,91,3,Drift av biblioteker og arkiver
+91.2,91,3,"Drift av museer, samlinger, historiske steder og monumenter"
+91.3,91,3,"Konservering, restaurering og andre tjenester tilknyttet kulturarv"
+91.4,91,3,Drift av botaniske og zoologiske hager og naturreservater
+91.11,91.1,4,Drift av biblioteker
+91.12,91.1,4,Drift av arkiver
+91.21,91.2,4,Drift av museer og samlinger
+91.22,91.2,4,Drift av historiske steder og monumenter
+91.30,91.3,4,"Konservering, restaurering og andre tjenester tilknyttet kulturarv"
+91.41,91.4,4,Drift av botaniske og zoologiske hager
+91.42,91.4,4,Drift av naturreservater
+91.111,91.11,5,Drift av folkebiblioteker
+91.112,91.11,5,Drift av fag- og forskningsbiblioteker
+91.120,91.12,5,Drift av arkiver
+91.211,91.21,5,Drift av kunst- og kunstindustrimuseer
+91.212,91.21,5,Drift av kulturhistoriske museer
+91.213,91.21,5,"Drift av naturhistoriske, teknologiske og vitenskapshistoriske museer"
+91.220,91.22,5,Drift av historiske steder og monumenter
+91.300,91.30,5,"Konservering, restaurering og andre tjenester tilknyttet kulturarv"
+91.410,91.41,5,Drift av botaniske og zoologiske hager
+91.420,91.42,5,Drift av naturreservater
+92,S,2,Lotteri- og gamblingvirksomhet
+92.0,92,3,Lotteri- og gamblingvirksomhet
+92.00,92.0,4,Lotteri- og gamblingvirksomhet
+92.000,92.00,5,Lotteri- og gamblingvirksomhet
+93,S,2,"Sports-, fornøyelses- og fritidsaktiviteter"
+93.1,93,3,Sportsaktiviteter
+93.2,93,3,Fornøyelses- og fritidsaktiviteter
+93.11,93.1,4,Drift av idrettsanlegg
+93.12,93.1,4,Aktiviteter i idrettslag og -klubber
+93.13,93.1,4,Treningssentervirksomhet
+93.19,93.1,4,Sportsaktiviteter ikke nevnt annet sted
+93.21,93.2,4,Drift av fornøyelses- og temaparker
+93.29,93.2,4,Fornøyelses- og fritidsaktiviteter ikke nevnt annet sted
+93.110,93.11,5,Drift av idrettsanlegg
+93.120,93.12,5,Aktiviteter i idrettslag og -klubber
+93.130,93.13,5,Treningssentervirksomhet
+93.190,93.19,5,Sportsaktiviteter ikke nevnt annet sted
+93.210,93.21,5,Drift av fornøyelses- og temaparker
+93.291,93.29,5,Opplevelsesaktiviteter
+93.292,93.29,5,Fritidsvirksomhet ellers
+94,T,2,Aktiviteter i medlemsorganisasjoner
+94.1,94,3,Aktiviteter i næringslivs- og arbeidsgiverorganisasjoner og yrkessammenslutninger
+94.2,94,3,Aktiviteter i arbeidstakerorganisasjoner
+94.9,94,3,Aktiviteter i andre medlemsorganisasjoner
+94.11,94.1,4,Aktiviteter i næringslivs- og arbeidsgiverorganisasjoner
+94.12,94.1,4,Aktiviteter i yrkessammenslutninger
+94.20,94.2,4,Aktiviteter i arbeidstakerorganisasjoner
+94.91,94.9,4,Aktiviteter i religiøse organisasjoner
+94.92,94.9,4,Aktiviteter i partipolitiske organisasjoner
+94.99,94.9,4,Aktiviteter i andre medlemsorganisasjoner ikke nevnt annet sted
+94.110,94.11,5,Aktiviteter i næringslivs- og arbeidsgiverorganisasjoner
+94.120,94.12,5,Aktiviteter i yrkessammenslutninger
+94.200,94.20,5,Aktiviteter i arbeidstakerorganisasjoner
+94.910,94.91,5,Aktiviteter i religiøse organisasjoner
+94.920,94.92,5,Aktiviteter i partipolitiske organisasjoner
+94.991,94.99,5,Aktiviteter i fond/legat som støtter veldedige og allmennyttige formål
+94.992,94.99,5,Aktiviteter i andre medlemsorganisasjoner ellers
+95,T,2,"Reparasjon og vedlikehold av datamaskiner, husholdningsvarer, varer til personlig bruk og motorvogner og motorsykler"
+95.1,95,3,Reparasjon og vedlikehold av datamaskiner og kommunikasjonsutstyr
+95.2,95,3,Reparasjon og vedlikehold av husholdningsvarer og varer til personlig bruk
+95.3,95,3,Reparasjon og vedlikehold av motorvogner og motorsykler
+95.4,95,3,"Formidlingstjenester tilknyttet reparasjon og vedlikehold av datamaskiner, husholdningsvarer og varer til personlig bruk, og motorvogner og motorsykler"
+95.10,95.1,4,Reparasjon og vedlikehold av datamaskiner og kommunikasjonsutstyr
+95.21,95.2,4,Reparasjon og vedlikehold av elektronikk til husholdningsbruk
+95.22,95.2,4,Reparasjon og vedlikehold av husholdningsvarer og hageredskaper
+95.23,95.2,4,Reparasjon og vedlikehold av skotøy og lærvarer
+95.24,95.2,4,Reparasjon og vedlikehold av møbler og boliginnredning
+95.25,95.2,4,"Reparasjon og vedlikehold av ur, klokker og smykker"
+95.29,95.2,4,Reparasjon og vedlikehold av andre husholdningsvarer og varer til personlig bruk ikke nevnt annet sted
+95.31,95.3,4,Reparasjon og vedlikehold av motorvogner
+95.32,95.3,4,Reparasjon og vedlikehold av motorsykler
+95.40,95.4,4,"Formidlingstjenester tilknyttet reparasjon og vedlikehold av datamaskiner, husholdningsvarer og varer til personlig bruk, og motorvogner og motorsykler"
+95.100,95.10,5,Reparasjon og vedlikehold av datamaskiner og kommunikasjonsutstyr
+95.210,95.21,5,Reparasjon og vedlikehold av elektronikk til husholdningsbruk
+95.220,95.22,5,Reparasjon og vedlikehold av husholdningsvarer og hageredskaper
+95.230,95.23,5,Reparasjon og vedlikehold av skotøy og lærvarer
+95.240,95.24,5,Reparasjon og vedlikehold av møbler og boliginnredning
+95.250,95.25,5,"Reparasjon og vedlikehold av ur, klokker og smykker"
+95.290,95.29,5,Reparasjon og vedlikehold av andre husholdningsvarer og varer til personlig bruk ikke nevnt annet sted
+95.310,95.31,5,Reparasjon og vedlikehold av motorvogner
+95.320,95.32,5,Reparasjon og vedlikehold av motorsykler
+95.400,95.40,5,"Formidlingstjenester tilknyttet reparasjon og vedlikehold av datamaskiner, husholdningsvarer og varer til personlig bruk, og motorvogner og motorsykler"
+96,T,2,Personlig tjenesteyting
+96.1,96,3,Vaskeri- og renserivirksomhet
+96.2,96,3,"Frisering, skjønnhetsbehandling, dagspa og lignende aktiviteter"
+96.3,96,3,Begravelsesbyråvirksomhet og lignende tjenester
+96.4,96,3,Formidlingstjenester tilknyttet personlig tjenesteyting
+96.9,96,3,Annen personlig tjenesteyting
+96.10,96.1,4,Vaskeri- og renserivirksomhet
+96.21,96.2,4,Frisering og barbering
+96.22,96.2,4,Skjønnhetspleie
+96.23,96.2,4,"Aktiviteter i dagspa, badstue og dampbad"
+96.30,96.3,4,Begravelsesbyråvirksomhet og lignende tjenester
+96.40,96.4,4,Formidlingstjenester tilknyttet personlig tjenesteyting
+96.91,96.9,4,Personlig tjenesteyting i husholdninger
+96.99,96.9,4,Andre personlige tjenester ikke nevnt annet sted
+96.100,96.10,5,Vaskeri- og renserivirksomhet
+96.210,96.21,5,Frisering og barbering
+96.220,96.22,5,Skjønnhetspleie
+96.230,96.23,5,"Aktiviteter i dagspa, badstue og dampbad"
+96.300,96.30,5,Begravelsesbyråvirksomhet og lignende tjenester
+96.400,96.40,5,Formidlingstjenester tilknyttet personlig tjenesteyting
+96.910,96.91,5,Personlig tjenesteyting i husholdninger
+96.990,96.99,5,Andre personlige tjenester ikke nevnt annet sted
+97,U,2,Lønnet arbeid i private husholdninger
+97.0,97,3,Lønnet arbeid i private husholdninger
+97.00,97.0,4,Lønnet arbeid i private husholdninger
+97.001,97.00,5,Aktiviteter i borettslag og boligsameier
+97.002,97.00,5,Lønnet arbeid i private husholdninger ellers
+98,U,2,Annen vareproduksjon og tjenesteyting i private husholdninger til eget bruk
+98.1,98,3,Annen vareproduksjon i private husholdninger til eget bruk
+98.2,98,3,Annen tjenesteyting i privat husholdninger til eget bruk
+98.10,98.1,4,Annen vareproduksjon i private husholdninger til eget bruk
+98.20,98.2,4,Annen tjenesteyting i privat husholdninger til eget bruk
+98.100,98.10,5,Annen vareproduksjon i private husholdninger til eget bruk
+98.200,98.20,5,Annen tjenesteyting i privat husholdninger til eget bruk
+99,V,2,Aktiviteter i internasjonale organisasjoner og organer
+99.0,99,3,Aktiviteter i internasjonale organisasjoner og organer
+99.00,99.0,4,Aktiviteter i internasjonale organisasjoner og organer
+99.000,99.00,5,Aktiviteter i internasjonale organisasjoner og organer
+A,,1,"Jordbruk, skogbruk og fiske"
+B,,1,Bergverksdrift og utvinning
+C,,1,Industri
+D,,1,"Forsyning av elektrisitet, gass, damp og kjøleluft"
+E,,1,"Vannforsyning, avløps-, renovasjons- og oppryddingsvirksomhet"
+F,,1,Bygge- og anleggsvirksomhet
+G,,1,Varehandel
+H,,1,Transport og lagring
+I,,1,Overnattings- og serveringsvirksomhet
+J,,1,"Utgivelse, kringkasting, innholdsproduksjon og distribusjonsvirksomhet"
+K,,1,"Telekommunikasjon, dataprogrammering, konsulentvirksomhet, datainfrastruktur og andre tjenester tilknyttet informasjonsteknologi"
+L,,1,Finansiell tjenesteyting
+M,,1,Eiendomsvirksomhet
+N,,1,"Faglig, vitenskapelig og teknisk tjenesteyting"
+O,,1,Forretningsmessig tjenesteyting
+P,,1,"Offentlig administrasjon og forsvar, og trygdeordninger underlagt offentlig forvaltning"
+Q,,1,Undervisning
+R,,1,Helse- og sosialtjenester
+S,,1,"Kulturell virksomhet, idrett og fritidsaktiviteter"
+T,,1,Annen tjenesteyting
+U,,1,Lønnet arbeid i private husholdninger og annen vareproduksjon og tjenesteyting i private husholdninger til eget bruk
+V,,1,Aktiviteter i internasjonale organisasjoner og organer

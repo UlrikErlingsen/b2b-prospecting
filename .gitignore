@@ -8,7 +8,9 @@ build/
 dist/
 .pytest_cache/
 .ruff_cache/
-data/
+/data/
+# Bundled open reference data (SSB, Kartverket; see docs/sources.md) ships with the package.
+!src/prospectsignal/data/
 *.db
 *.duckdb
 *.duckdb.wal
