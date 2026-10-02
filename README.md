@@ -150,6 +150,10 @@ docker run --rm -p 8589:8589 -v prospectsignal-data:/data prospectsignal
 
 Then open `http://127.0.0.1:8589`. The container runs as a non-root user, keeps its databases in the `/data` volume and includes a health check.
 
+### In Signal Hub
+
+[Signal Hub](https://github.com/UlrikErlingsen/signal-hub) runs Prospect Signal inside one shared Streamlit app through `prospectsignal.ui.render()`. There it sets `SIGNAL_HUB=1`, and Prospect Signal then runs the fictional offline demo in an in-memory database for each browser session: nothing is downloaded from Brønnøysundregistrene, no database file is written or read on the server, and the shortlist and saved ICPs disappear when the session ends. The *Data & register* page says so where the register loader would be. To load and keep the real register, run Prospect Signal locally as above.
+
 ## Privacy
 
 Prospect Signal stores company facts only, on your computer. See [PRIVACY.md](PRIVACY.md) for exactly what is and is not stored, and why ENK rows need care.
@@ -163,11 +167,11 @@ python -m ruff check .
 python -m build
 ```
 
-Tests use recorded API responses and the recorded bulk-file header with fictional rows; a guard fails any test that tries a live network call. The suite covers organisation numbers as strings with MOD11, leading-zero postcodes, Æ/Ø/Å round trips, the NACE hierarchy filter, ENK exclusion, the absence of person fields in storage and export, the Freddo CSV format, the outreach checklist's sources, the architecture rules (no Streamlit under `src/` except the `src/prospectsignal/ui/` theme layer, SQL only in `storage.py`), the Signal brand, and every Streamlit page.
+Tests use recorded API responses and the recorded bulk-file header with fictional rows; a guard fails any test that tries a live network call. The suite covers organisation numbers as strings with MOD11, leading-zero postcodes, Æ/Ø/Å round trips, the NACE hierarchy filter, ENK exclusion, the absence of person fields in storage and export, the Freddo CSV format, the outreach checklist's sources, the architecture rules (no Streamlit under `src/` except the `src/prospectsignal/ui/` layer, SQL only in `storage.py`), the Signal brand, every Streamlit page, and the Signal Hub contract: `render()` from the packaged files alone, slug-namespaced keys, and hub mode with no files written and no network calls.
 
 ### Use it as a package
 
-The logic lives in `src/prospectsignal/` and does not import Streamlit outside `src/prospectsignal/ui/` (the shared Signal theme), so it can be reused (for example in a merged Signal Hub):
+The logic lives in `src/prospectsignal/` and does not import Streamlit outside `src/prospectsignal/ui/` (the Streamlit pages and the shared Signal theme), so it can be reused without a UI (`pip install .`; add the `ui` extra for the Streamlit pages):
 
 ```python
 from prospectsignal import ICP, Store, demo_icp, load_demo, freddo_csv_bytes

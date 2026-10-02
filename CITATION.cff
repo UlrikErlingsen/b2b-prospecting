@@ -6,7 +6,7 @@ authors:
   - family-names: Erlingsen
     given-names: Ulrik
 version: 1.0.0
-date-released: 2026-10-01
+date-released: 2026-10-02
 license: AGPL-3.0-or-later
 repository-code: "https://github.com/UlrikErlingsen/b2b-prospecting"
 abstract: "A local-first application for ideal-customer filters, market counts and shortlists on Brønnøysundregistrene's open company register, with a manual export to Freddo CRM and no person data."

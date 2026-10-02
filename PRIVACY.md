@@ -25,4 +25,8 @@ Shortlist notes are free text. Do not write names, e-mail addresses or phone num
 
 A company's presence in Enhetsregisteret does not mean it, or anyone working there, agreed to receive marketing. Read the outreach checklist on the Export page before contacting anyone.
 
+## Inside Signal Hub
+
+When Prospect Signal runs inside Signal Hub (`SIGNAL_HUB=1`), it uses only the fictional offline demo, kept in an in-memory database for your browser session. It makes no requests to Brønnøysundregistrene, writes no database or other file on the server, and reads no earlier local data. Your shortlist, notes and saved ICPs disappear when the session ends; exports are built in memory and downloaded straight to your browser.
+
 If someone deploys the app for others, that operator controls infrastructure logs, retention, authentication, backups and network access, and must document those practices separately.

@@ -1,31 +1,8 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.0] - 2026-10-02
 
-Signal brand refresh (no version bump).
-
-### Changed
-
-- The app uses the shared Signal theme (`prospectsignal.ui.signal_theme`, synced from Signal Hub): Organic look with the Market family colour `#728157`, Figtree, the shared sidebar lockup, masthead, hero, cards, page headers, notes and footer. The pasted CSS and hand-written lockup are gone; `st.navigation` with `pages/` is unchanged.
-- Market charts use the per-app Signal Plotly template and the family sequential scale instead of hard-coded colours, shown with `sig.chart` so Streamlit's chart theme does not override Figtree and the palette.
-- Display name is now **Prospect Signal** (with a space) in the app, messages, attribution line, export metadata, launchers and docs. Technical identifiers (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs, HTTP user agent) are unchanged.
-- README follows the Signal README template (banner PNG, family badges, template section order, where-this-fits table, references, suite footer).
-- The architecture rule now reads "no Streamlit under `src/` except `src/prospectsignal/ui/`" (guard test, CLAUDE.md, AGENTS.md, CONTRIBUTING, PR template); a new test keeps the core package from importing the ui layer.
-- README screenshots re-taken in the Signal theme on the offline demo; `scripts/take_screenshots.py` now waits for the shared `.sg-mast` masthead.
-
-### Added
-
-- Figtree is embedded from the synced `prospectsignal.ui.signal_font` (Latin subset, OFL licence included), so the app makes no Google Fonts request.
-- Synced brand assets (`assets/prospectsignal-banner.png`, `-social.png`, `-mark-32/64/512.png`), theme marks shipped as `prospectsignal.ui` package data, and the synced `.streamlit/config.toml`.
-- Issue templates (bug report, feature request, config) and brand tests.
-
-### Removed
-
-- The superseded `assets/prospectsignal-banner.svg`.
-
-## 1.0.0 — 2026-10-01
-
-First release of **ProspectSignal**, the Signal suite's prospecting tool for the Norwegian market.
+First release of **Prospect Signal**, the Signal suite's prospecting tool for the Norwegian market, with the Signal brand and the Signal Hub entry point.
 
 ### Application
 
@@ -47,4 +24,24 @@ First release of **ProspectSignal**, the Signal suite's prospecting tool for the
 
 ### Architecture
 
-- All logic under `src/prospectsignal/` without Streamlit; Streamlit only in `app.py` and `pages/`; all SQL behind `storage.py`; public API in `prospectsignal/__init__.py`; tests enforce these rules.
+- All logic under `src/prospectsignal/` without Streamlit; Streamlit only in `src/prospectsignal/ui/` (plus the thin `app.py` and `pages/` wrappers); all SQL behind `storage.py`; public API in `prospectsignal/__init__.py`; tests enforce these rules.
+
+### Signal brand
+
+- The app uses the shared Signal theme (`prospectsignal.ui.signal_theme`, synced from Signal Hub): Organic look with the Market family colour `#728157`, Figtree, the shared sidebar lockup, masthead, hero, cards, page headers, notes and footer.
+- Market charts use the per-app Signal Plotly template and the family sequential scale instead of hard-coded colours, shown with `sig.chart` so Streamlit's chart theme does not override Figtree and the palette.
+- Display name is now **Prospect Signal** (with a space) in the app, messages, attribution line, export metadata, launchers and docs. Technical identifiers (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs, HTTP user agent) are unchanged.
+- README follows the Signal README template (banner PNG, family badges, template section order, where-this-fits table, references, suite footer).
+- The architecture rule now reads "no Streamlit under `src/` except `src/prospectsignal/ui/`" (guard test, CLAUDE.md, AGENTS.md, CONTRIBUTING, PR template); a new test keeps the core package from importing the ui layer.
+- README screenshots re-taken in the Signal theme on the offline demo; `scripts/take_screenshots.py` now waits for the shared `.sg-mast` masthead.
+- Figtree is embedded from the synced `prospectsignal.ui.signal_font` (Latin subset, OFL licence included), so the app makes no Google Fonts request.
+- Synced brand assets (`assets/prospectsignal-banner.png`, `-social.png`, `-mark-32/64/512.png`; the old banner SVG is removed), theme marks shipped as `prospectsignal.ui` package data, and the synced `.streamlit/config.toml`.
+- Issue templates (bug report, feature request, config) and brand tests.
+
+### Signal Hub
+
+- `prospectsignal.ui` exposes `APP_INFO` and `render()`, which draws the whole app (theme, sidebar lockup, a namespaced page radio, masthead, the selected page, footer) without `st.set_page_config`, `st.navigation` or `st.stop`. The page code moved into `prospectsignal.ui.pages`, so an installed package has it; `pages/*.py` are thin wrappers and the standalone app keeps its `st.navigation` layout and URLs.
+- Every session-state and widget key is namespaced `prospect:` through one `k()` helper.
+- Hub mode (`SIGNAL_HUB=1`): the fictional offline demo runs in an in-memory DuckDB per browser session. No database file is opened, no earlier local workspace is read, Brønnøysundregistrene is never called (the register loader and single-unit refresh are hidden or disabled with a note), and the bundled outreach checklist is used instead of a local override file. Standalone behaviour is unchanged.
+- `ui` optional extra for Streamlit (`app` kept as an alias); `requirements.txt` still installs everything.
+- Contract tests (entry point, Streamlit only under `ui/`, fresh-interpreter core import, render from the packaged files alone, namespaced keys) and hub-mode tests (every page renders, nothing written to the working, home or app-data folders, only `:memory:` databases, no network, no person columns, one database per session).

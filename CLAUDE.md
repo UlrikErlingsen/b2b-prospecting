@@ -74,6 +74,9 @@ brand "Fjellbrus".
 - Streamlit only in `app.py`, `pages/` and `src/prospectsignal/ui/`: nothing else under `src/prospectsignal/`
   imports Streamlit (guard test). `ui/` holds the shared Signal theme (`signal_theme.py`, `assets/marks/`),
   synced from Signal Hub with `.streamlit/config.toml` and `assets/prospectsignal-*`; never edit those copies.
+- Page code lives in `src/prospectsignal/ui/pages/` (`pages/*.py` only wrap it). `prospectsignal.ui.render()` is the
+  Signal Hub entry point (no `st.set_page_config`/`st.navigation`/`st.stop`; keys via `k()` = `prospect:...`). With
+  `SIGNAL_HUB=1` the app uses the in-memory demo only: no files, no Brønnøysund calls. See Signal Hub `docs/APP_CONTRACT.md`.
 - Display name is **Prospect Signal** (with a space) in user-facing text; technical identifiers
   (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs) stay unchanged.
 - `pyproject.toml` (setuptools, AGPL-3.0-or-later, author "Ulrik Erlingsen"), `requirements.txt`,
