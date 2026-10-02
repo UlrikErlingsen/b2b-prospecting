@@ -36,7 +36,7 @@ def main() -> None:
         page = browser.new_page(viewport={"width": 1440, "height": 1000}, device_scale_factor=1)
         for name, (path, scroll_to) in SHOTS.items():
             page.goto(f"{args.base}/{path}?dataset=demo")
-            page.wait_for_selector(".ps-masthead", timeout=60_000)
+            page.wait_for_selector(".sg-mast", timeout=60_000)
             page.wait_for_selector('[data-testid="stStatusWidget"]', state="detached", timeout=60_000)
             if scroll_to:
                 page.locator(scroll_to).first.scroll_into_view_if_needed()

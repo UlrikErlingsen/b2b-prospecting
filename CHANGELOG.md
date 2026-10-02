@@ -11,6 +11,7 @@ Signal brand refresh (no version bump).
 - Display name is now **Prospect Signal** (with a space) in the app, messages, attribution line, export metadata, launchers and docs. Technical identifiers (`prospectsignal`, `PROSPECTSIGNAL_*`, file slugs, HTTP user agent) are unchanged.
 - README follows the Signal README template (banner PNG, family badges, template section order, where-this-fits table, references, suite footer).
 - The architecture rule now reads "no Streamlit under `src/` except `src/prospectsignal/ui/`" (guard test, CLAUDE.md, AGENTS.md, CONTRIBUTING, PR template); a new test keeps the core package from importing the ui layer.
+- README screenshots re-taken in the Signal theme on the offline demo; `scripts/take_screenshots.py` now waits for the shared `.sg-mast` masthead.
 
 ### Added
 
