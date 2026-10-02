@@ -66,7 +66,8 @@ def test_only_storage_talks_to_the_database():
 
 
 def test_pages_do_not_import_duckdb_directly():
-    for path in [ROOT / "app.py", *(ROOT / "pages").glob("*.py")]:
+    ui = ROOT / "src" / "prospectsignal" / "ui"
+    for path in [ROOT / "app.py", *(ROOT / "pages").glob("*.py"), *ui.rglob("*.py")]:
         assert "duckdb" not in _imports(path), path
 
 

@@ -16,11 +16,11 @@ OLD_COLOURS = ("#173c3a", "#d95b40", "#83d2b4", "#f2c66d", "#17322e", "#102c2a",
 @pytest.fixture(autouse=True)
 def isolated_data_dir(tmp_path, monkeypatch):
     monkeypatch.setenv("PROSPECTSIGNAL_DATA_DIR", str(tmp_path))
-    from pages import _ui
+    from prospectsignal.ui import common
 
-    _ui._open_store.clear()
+    common._open_store.clear()
     yield
-    _ui._open_store.clear()
+    common._open_store.clear()
 
 
 def test_shell_renders_the_shared_signal_masthead_sidebar_and_footer():
@@ -41,13 +41,15 @@ def test_shell_renders_the_shared_signal_masthead_sidebar_and_footer():
 
 def test_app_and_pages_use_signal_theme_instead_of_pasted_styles():
     standalone = (ROOT / "app.py").read_text(encoding="utf-8")
-    pages = "".join(path.read_text(encoding="utf-8") for path in sorted((ROOT / "pages").glob("*.py")))
+    # Page code lives in the ui package (shared with Signal Hub); pages/ only holds thin wrappers.
+    ui_sources = [UI / "app.py", UI / "common.py", *sorted((UI / "pages").glob("*.py"))]
+    pages = "".join(path.read_text(encoding="utf-8") for path in [*sorted((ROOT / "pages").glob("*.py")), *ui_sources])
     charts = (ROOT / "src" / "prospectsignal" / "market.py").read_text(encoding="utf-8")
-    assert "st.set_page_config(**sig.page_config(_ui.KEY))" in standalone
-    assert "sig.apply(_ui.KEY)" in standalone
-    assert 'KEY = "prospect"' in pages
-    assert "from prospectsignal.ui import signal_theme as sig" in standalone + pages
-    assert "sig.chart(_ui.KEY," in pages  # per-app template and theme=None on every market figure
+    assert "st.set_page_config(**sig.page_config(NS))" in standalone
+    assert "sig.apply(NS)" in pages
+    assert 'NS = "prospect"' in pages and "KEY = NS" in pages
+    assert "from prospectsignal.ui import signal_theme as sig" in pages
+    assert "sig.chart(ui.KEY," in pages  # per-app template and theme=None on every market figure
     assert "st.plotly_chart" not in standalone + pages
     assert "<style>" not in standalone + pages
     assert "ps-" not in standalone + pages  # old CSS classes are gone

@@ -20,11 +20,11 @@ PAGES = [
 @pytest.fixture(autouse=True)
 def isolated_data_dir(tmp_path, monkeypatch):
     monkeypatch.setenv("PROSPECTSIGNAL_DATA_DIR", str(tmp_path))
-    from pages import _ui
+    from prospectsignal.ui import common
 
-    _ui._open_store.clear()
+    common._open_store.clear()
     yield
-    _ui._open_store.clear()
+    common._open_store.clear()
 
 
 def _text(app: AppTest) -> str:
@@ -75,7 +75,7 @@ def test_shortlist_and_export_flow():
 
 def test_real_register_not_loaded_is_explained():
     app = AppTest.from_file(APP, default_timeout=120)
-    app.session_state["dataset"] = "register"
+    app.session_state["prospect:dataset"] = "register"
     app.run()
     app.switch_page("pages/icp.py").run()
     assert not app.exception

@@ -16,6 +16,12 @@ UNDERENHET_HEADER = FIXTURES / "underenheter_header_2026-10-01.csv"
 
 
 @pytest.fixture(autouse=True)
+def standalone_mode_by_default(monkeypatch):
+    """Tests run the standalone app unless they opt into Signal Hub mode themselves."""
+    monkeypatch.delenv("SIGNAL_HUB", raising=False)
+
+
+@pytest.fixture(autouse=True)
 def no_live_network(monkeypatch):
     """Tests use recorded fixtures only; any real HTTP request fails loudly."""
 

@@ -117,9 +117,14 @@ def parse(text: str) -> Checklist:
     )
 
 
+def bundled() -> Checklist:
+    """The checklist shipped with the package (ignores PROSPECTSIGNAL_CHECKLIST)."""
+    return parse(resources.files("prospectsignal").joinpath("data/outreach_checklist.yaml").read_text(encoding="utf-8"))
+
+
 def load(path: str | Path | None = None) -> Checklist:
     """Load the checklist from ``path``, the PROSPECTSIGNAL_CHECKLIST file, or the bundled default."""
     chosen = path or os.environ.get(ENV_OVERRIDE)
     if chosen:
         return parse(Path(chosen).read_text(encoding="utf-8"))
-    return parse(resources.files("prospectsignal").joinpath("data/outreach_checklist.yaml").read_text(encoding="utf-8"))
+    return bundled()

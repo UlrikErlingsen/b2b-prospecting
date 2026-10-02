@@ -1,1 +1,1 @@
-"""Prospect Signal Streamlit pages (UI only; logic lives in src/prospectsignal)."""
+"""Thin standalone page wrappers for st.navigation; the page code ships in prospectsignal.ui.pages."""

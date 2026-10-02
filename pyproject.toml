@@ -38,6 +38,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# The Streamlit UI (prospectsignal.ui, used by app.py and Signal Hub). plotly stays a core dependency: the core
+# market module builds the figures. "app" is kept as an alias of "ui" for existing installs.
+ui = ["streamlit>=1.40,<2"]
 app = ["streamlit>=1.40,<2"]
 test = [
   "build>=1.2,<2",
