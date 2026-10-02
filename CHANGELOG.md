@@ -14,6 +14,7 @@ Signal brand refresh (no version bump).
 
 ### Added
 
+- Figtree is embedded from the synced `prospectsignal.ui.signal_font` (Latin subset, OFL licence included), so the app makes no Google Fonts request.
 - Synced brand assets (`assets/prospectsignal-banner.png`, `-social.png`, `-mark-32/64/512.png`), theme marks shipped as `prospectsignal.ui` package data, and the synced `.streamlit/config.toml`.
 - Issue templates (bug report, feature request, config) and brand tests.
 
