@@ -17,6 +17,7 @@ import threading
 import duckdb
 import pandas as pd
 
+from . import limits
 from .errors import DataProblem
 from .icp import ICP
 from .schema import (
@@ -604,6 +605,9 @@ class Store:
     # -- saved ICPs ---------------------------------------------------------------------------------------
     def save_icp(self, icp: ICP) -> None:
         icp = icp.validated()
+        existing = self.list_icps()
+        if icp.name not in existing and limits.exceeds(len(existing) + 1, limits.max_saved_icps()):
+            raise DataProblem(limits.demo_message(f"At most {limits.DEMO_MAX_SAVED_ICPS} saved ICPs here."))
         with self._lock:
             self._cursor().execute(
                 "INSERT INTO icps VALUES (?, ?, ?) ON CONFLICT (name) DO UPDATE SET "
@@ -628,6 +632,12 @@ class Store:
     def add_to_shortlist(self, org_nrs: list[str], icp_name: str | None = None) -> int:
         now = datetime.now(timezone.utc).replace(tzinfo=None)
         added = 0
+        cap = limits.max_shortlist()
+        if cap is not None:
+            current = set(self._cursor().execute("SELECT org_nr FROM shortlist").df()["org_nr"].astype(str))
+            new = [org_nr for org_nr in dict.fromkeys(map(str, org_nrs)) if org_nr not in current]
+            if limits.exceeds(len(current) + len(new), cap):
+                raise DataProblem(limits.demo_message(f"The shortlist holds at most {limits.DEMO_MAX_SHORTLIST} companies here."))
         with self._lock:
             cur = self._cursor()
             for org_nr in dict.fromkeys(org_nrs):
@@ -641,6 +651,8 @@ class Store:
     def update_shortlist(self, org_nr: str, *, status: str | None = None, notes: str | None = None) -> None:
         if status is not None and status not in SHORTLIST_STATUSES:
             raise DataProblem(f"Status must be one of: {', '.join(SHORTLIST_STATUSES)}")
+        if notes is not None and limits.exceeds(len(notes), limits.max_note_chars()):
+            raise DataProblem(limits.demo_message(f"Notes are limited to {limits.DEMO_MAX_NOTE_CHARS:,} characters here."))
         now = datetime.now(timezone.utc).replace(tzinfo=None)
         with self._lock:
             cur = self._cursor()

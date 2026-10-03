@@ -19,6 +19,7 @@ UNDERENHET_HEADER = FIXTURES / "underenheter_header_2026-10-01.csv"
 def standalone_mode_by_default(monkeypatch):
     """Tests run the standalone app unless they opt into Signal Hub mode themselves."""
     monkeypatch.delenv("SIGNAL_HUB", raising=False)
+    monkeypatch.delenv("SIGNAL_PUBLIC", raising=False)  # no demo limits unless a test sets SIGNAL_PUBLIC=1
 
 
 @pytest.fixture(autouse=True)

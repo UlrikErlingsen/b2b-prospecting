@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from prospectsignal import brreg, load_demo, orgnr
+from prospectsignal import brreg, limits, load_demo, orgnr
 from prospectsignal.errors import DataProblem, RegisterUnavailable
 from prospectsignal.ui import common as ui
 from prospectsignal.ui.common import k
@@ -12,6 +12,9 @@ from prospectsignal.ui.common import k
 
 def _load_register_section() -> None:
     st.markdown("### Load the real register")
+    if not limits.register_download_allowed():
+        st.info(limits.demo_message("Loading the real register is off in this public demo."))
+        return
     st.markdown(
         "Prospect Signal downloads the official bulk CSV of **Enhetsregisteret** (about 150 MB compressed, produced "
         "every night around 05:00), then indexes it locally in DuckDB. The download date is stored on every row. "

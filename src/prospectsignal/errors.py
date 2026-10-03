@@ -15,6 +15,10 @@ def friendly_message(exc: Exception) -> str:
     """Return a useful message without exposing an internal traceback by default."""
     if isinstance(exc, (DataProblem, RegisterUnavailable)):
         return str(exc)
+    if isinstance(exc, MemoryError):
+        from .limits import MEMORY_MESSAGE
+
+        return MEMORY_MESSAGE
     if isinstance(exc, ValueError):
         return f"Prospect Signal could not complete that step: {exc}"
     return (
