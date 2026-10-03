@@ -21,16 +21,17 @@ items:
     status: verified
     rule: >-
       Being listed in Enhetsregisteret does not mean a company, or anyone working there, agreed to receive marketing.
-      Forbrukertilsynet states that the e-mail ban in markedsføringsloven § 15 applies even when a person's e-mail
+      Forbrukertilsynet (the Norwegian Consumer Authority) states that the e-mail ban in the Marketing Control Act
+      (markedsføringsloven) § 15 applies even when a person's e-mail
       address is registered as a company's contact address in Brønnøysundregistrene or another company register.
     action: >-
       Treat every exported company as a lead to research, not as a contact permission. ProspectSignal exports no
       e-mail addresses or phone numbers.
     sources:
       - publisher: Forbrukertilsynet
-        title: Veileder for markedsføring via e-post, SMS og lignende
+        title: Veileder for markedsføring via e-post, SMS og lignende (guidance on marketing by e-mail, SMS and similar)
         url: https://www.forbrukertilsynet.no/lov-og-rett/veiledninger-og-retningslinjer/forbrukertilsynets-veiledning-markedsforing-via-e-post-sms-o-l
-        reference: "Section 2.4 «…fysiske personer…» (page updated 8 May 2026)"
+        reference: "Section 2.4, on natural persons (page updated 8 May 2026)"
         retrieved: "2026-10-01"
 
   - id: company-versus-named-person
@@ -38,7 +39,7 @@ items:
     applies_to: email
     status: verified
     rule: >-
-      Markedsføringsloven § 15 protects natural persons (fysiske personer). Forbrukertilsynet's guidance says this
+      Marketing Control Act § 15 protects natural persons (fysiske personer). Forbrukertilsynet's guidance says this
       covers a person's individual work address, for example ola.nordmann@firmaX.no, even when the offer is aimed
       at the business. Marketing to addresses that do not belong to a specific person, for example post@firmaX.no,
       is allowed. If it is unclear whether an address belongs to a person, the sender carries the risk.
@@ -47,12 +48,12 @@ items:
       addresses that do not belong to a specific person.
     sources:
       - publisher: Forbrukertilsynet
-        title: Veileder for markedsføring via e-post, SMS og lignende
+        title: Veileder for markedsføring via e-post, SMS og lignende (guidance on marketing by e-mail, SMS and similar)
         url: https://www.forbrukertilsynet.no/lov-og-rett/veiledninger-og-retningslinjer/forbrukertilsynets-veiledning-markedsforing-via-e-post-sms-o-l
         reference: "Section 2.4 (page updated 8 May 2026)"
         retrieved: "2026-10-01"
       - publisher: Datatilsynet
-        title: Nyhetsbrev, e-postlister og SMS
+        title: Nyhetsbrev, e-postlister og SMS (newsletters, e-mail lists and SMS)
         url: https://www.datatilsynet.no/personvern-pa-ulike-omrader/kundehandtering-handel-og-medlemskap/nyhetsbrev-epostlister-og-sms/
         reference: "Consent applies when marketing is sent to a specific person, private or an employee (navn@virksomhet.no); page last changed 6 May 2026"
         retrieved: "2026-10-01"
@@ -62,7 +63,7 @@ items:
     applies_to: email
     status: verified
     rule: >-
-      Markedsføringsloven § 15 first paragraph: in business activity it is forbidden, without the recipient's prior
+      Marketing Control Act § 15 first paragraph: in business activity it is forbidden, without the recipient's prior
       consent, to direct marketing to natural persons by electronic methods that allow individual communication
       (e-mail, SMS/MMS, fax, automated calling). Forbrukertilsynet: consent must be voluntary, specific and
       informed, cannot come from passivity or a pre-ticked box, and the sender must be able to document it.
@@ -72,12 +73,12 @@ items:
       "may we e-mail you?" messages by e-mail or SMS.
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven (LOV-2009-01-09-2) § 15
+        title: Markedsføringsloven (Marketing Control Act, LOV-2009-01-09-2) § 15
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
         reference: "§ 15 first and fifth paragraphs; law last amended by LOV-2026-05-07-17 (in force 1 July 2026)"
         retrieved: "2026-10-01"
       - publisher: Forbrukertilsynet
-        title: Veileder for markedsføring via e-post, SMS og lignende
+        title: Veileder for markedsføring via e-post, SMS og lignende (guidance on marketing by e-mail, SMS and similar)
         url: https://www.forbrukertilsynet.no/lov-og-rett/veiledninger-og-retningslinjer/forbrukertilsynets-veiledning-markedsforing-via-e-post-sms-o-l
         reference: "Sections 2.5–2.6 (consent requirements, documentation)"
         retrieved: "2026-10-01"
@@ -90,24 +91,25 @@ items:
       § 15 third paragraph: prior consent is not required for e-mail in an existing customer relationship where the
       business received the customer's e-mail address in connection with a sale, the marketing concerns the
       business's own products similar to those the relationship is based on, and the customer can opt out easily and
-      free of charge when the address is collected and in every message. Datatilsynet notes that when these
+      free of charge when the address is collected and in every message. Datatilsynet (the Norwegian Data Protection
+      Authority) notes that when these
       conditions are met, no separate legal basis under the GDPR is needed.
     action: >-
       Do not rely on this exception for prospects from ProspectSignal: they are, by definition, not yet customers.
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven § 15 third paragraph
+        title: Marketing Control Act (markedsføringsloven) § 15 third paragraph
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
         reference: "§ 15 third paragraph"
         retrieved: "2026-10-01"
       - publisher: Datatilsynet
-        title: Nyhetsbrev, e-postlister og SMS
+        title: Nyhetsbrev, e-postlister og SMS (newsletters, e-mail lists and SMS)
         url: https://www.datatilsynet.no/personvern-pa-ulike-omrader/kundehandtering-handel-og-medlemskap/nyhetsbrev-epostlister-og-sms/
-        reference: "Unntak fra kravet om forutgående samtykke; Avklaring fra EU-domstolen"
+        reference: "Sections on the exception from prior consent and on the EU Court of Justice clarification"
         retrieved: "2026-10-01"
 
   - id: phone-reservation
-    title: Telephone marketing and Reservasjonsregisteret
+    title: Telephone marketing and Reservasjonsregisteret (the do-not-call register)
     applies_to: phone
     status: verified
     rule: >-
@@ -122,12 +124,12 @@ items:
       and against your own do-not-call list, and record when you did it.
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven §§ 12, 13 a and 15
+        title: Marketing Control Act (markedsføringsloven) §§ 12, 13 a and 15
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
         reference: "§ 12, § 13 a, § 15 second paragraph"
         retrieved: "2026-10-01"
       - publisher: Brønnøysundregistrene
-        title: Om Reservasjonsregisteret
+        title: Om Reservasjonsregisteret (about the do-not-call register)
         url: https://www.brreg.no/om-oss/registrene-vare/om-reservasjonsregisteret/
         reference: "Page last updated 14 November 2023"
         retrieved: "2026-10-01"
@@ -146,9 +148,9 @@ items:
       Forbrukertilsynet or a lawyer how the rules apply.
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven §§ 12, 14, 15
+        title: Marketing Control Act (markedsføringsloven) §§ 12, 14, 15
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
-        reference: "Wording 'forbrukere' versus 'fysiske personer'"
+        reference: "Wording 'forbrukere' (consumers) versus 'fysiske personer' (natural persons)"
         retrieved: "2026-10-01"
 
   - id: phone-hours-and-number
@@ -161,12 +163,12 @@ items:
     action: Call consumers only on weekdays 09:00–21:00 from a listed, visible number.
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven § 14
+        title: Marketing Control Act (markedsføringsloven) § 14
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
         reference: "§ 14"
         retrieved: "2026-10-01"
       - publisher: Forbrukertilsynet
-        title: Veileder for telefonsalg
+        title: Veileder for telefonsalg (guidance on telephone sales)
         url: https://www.forbrukertilsynet.no/lov-og-rett/veiledninger-og-retningslinjer/forbrukerombudets-veiledning-regelverket-telefonsalg
         reference: "Page updated 16 September 2026"
         retrieved: "2026-10-01"
@@ -185,7 +187,7 @@ items:
       ProspectSignal, the source is Enhetsregisteret (Brønnøysundregistrene).
     sources:
       - publisher: Lovdata
-        title: Markedsføringsloven § 16
+        title: Marketing Control Act (markedsføringsloven) § 16
         url: https://lovdata.no/dokument/NL/lov/2009-01-09-2
         reference: "§ 16"
         retrieved: "2026-10-01"
@@ -198,14 +200,14 @@ items:
       Once you add a named person to your CRM, you process personal data and need a legal basis. Datatilsynet:
       to rely on legitimate interests (berettigede interesser) you must meet three conditions — a legitimate
       interest exists, the processing is necessary for the purpose, and the balancing of interests falls in your
-      favour — and you should document the assessment. Where markedsføringsloven requires consent, that consent
+      favour — and you should document the assessment. Where the Marketing Control Act requires consent, that consent
       rule still applies.
     action: >-
       Write and keep a legitimate-interest assessment before storing named B2B contacts, or obtain consent.
       ProspectSignal itself stores no named persons.
     sources:
       - publisher: Datatilsynet
-        title: Nødvendig for å ivareta berettigede interesser — interesseavveiing
+        title: Nødvendig for å ivareta berettigede interesser — interesseavveiing (legitimate interests and the balancing test)
         url: https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/om-behandlingsgrunnlag/nodvendig-for-a-ivareta-legitime-interesser---interesseavveiing/
         reference: "Three conditions; page last changed 17 March 2026"
         retrieved: "2026-10-01"
@@ -221,9 +223,9 @@ items:
     action: Keep a suppression list and honour objections immediately in every channel.
     sources:
       - publisher: Datatilsynet
-        title: Rett til å protestere
+        title: Rett til å protestere (the right to object)
         url: https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-a-protestere/
-        reference: "Spesielt om direkte markedsføring (published 26 June 2024)"
+        reference: "Section on direct marketing (published 26 June 2024)"
         retrieved: "2026-10-01"
 
   - id: enk-personal-data
@@ -231,7 +233,7 @@ items:
     applies_to: any
     status: verified
     rule: >-
-      An enkeltpersonforetak usually carries its owner's name. NLOD § 3 excludes from the licence information that
+      A sole proprietorship (enkeltpersonforetak, ENK) usually carries its owner's name. NLOD § 3 excludes from the licence information that
       contains personal data covered by the Personal Data Act, unless there is a lawful basis for the disclosure and
       the further processing.
     action: >-
@@ -239,9 +241,9 @@ items:
       street address.
     sources:
       - publisher: Digitaliseringsdirektoratet (data.norge.no)
-        title: Norsk lisens for offentlige data (NLOD) 2.0
-        url: https://data.norge.no/nlod/no/2.0
-        reference: "§ 3 Unntak"
+        title: Norwegian Licence for Open Government Data (NLOD) 2.0
+        url: https://data.norge.no/nlod/en/2.0
+        reference: "§ 3 Exemptions"
         retrieved: "2026-10-01"
 
   - id: nlod-attribution
@@ -250,15 +252,15 @@ items:
     status: verified
     rule: >-
       NLOD § 5: name the licensor as specified, refer to the licence, link to the licence and the source where
-      practical, and mark that the information has been changed. Default wording: «Inneholder data under Norsk
-      lisens for offentlige data (NLOD) tilgjengeliggjort av [lisensgiver]». § 6: do not use the licensor's name to
-      endorse or market your product.
+      practical, and mark that the information has been changed. Default wording (official English version):
+      «Contains data under the Norwegian licence for Open Government data (NLOD) distributed by [name of
+      licensor]». § 6: do not use the licensor's name to endorse or market your product.
     action: >-
       Keep the brreg_source column and the "Source & licence" sheet in every copy you share. Do not present
       Brønnøysundregistrene as endorsing your campaign.
     sources:
       - publisher: Digitaliseringsdirektoratet (data.norge.no)
-        title: Norsk lisens for offentlige data (NLOD) 2.0
-        url: https://data.norge.no/nlod/no/2.0
-        reference: "§ 5 Navngivelse, § 6 Forsvarlig bruk"
+        title: Norwegian Licence for Open Government Data (NLOD) 2.0
+        url: https://data.norge.no/nlod/en/2.0
+        reference: "§ 5 Attribution, § 6 Proper use"
         retrieved: "2026-10-01"

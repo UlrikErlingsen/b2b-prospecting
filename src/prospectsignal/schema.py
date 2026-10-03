@@ -112,21 +112,23 @@ def band_range(label: str) -> tuple[int, int | None]:
     raise ValueError(f"Unknown employee band: {label}")
 
 
+# Organisation-form codes from Enhetsregisteret with an English description (the register's own Norwegian name in
+# parentheses, as shown on official register pages).
 ORG_FORMS: dict[str, str] = {
-    "AS": "Aksjeselskap",
-    "ASA": "Allmennaksjeselskap",
-    "ENK": "Enkeltpersonforetak",
-    "ANS": "Ansvarlig selskap",
-    "DA": "Selskap med delt ansvar",
-    "SA": "Samvirkeforetak",
-    "NUF": "Norskregistrert utenlandsk foretak",
-    "STI": "Stiftelse",
-    "FLI": "Forening/lag/innretning",
-    "BA": "Selskap med begrenset ansvar",
-    "KS": "Kommandittselskap",
-    "SE": "Europeisk selskap",
-    "ESEK": "Eierseksjonssameie",
-    "BRL": "Borettslag",
+    "AS": "Private limited company (aksjeselskap)",
+    "ASA": "Public limited company (allmennaksjeselskap)",
+    "ENK": "Sole proprietorship (enkeltpersonforetak)",
+    "ANS": "General partnership, joint liability (ansvarlig selskap)",
+    "DA": "General partnership, shared liability (selskap med delt ansvar)",
+    "SA": "Cooperative (samvirkeforetak)",
+    "NUF": "Norwegian branch of a foreign company (NUF)",
+    "STI": "Foundation (stiftelse)",
+    "FLI": "Association or club (forening/lag/innretning)",
+    "BA": "Company with limited liability (selskap med begrenset ansvar)",
+    "KS": "Limited partnership (kommandittselskap)",
+    "SE": "European company (SE)",
+    "ESEK": "Condominium (eierseksjonssameie)",
+    "BRL": "Housing cooperative (borettslag)",
 }
 DEFAULT_ORG_FORMS: tuple[str, ...] = ()  # empty = any form (ENK still excluded unless explicitly included)
 
@@ -138,7 +140,7 @@ UNKNOWN_FORM = "UKJENT"
 PERSON_NAME_FORMS: tuple[str, ...] = ("ENK", UNKNOWN_FORM)
 
 ENK_WARNING = (
-    "ENK (enkeltpersonforetak): the company name is usually a person's name, so this row is personal data. "
+    "ENK (enkeltpersonforetak, sole proprietorship): the company name is usually a person's name, so this row is personal data. "
     "Prospect Signal excludes ENK by default and never stores an ENK street address. Sub-units whose parent is "
     "missing from the open register (legal form unknown) are treated the same way."
 )

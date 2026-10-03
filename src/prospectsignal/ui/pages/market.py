@@ -71,9 +71,10 @@ def render() -> None:
     )
 
     with st.expander("Tables"):
-        fylke_table = tables["fylke"][["fylke", "units"]]
+        fylke_table = tables["fylke"][["fylke", "units"]].rename(columns={"fylke": "county"})
         st.dataframe(fylke_table, hide_index=True, width="stretch")
-        st.dataframe(tables["org_form"].rename(columns={"key": "org_form"}), hide_index=True, width="stretch")
+        st.dataframe(tables["nace_division"][["industry", "units"]], hide_index=True, width="stretch")
+        st.dataframe(tables["org_form"].rename(columns={"key": "legal form"}), hide_index=True, width="stretch")
     ui.boundary(
         "**Counts, not contacts.** This page shows aggregate counts only. Selecting individual companies "
         "happens deliberately on the ICP and Shortlist pages, and Freddo CRM receives only what you export."

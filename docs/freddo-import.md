@@ -10,14 +10,14 @@ The bridge is **one-way and manual**: Prospect Signal writes a file, and you dec
 |---|---|---|
 | `organization_name` | CRM Organization name (upstream, required) | Registered name |
 | `org_nr` | `org_nr` (custom, unique, MOD11-validated) | Nine-character string; leading zeros kept |
-| `entity_kind` | `entity_kind` (`hovedenhet` / `underenhet`) | Unit level |
-| `parent_org_nr` | `parent_org_nr` | Parent of an underenhet, or the overordnet enhet of a public body |
+| `entity_kind` | `entity_kind` (`hovedenhet` / `underenhet`, the register's terms) | Unit level: company or location (sub-unit) |
+| `parent_org_nr` | `parent_org_nr` | Parent of a sub-unit (underenhet), or the parent body (overordnet enhet) of a public body |
 | `nace` | `nace` | Main SN2025 code, e.g. `11.050` |
 | `nace_description` | — | Code name from the register |
 | `employee_band` | `employee_band` | `0`, `1-4`, `5-9`, `10-19`, `20-49`, `50-99`, `100-249`, `250+` |
 | `street_address` | — | Business address lines (blank for ENK) |
 | `region_postcode` | `region_postcode` | Four-character string |
-| `poststed`, `kommune`, `fylke` | — | Place, municipality, county |
+| `post_town`, `municipality`, `county` | — | Post town (poststed), municipality (kommune), county (fylke) |
 | `website` | `website` (upstream) | As registered |
 | `brreg_source` | `brreg_source` (read-only) | Source and licence line (NLOD attribution) |
 | `brreg_refreshed_at` | `brreg_refreshed_at` (read-only) | Download date, ISO `YYYY-MM-DD` |

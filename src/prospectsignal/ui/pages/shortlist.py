@@ -128,8 +128,8 @@ def render() -> None:
         disabled=[c for c in view.columns if c not in ("status", "notes", "remove")],
         column_config={
             "name": "Name",
-            "kommune": "Kommune",
-            "fylke": "Fylke",
+            "kommune": "Municipality",
+            "fylke": "County",
             "status": st.column_config.SelectboxColumn("Status", options=list(SHORTLIST_STATUSES), required=True),
             "notes": st.column_config.TextColumn("Notes", width="large"),
             "fit_score": st.column_config.ProgressColumn("Fit", min_value=0, max_value=100, format="%d"),

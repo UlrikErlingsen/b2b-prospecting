@@ -61,11 +61,14 @@ def fylke_map(
         )
     )
     figure.update_geos(fitbounds="locations", visible=False)
-    return _layout(figure, "Units by fylke", height=520)
+    return _layout(figure, "Units by county (fylke)", height=520)
 
 
 def bar(frame: pd.DataFrame, label: str, title: str, horizontal: bool = True, limit: int = 20) -> go.Figure:
     data = frame.head(limit)
+    if len(frame) > limit:
+        # A readable chart shows the largest groups; the tables below the charts list every group.
+        title = f"{title} (largest {limit} of {len(frame)})"
     if horizontal:
         data = data.iloc[::-1]
         trace = go.Bar(x=data["units"], y=data[label].astype(str), orientation="h")

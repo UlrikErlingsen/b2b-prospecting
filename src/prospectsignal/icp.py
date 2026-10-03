@@ -48,7 +48,7 @@ class ICP:
         kommuner = tuple(sorted({str(k).strip().zfill(4) for k in self.kommuner if str(k).strip()}))
         bad_kommuner = [k for k in kommuner if not (len(k) == 4 and k.isdigit())]
         if bad_kommuner:
-            problems.append("Kommune numbers must have four digits: " + ", ".join(bad_kommuner))
+            problems.append("Municipality (kommune) numbers must have four digits: " + ", ".join(bad_kommuner))
         for label, value in (("Minimum", self.employees_min), ("Maximum", self.employees_max)):
             if value is not None and value < 0:
                 problems.append(f"{label} employees cannot be negative.")
@@ -107,7 +107,7 @@ class ICP:
             lines.append("Industry match includes secondary codes")
         lines.append("Fylke: " + (", ".join(regions.fylke_name(f) for f in self.fylker) or "any"))
         if self.kommuner:
-            lines.append("Kommune numbers: " + ", ".join(self.kommuner))
+            lines.append("Municipality numbers: " + ", ".join(self.kommuner))
         low = self.employees_min if self.employees_min is not None else 0
         high = self.employees_max if self.employees_max is not None else "∞"
         lines.append(f"Employees: {low}–{high}")

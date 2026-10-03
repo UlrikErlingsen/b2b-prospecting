@@ -27,10 +27,10 @@ Source: [API documentation](https://data.brreg.no/enhetsregisteret/api/dokumenta
 
 ## NLOD 2.0
 
-Source: [data.norge.no/nlod/no/2.0](https://data.norge.no/nlod/no/2.0).
+Source: [data.norge.no/nlod/en/2.0](https://data.norge.no/nlod/en/2.0) (official English version; Norwegian original at [data.norge.no/nlod/no/2.0](https://data.norge.no/nlod/no/2.0)), retrieved 2026-10-03.
 
 - § 3: the licence does not cover information containing personal data unless there is a lawful basis for disclosure and further processing → ENK handling.
-- § 5: name the licensor as specified, refer to and (where practical) link the licence and the source, and mark changes. Default wording «Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av [lisensgiver]» → `brreg.ATTRIBUTION`, which also notes that Prospect Signal filtered the data and derived fields.
+- § 5: name the licensor as specified, refer to and (where practical) link the licence and the source, and mark changes. Default wording in the English version: «Contains data under the Norwegian licence for Open Government data (NLOD) distributed by [name of licensor]» → `brreg.ATTRIBUTION`, which also notes that Prospect Signal filtered the data and derived fields.
 - § 6: do not use the licensor's name to endorse or market your product.
 
 ## Reference data bundled in `src/prospectsignal/data/`
@@ -62,6 +62,6 @@ Checked in the local checkout on 1 October 2026: the company file importer is pl
 1. **API rate limits.** None are published in the API documentation. Prospect Signal calls the API only on a user action, one request at a time. Ask opendata@brreg.no before any automated refresh.
 2. **Deleted units in single lookups.** The documentation does not state the status code for deleted units; 404 and 410 are both treated as “not in open data”, and a `slettedato` in the body is treated the same way.
 3. **Financial statements.** `data.brreg.no/regnskapsregisteret/regnskap/{orgnr}` answers, but its OpenAPI specification states no licence, and Brønnøysundregistrene's open-data page mentions a temporary research API that “can be shut down without notice”. v1 shows no financials until the terms are confirmed.
-4. **Freddo importer behaviour.** Whether Frappe Data Import fills read-only fields and how it treats unmapped columns (`street_address`, `poststed`, `kommune`, `fylke`, `nace_description`).
+4. **Freddo importer behaviour.** Whether Frappe Data Import fills read-only fields and how it treats unmapped columns (`street_address`, `post_town`, `municipality`, `county`, `nace_description`).
 5. **ENK and telemarketing.** Whether a call to a sole proprietor counts as a call to a consumer under §§ 12 and 14.
 6. **Name screen.** “Prospect Signal” (written “ProspectSignal” in earlier releases and in technical identifiers such as `prospectsignal`) has not been screened for trademarks or existing products.

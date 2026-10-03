@@ -44,7 +44,8 @@ def render() -> None:
     st.markdown(f"## {unit['name']}")
     if unit["is_demo"]:
         st.info(
-            "Fictional DEMO company. Its organisation number fails MOD11 on purpose and does not exist in the register."
+            "Fictional DEMO company. Its organisation number fails MOD11 on purpose and does not exist in the register. "
+            + ui.DEMO_LANGUAGE_NOTE
         )
     if unit["org_form"] in PERSON_NAME_FORMS:
         st.warning(ENK_WARNING)
@@ -65,7 +66,7 @@ def render() -> None:
     with left:
         st.markdown(
             f"**Organisation number:** {orgnr.format_display(unit['org_nr'])}  \n"
-            f"**Level:** {unit['entity_kind']}"
+            f"**Level:** {ui.LEVEL_LABELS.get(unit['entity_kind'], unit['entity_kind'])}"
             + (f" (parent {orgnr.format_display(unit['parent_org_nr'])})" if unit.get("parent_org_nr") else "")
             + f"  \n**Legal form:** {unit['org_form']} — {unit['org_form_desc'] or ''}  \n"
             f"**Founded:** {ui.date_text(unit['founded'])}  \n"
@@ -80,7 +81,7 @@ def render() -> None:
             f"(band {unit['employee_band']})  \n"
             f"**Address:** {unit['address'] or '—'}  \n"
             f"**Postcode / place:** {unit['postcode'] or ''} {unit['poststed'] or ''}  \n"
-            f"**Kommune / fylke:** {(unit['kommune'] or '').title()} · {regions.fylke_name(unit['fylke_nr'])}"
+            f"**Municipality / county:** {(unit['kommune'] or '').title()} · {regions.fylke_name(unit['fylke_nr'])}"
         )
     codes = [(unit[f"nace{i}"], unit[f"nace{i}_desc"]) for i in (1, 2, 3) if unit[f"nace{i}"]]
     st.markdown("**Industry codes:** " + "; ".join(f"{code} {desc or nace.name(code)}" for code, desc in codes))

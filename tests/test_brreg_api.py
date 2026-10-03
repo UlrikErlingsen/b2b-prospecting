@@ -153,7 +153,10 @@ def test_register_urls():
 
 
 def test_attribution_follows_nlod_wording():
+    # NLOD 2.0 § 5 default wording, from the licence's official English version.
     assert brreg.ATTRIBUTION.startswith(
-        "Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Brønnøysundregistrene."
+        "Contains data under the Norwegian licence for Open Government data (NLOD) distributed by "
+        "Brønnøysundregistrene."
     )
-    assert "endret" in brreg.ATTRIBUTION or "filtrert" in brreg.ATTRIBUTION  # NLOD § 5: mark changes
+    assert "filtered" in brreg.ATTRIBUTION  # NLOD § 5: mark changes
+    assert brreg.LICENCE_URL == "https://data.norge.no/nlod/en/2.0"

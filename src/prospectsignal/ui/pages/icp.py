@@ -79,7 +79,7 @@ def _filter_form(store, icp) -> None:
         st.markdown("**Region**")
         region_col, kommune_col = st.columns(2)
         regions_picked = region_col.multiselect(
-            "Fylke",
+            "County (fylke)",
             region_options,
             default=[r for r in selected_regions if r in region_options],
             format_func=lambda key: key if key in regions.REGION_ALIASES else regions.fylke_name(key),
@@ -87,7 +87,7 @@ def _filter_form(store, icp) -> None:
             key=fk("fylker"),
         )
         kommuner_picked = kommune_col.multiselect(
-            "Kommune (optional)",
+            "Municipality (kommune, optional)",
             list(kommune_labels),
             default=[number for number in icp.kommuner if number in kommune_labels],
             format_func=lambda key: kommune_labels.get(key, key),
@@ -227,6 +227,7 @@ def render() -> None:
     view.insert(0, "⚠", ui.enk_flag(view))
     view["fylke"] = view["fylke_nr"].map(regions.fylke_name)
     view["in shortlist"] = view["shortlist_status"].fillna("")
+    view["entity_kind"] = view["entity_kind"].map(lambda level: ui.LEVEL_LABELS.get(level, level))
     if len(results) < matches:
         st.caption(f"Showing the {TABLE_LIMIT:,} largest of {matches:,} matches (by employee count).")
     selection = st.dataframe(
@@ -258,8 +259,8 @@ def render() -> None:
             "name": "Name",
             "org_nr": st.column_config.TextColumn("Org.nr"),
             "org_form": "Form",
-            "kommune": "Kommune",
-            "fylke": "Fylke",
+            "kommune": "Municipality",
+            "fylke": "County",
             "in shortlist": "Shortlist",
             "nace1": "NACE",
             "nace1_desc": "Industry",

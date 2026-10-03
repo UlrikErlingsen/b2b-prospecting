@@ -26,7 +26,7 @@ def _load_register_section() -> None:
         try:
             headers = brreg.bulk_headers("enheter")
             size = int(headers.get("content-length", 0)) / 1_000_000
-            st.success(f"Enheter file: {size:,.0f} MB, published {headers.get('last-modified', 'unknown')}.")
+            st.success(f"Main-unit file (enheter): {size:,.0f} MB, published {headers.get('last-modified', 'unknown')}.")
         except RegisterUnavailable as exc:
             st.error(str(exc))
 
@@ -54,8 +54,8 @@ def _load_register_section() -> None:
             bar.progress(1.0, text="Done")
             counts = summary["counts"]
             st.session_state[k("flash")] = (
-                f"Indexed {counts['hovedenheter']:,} hovedenheter"
-                + (f" and {counts['underenheter']:,} underenheter" if counts["underenheter"] else "")
+                f"Indexed {counts['hovedenheter']:,} main units (hovedenheter)"
+                + (f" and {counts['underenheter']:,} sub-units (underenheter)" if counts["underenheter"] else "")
                 + f" (downloaded {summary['downloaded_at']}). Switched to the real register."
             )
             ui.request_dataset("register")
@@ -121,7 +121,7 @@ def render() -> None:
     st.markdown(
         "**Stored per unit:** name, organisation number (as text), legal form, industry codes, employee count and "
         "band, founding and registration dates, VAT and business-register flags, bankruptcy/liquidation flags, "
-        "business address (street address blank for ENK), postcode, kommune, fylke, website, download date.\n\n"
+        "business address (street address blank for ENK), postcode, municipality, county, website, download date.\n\n"
         "**Never stored:** roles (board, CEO, contact persons), e-mail addresses, phone and mobile numbers, birth "
         "numbers, annotations. Financial statements are not included in v1 (the terms of the open accounts API are "
         "not yet verified)."

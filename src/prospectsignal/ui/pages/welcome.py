@@ -15,12 +15,12 @@ def render() -> None:
         title="Which companies fit your ICP — and",
         em="which first?",
         body=(
-            "Filter Enhetsregisteret by industry, county, size and age; see how big the market is; shortlist the "
+            "Filter Enhetsregisteret (Norway's central register of legal entities) by industry, county, size and age; see how big the market is; shortlist the "
             "companies worth a closer look; and hand the shortlist to Freddo CRM. Everything runs on your computer."
         ),
         pills=[
             "NACE hierarchy (SN2025)",
-            "fylke & kommune",
+            "county & municipality",
             "employee bands",
             "market counts & map",
             "shortlist with notes",
@@ -33,7 +33,7 @@ def render() -> None:
             (
                 "01 · FILTER",
                 "Describe your ideal customer",
-                "Industry codes with their hierarchy (10 → 10.1 → 10.11), county or kommune, employee range, founding "
+                "Industry codes with their hierarchy (10 → 10.1 → 10.11), county or municipality, employee range, founding "
                 "dates, legal form, VAT status. Inactive companies and sole proprietorships are excluded by default.",
             ),
             (
@@ -57,6 +57,8 @@ def render() -> None:
             "organisation numbers that fail the MOD11 check on purpose. The demo ICP is “Fjellbrus — food & beverage "
             "producers, former Viken, 10–100 employees”."
             + ("" if ui.hub_mode() else " Load the real register on **Data & register**.")
+            + " "
+            + ui.DEMO_LANGUAGE_NOTE
         )
     if ui.hub_mode():
         ui.hub_note()

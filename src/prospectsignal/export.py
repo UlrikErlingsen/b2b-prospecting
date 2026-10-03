@@ -11,7 +11,7 @@ nace, employee_band, region_postcode) plus the upstream ``organization_name`` an
 - no person fields, ever.
 
 TODO(verify) once Freddo's importer exists: whether Frappe Data Import fills the read-only ``brreg_source`` /
-``brreg_refreshed_at`` fields, and how it treats the unmapped ``street_address``/``poststed``/``kommune`` columns.
+``brreg_refreshed_at`` fields, and how it treats the unmapped ``street_address``/``post_town``/``municipality``/``county`` columns.
 """
 
 from __future__ import annotations
@@ -36,9 +36,9 @@ FREDDO_COLUMNS: tuple[str, ...] = (
     "employee_band",
     "street_address",
     "region_postcode",
-    "poststed",
-    "kommune",
-    "fylke",
+    "post_town",
+    "municipality",
+    "county",
     "website",
     "brreg_source",
     "brreg_refreshed_at",
@@ -103,9 +103,9 @@ def freddo_frame(shortlist: pd.DataFrame) -> pd.DataFrame:
                 "employee_band": _text(row.get("employee_band")),
                 "street_address": _text(row.get("address")),
                 "region_postcode": _text(row.get("postcode")),
-                "poststed": _text(row.get("poststed")),
-                "kommune": _text(row.get("kommune")),
-                "fylke": regions.fylke_name(_text(row.get("fylke_nr")) or None),
+                "post_town": _text(row.get("poststed")),
+                "municipality": _text(row.get("kommune")),
+                "county": regions.fylke_name(_text(row.get("fylke_nr")) or None),
                 "website": _text(row.get("website")),
                 "brreg_source": source_line(row),
                 "brreg_refreshed_at": _date_text(row.get("downloaded_at")),
@@ -145,7 +145,6 @@ def xlsx_bytes(
     is_demo = meta.get("dataset") == "demo"
     source_rows = [
         ("Attribution", brreg.DEMO_ATTRIBUTION if is_demo else brreg.ATTRIBUTION),
-        ("Attribution (English)", brreg.DEMO_ATTRIBUTION if is_demo else brreg.ATTRIBUTION_EN),
         ("Licence", "Not applicable (fictional data)" if is_demo else f"{brreg.LICENCE_NAME} — {brreg.LICENCE_URL}"),
         ("Source", "Prospect Signal demo generator" if is_demo else brreg.DOCS_URL),
         ("Register downloaded", meta.get("downloaded_at", "")),

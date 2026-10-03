@@ -38,6 +38,12 @@ from prospectsignal.ui import signal_theme as sig
 NS = "prospect"
 KEY = NS  # signal_theme app key (Market family)
 DATASETS = {"demo": "Offline demo (fictional)", "register": "Real register (Brønnøysund)"}
+# Unit levels as stored and exported (Enhetsregisteret's terms) and as shown on screen.
+LEVEL_LABELS = {"hovedenhet": "Company (hovedenhet)", "underenhet": "Location (underenhet)"}
+DEMO_LANGUAGE_NOTE = (
+    "Company names, places and industry descriptions in the demo are in Norwegian, like the real register, because "
+    "Prospect Signal is built for the Norwegian market."
+)
 HUB_OFF_NOTE = (
     "**Loading the real register is off in Signal Hub.** The Hub runs the fictional offline demo in memory for this "
     "session only: nothing is downloaded from Brønnøysundregistrene and nothing is saved on the server. Run Prospect "

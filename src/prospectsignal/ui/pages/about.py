@@ -34,7 +34,7 @@ def render() -> None:
             ),
             (
                 "County map",
-                "Administrative enheter fylker, Kartverket (simplified)",
+                "Administrative enheter fylker (county boundaries), Kartverket, simplified",
                 "CC BY 4.0",
                 "https://kartkatalog.geonorge.no/metadata/6093c8a8-fa80-11e6-bc64-92361f002671",
             ),
