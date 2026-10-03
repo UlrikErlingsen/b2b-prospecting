@@ -357,7 +357,7 @@ def test_hub_mode_full_workflow_writes_nothing_and_calls_no_network(hub) -> None
     app.run()
     _shortlist_top(app)
     form_name = next(t for t in app.text_input if t.label == "ICP name")
-    form_name.set_value("Hub ICP").run()
+    form_name.set_value("Hub ICP")  # submitted with the button below (a separate run drops pending form values)
     next(button for button in app.button if button.label == "Apply and save ICP").click().run()
     assert not app.exception, [error.value for error in app.exception]
     store = app.session_state["prospect:hub_store"]
