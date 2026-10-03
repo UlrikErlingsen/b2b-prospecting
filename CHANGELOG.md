@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.1.0] - 2026-10-03
+
+Larger datasets and English app text. The register data, filters, statistics and the person-free rules are unchanged.
+
+### Larger datasets
+
+- Larger datasets: run locally, Prospect Signal has no built-in limit on the register size, matches, shortlist, notes or saved ICPs; memory and disk are the limit. The register already lives in DuckDB on disk: a synthetic 2,000,000-unit bulk file (about 1.8 times today's register) indexes in 11 s with about 1.5 GB peak memory, and an ICP count with its first 2,000 matches takes 0.05 s. A running-out-of-memory error becomes a plain message.
+- Public demo limits: with `SIGNAL_PUBLIC=1` (Signal Hub's public image) the shortlist holds at most 500 companies, notes at most 2,000 characters, at most 25 ICPs can be saved, and the register download and API calls are off. All caps live in the new `prospectsignal.limits`; each message says it is a demo limit that the downloaded app does not have.
+- Streamlit's upload cap is 10,000 MB: `.streamlit/config.toml`, `run_app.bat` and `run_app.command` (`PROSPECTSIGNAL_MAX_UPLOAD_MB`, default 10000, now passed to `--server.maxUploadSize`), and the Dockerfile (`STREAMLIT_SERVER_MAX_UPLOAD_SIZE=10000`).
+- Display truncation is labelled: the industry chart title says when it shows only the largest 20 divisions, and the market tables now list every industry division (the results table already said it shows the 2,000 largest matches).
+
+### All app text is in English
+
+- All app text is in English: labels, column headers, captions and messages now say county (fylke), municipality (kommune), main unit (hovedenhet) and sub-unit (underenhet), with the register's Norwegian term as a gloss on first use; the unit level shows as “Company (hovedenhet)” or “Location (underenhet)”.
+- The NLOD attribution in the app and every export uses the licence's official English wording (“Contains data under the Norwegian licence for Open Government data (NLOD) distributed by Brønnøysundregistrene …”), and the licence link points to the English version. The XLSX *Source & licence* sheet has one attribution row instead of a Norwegian and an English one.
+- Organisation forms show an English description with the register's name in brackets (for example “Private limited company (aksjeselskap)”). The demo's registered-activity text is English; the demo's company names, places and industry descriptions stay Norwegian, and the app says why (the tool is built for the Norwegian market).
+- Freddo CSV and XLSX columns `poststed`, `kommune`, `fylke` are renamed `post_town`, `municipality`, `county` (all three are unmapped in Freddo, so the import mapping is unaffected).
+- The outreach checklist glosses every Norwegian source title and law name (for example “Marketing Control Act (markedsføringsloven)”).
+- Test fixed for Streamlit 1.65, whose test harness drops a form value set in a separate run before the submit click.
+
+### Suite
+
+- Suite: Rival, Reach, Learn and Blueprint Signal added to the suite table (README and the shared theme).
+
 ## [1.0.0] - 2026-10-02
 
 First release of **Prospect Signal**, the Signal suite's prospecting tool for the Norwegian market, with the Signal brand and the Signal Hub entry point.

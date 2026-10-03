@@ -8,7 +8,7 @@ Public API (stable for the Signal suite; nothing here imports Streamlit)::
     store.count(demo_icp())
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 from .brreg import (  # noqa: E402
     ATTRIBUTION,
