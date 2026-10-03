@@ -21,6 +21,7 @@ if errorlevel 1 (
   )
 )
 if "%PROSPECTSIGNAL_PORT%"=="" set PROSPECTSIGNAL_PORT=8589
+if "%PROSPECTSIGNAL_MAX_UPLOAD_MB%"=="" set PROSPECTSIGNAL_MAX_UPLOAD_MB=10000
 echo Starting Prospect Signal at http://127.0.0.1:%PROSPECTSIGNAL_PORT% ...
-".venv\Scripts\python.exe" -m streamlit run app.py --server.headless=false --server.address=127.0.0.1 --server.port=%PROSPECTSIGNAL_PORT% --server.fileWatcherType=none --browser.gatherUsageStats=false
+".venv\Scripts\python.exe" -m streamlit run app.py --server.headless=false --server.address=127.0.0.1 --server.port=%PROSPECTSIGNAL_PORT% --server.maxUploadSize=%PROSPECTSIGNAL_MAX_UPLOAD_MB% --server.fileWatcherType=none --browser.gatherUsageStats=false
 if errorlevel 1 pause

@@ -32,5 +32,6 @@ exec python -m streamlit run app.py \
   --server.headless=false \
   --server.address=127.0.0.1 \
   --server.port="$PORT" \
+  --server.maxUploadSize="${PROSPECTSIGNAL_MAX_UPLOAD_MB:-10000}" \
   --server.fileWatcherType=none \
   --browser.gatherUsageStats=false
